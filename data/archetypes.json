@@ -346,5 +346,18 @@
       "search_tags": ["规训", "觉醒", "规则", "定义权"]
     }
   ],
-  "character_records": []
+  "character_records": [
+    {
+      "card_id": "CN-JPM-001",
+      "name_zh": "潘金莲",
+      "tier": "Gold",
+      "primary_archetype_id": "desire-escalation"
+    },
+    {
+      "card_id": "CN-SHZ-001",
+      "name_zh": "阎婆惜",
+      "tier": "Gold",
+      "primary_archetype_id": "secret-bargaining"
+    }
+  ]
 }

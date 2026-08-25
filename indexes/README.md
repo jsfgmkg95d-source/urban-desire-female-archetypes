@@ -2,7 +2,7 @@
 
 本目录保存从人物卡派生的检索索引，不保存新的事实。索引值必须能回到人物卡、来源记录和稳定 `card_id`；索引不允许修正或补写人物卡。
 
-当前阶段只安装规范，`data/archetypes.json` 中的 `character_records` 保持为空，不生成任何具体人物索引。
+Stage 3A 已加入首个双卡校准批次。`data/characters.jsonl` 是机器摘要；本目录中的 Markdown 文件是人工可读派生索引。二者都不得补写人物卡没有的事实。
 
 ## 1. 稳定标识
 
@@ -24,6 +24,8 @@
 | `by-source.json` | 来源作品、版本、媒介和分类 | 来源键 |
 | `hybridization-pool.json` | 已通过质量门的可输出槽位 | `card_id + slot_id` |
 | `nearest-neighbors.json` | Anti-Clone 最近邻和差异 | `card_id` |
+
+当前人工可读索引为：`master-index.md`、`by-archetype.md`、`by-visual-hook.md`、`by-modern-role.md`、`by-relationship-mechanism.md`、`by-plot-engine.md`。首批只有两张卡时，最近邻互指；后续入库必须重算。
 
 上述文件只有出现合格人物卡后才创建，不为保持目录好看而生成空伪数据。
 
