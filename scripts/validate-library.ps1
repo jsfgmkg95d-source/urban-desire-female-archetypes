@@ -21,7 +21,7 @@ function Read-Utf8Strict {
 
 $archetypePath = Join-Path $repoRoot 'data/archetypes.json'
 $archetypes = Read-Utf8Strict $archetypePath | ConvertFrom-Json
-Assert-True ($archetypes.schema_version -eq '1.1.0') 'schema_version must be 1.1.0'
+Assert-True ($archetypes.schema_version -eq '1.2.0') 'schema_version must be 1.2.0'
 
 $validArchetypes = @($archetypes.archetypes.id)
 $validAdult = @($archetypes.enums.adult_status)
@@ -61,11 +61,19 @@ foreach ($record in $records) {
     Assert-True ($record.nearest_neighbor_card_id -and $record.nearest_neighbor_card_id -ne $record.card_id) "Invalid nearest neighbor in $($record.card_id)"
     Assert-True ($records.card_id -contains $record.nearest_neighbor_card_id) "Nearest neighbor does not exist in $($record.card_id)"
     Assert-True ($record.anti_clone_result -eq 'PASS') "Anti-Clone not passed in $($record.card_id)"
+    Assert-True ($record.schema_version -eq $archetypes.schema_version) "Record schema mismatch in $($record.card_id)"
+    Assert-True ($record.layer_completion.R -eq $true) "R layer incomplete in $($record.card_id)"
+    Assert-True ($record.retrieval_capsule.one_line_archetype.Length -le $archetypes.constraints.retrieval_one_line_max_chars) "R1 exceeds 40 characters in $($record.card_id)"
+    Assert-True ($record.retrieval_capsule.visual_signature.memory_points.Count -ge 1 -and $record.retrieval_capsule.visual_signature.memory_points.Count -le 3) "R2 memory points invalid in $($record.card_id)"
+    Assert-True ($record.retrieval_capsule.forbidden_as.Count -eq $archetypes.constraints.retrieval_forbidden_as_required) "R7 must have exactly three items in $($record.card_id)"
+    Assert-True (-not [string]::IsNullOrWhiteSpace($record.retrieval_capsule.machine_call_string)) "R8 missing in $($record.card_id)"
+    Assert-True ($record.archetype_uniqueness_statement.Length -le $archetypes.constraints.gold_uniqueness_statement_max_chars) "Uniqueness statement exceeds 60 characters in $($record.card_id)"
+    Assert-True (-not [string]::IsNullOrWhiteSpace($record.archetype_uniqueness_statement)) "Uniqueness statement missing in $($record.card_id)"
 
     $cardFile = Get-ChildItem -LiteralPath (Join-Path $repoRoot 'characters') -Filter "$($record.card_id)_*.md" -File -Recurse
     Assert-True ($cardFile.Count -eq 1) "Expected exactly one card file for $($record.card_id)"
     $cardText = Read-Utf8Strict $cardFile.FullName
-    foreach ($layer in @('F', 'V', 'M', 'P', 'H', 'X', 'S', 'A')) {
+    foreach ($layer in @('F', 'V', 'M', 'P', 'H', 'X', 'S', 'A', 'R')) {
         Assert-True ($cardText -match "(?m)^# $layer =") "Missing layer $layer in $($record.card_id)"
     }
     Assert-True ($cardText -match '(?m)^## H4\. 明确成年现代都市视觉移植$') "Missing H4 in $($record.card_id)"
@@ -76,6 +84,10 @@ foreach ($record in $records) {
     }
     $goldRows = [regex]::Matches($cardText, '(?m)^\| (?:[1-9]|1[0-2]) \|').Count
     Assert-True ($goldRows -eq 12) "Gold questions must have 12 rows in $($record.card_id); got $goldRows"
+    Assert-True ($cardText -match '(?m)^# 母体唯一性声明') "Missing uniqueness statement in $($record.card_id)"
+    foreach ($rSection in 1..8) {
+        Assert-True ($cardText -match "(?m)^## R$rSection\.") "Missing R$rSection in $($record.card_id)"
+    }
 
     $sourceFile = Join-Path $repoRoot "sources/$($record.card_id)_sources.md"
     Assert-True (Test-Path -LiteralPath $sourceFile) "Missing source file for $($record.card_id)"
@@ -99,4 +111,4 @@ foreach ($file in $markdownFiles) {
     }
 }
 
-Write-Output "VALIDATION PASSED: $($records.Count) cards; JSON/JSONL, schema, source traceability, H4, M, P, Gold, nearest-neighbor, Markdown links, and UTF-8 checks passed."
+Write-Output "VALIDATION PASSED: $($records.Count) cards; JSON/JSONL, schema, source traceability, H4, M, P, Gold, R, uniqueness, nearest-neighbor, Markdown links, and UTF-8 checks passed."

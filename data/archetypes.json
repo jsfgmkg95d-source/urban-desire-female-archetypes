@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.2.0",
   "library": {
     "slug": "urban-desire-female-archetypes",
     "name_zh": "都市欲望女性原型库",
@@ -15,7 +15,8 @@
       "H",
       "X",
       "S",
-      "A"
+      "A",
+      "R"
     ],
     "layer_meanings": {
       "F": "source-verifiable facts only",
@@ -25,7 +26,8 @@
       "H": "adaptation to 2020s Chinese urban settings",
       "X": "hybridization interface",
       "S": "numeric retrieval coordinates",
-      "A": "Anti-Clone audit"
+      "A": "Anti-Clone audit",
+      "R": "compact retrieval capsule derived only from existing layers"
     },
     "required_metadata": [
       "card_id",
@@ -77,6 +79,8 @@
       "scores",
       "nearest_neighbor_card_id",
       "anti_clone_result",
+      "archetype_uniqueness_statement",
+      "retrieval_capsule",
       "source_ids"
     ]
   },
@@ -150,6 +154,9 @@
     "secondary_archetypes_max": 3,
     "gold_plot_engines_min": 3,
     "gold_questions_required": 12,
+    "gold_uniqueness_statement_max_chars": 60,
+    "retrieval_one_line_max_chars": 40,
+    "retrieval_forbidden_as_required": 3,
     "adult_visual_analysis_requires": "CONFIRMED_ADULT",
     "adult_adaptation_age_min": 21,
     "adult_adaptation_status_requires": "DESIGNATED_ADULT",

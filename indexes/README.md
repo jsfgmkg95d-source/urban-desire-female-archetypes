@@ -2,7 +2,7 @@
 
 本目录保存从人物卡派生的检索索引，不保存新的事实。索引值必须能回到人物卡、来源记录和稳定 `card_id`；索引不允许修正或补写人物卡。
 
-Stage 3A 已加入首个双卡校准批次。`data/characters.jsonl` 是机器摘要；本目录中的 Markdown 文件是人工可读派生索引。二者都不得补写人物卡没有的事实。
+Stage 3B 起加入 R 快速调用胶囊。`data/characters.jsonl` 是机器摘要；本目录中的 Markdown 文件是人工可读派生索引。二者都不得补写人物卡没有的事实，R 也只能压缩卡片已有层。
 
 ## 1. 稳定标识
 
@@ -44,7 +44,7 @@ Stage 3A 已加入首个双卡校准批次。`data/characters.jsonl` 是机器�
   "primary_archetype_id": "identity-contrast",
   "secondary_archetype_ids": [],
   "adult_status": "UNKNOWN",
-  "layer_completion": {"F": true, "V": false, "M": true, "P": true, "H": true, "X": true, "S": true, "A": false},
+  "layer_completion": {"F": true, "V": false, "M": true, "P": true, "H": true, "X": true, "S": true, "A": false, "R": false},
   "visual_signature": [],
   "visual_plot_functions": [],
   "long_term_lack": "normalized phrase",
@@ -68,6 +68,17 @@ Stage 3A 已加入首个双卡校准批次。`data/characters.jsonl` 是机器�
   "scores": {},
   "nearest_neighbor_card_id": null,
   "anti_clone_result": "REVISE",
+  "archetype_uniqueness_statement": "Gold only, max 60 Chinese characters",
+  "retrieval_capsule": {
+    "one_line_archetype": "max 40 Chinese characters",
+    "visual_signature": {"memory_points": [], "identity_body_contrast": "", "clothing_effect": ""},
+    "desire_chain": "lack → first crossing → reward → escalation → cost",
+    "power_interface": {"power_method": "", "secret_use": "", "feared_resource_loss": ""},
+    "best_urban_container": {"age": 28, "identity": "", "marital_status": "", "class_position": "", "core_conflict": ""},
+    "hybrid_recommendation": {"inherit": "", "conflict": "", "never_copy_together": ""},
+    "forbidden_as": ["", "", ""],
+    "machine_call_string": ""
+  },
   "source_ids": []
 }
 ```
@@ -95,6 +106,10 @@ Stage 3A 已加入首个双卡校准批次。`data/characters.jsonl` 是机器�
 ### 杂交
 
 按可输出槽位、兼容原型、冲突原型、禁止继承项和克隆风险筛选。检索结果必须带槽位来源，不返回不可追溯的“混合灵感”。
+
+### R 快速调用
+
+R 默认用于首轮召回：返回一句话母体、视觉签名、欲望链、权力接口、最佳都市容器、三槽杂交建议、三项禁止写法和机器调用串。命中后必须回读完整卡片；R 不得作为事实来源，也不得覆盖 F/V/M/H/X/S/A。
 
 ## 5. 查询返回规则
 
