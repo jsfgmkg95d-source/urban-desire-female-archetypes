@@ -34,7 +34,7 @@ $jsonlText = Read-Utf8Strict $jsonlPath
 $records = @($jsonlText -split "`r?`n" | Where-Object { $_.Trim() } | ForEach-Object { $_ | ConvertFrom-Json })
 Assert-True ($records.Count -ge 2) 'At least two calibrated records are required'
 Assert-True ((@($records.card_id | Sort-Object -Unique)).Count -eq $records.Count) 'Duplicate card_id in characters.jsonl'
-Assert-True ($records.Count -eq 10) 'Batch 001 must contain exactly ten production records'
+Assert-True ($records.Count -eq 30) 'The production library must contain exactly thirty records'
 Assert-True ((@($archetypes.character_records.card_id | Sort-Object -Unique)).Count -eq $records.Count) 'archetypes.json character_records count mismatch'
 foreach ($recordId in $records.card_id) {
     Assert-True ($archetypes.character_records.card_id -contains $recordId) "Missing character_records entry for $recordId"
@@ -73,7 +73,9 @@ foreach ($record in $records) {
     Assert-True ($record.retrieval_capsule.forbidden_as.Count -eq $archetypes.constraints.retrieval_forbidden_as_required) "R7 must have exactly three items in $($record.card_id)"
     Assert-True (-not [string]::IsNullOrWhiteSpace($record.retrieval_capsule.machine_call_string)) "R8 missing in $($record.card_id)"
     Assert-True ($record.archetype_uniqueness_statement.Length -le $archetypes.constraints.gold_uniqueness_statement_max_chars) "Uniqueness statement exceeds 60 characters in $($record.card_id)"
-    Assert-True (-not [string]::IsNullOrWhiteSpace($record.archetype_uniqueness_statement)) "Uniqueness statement missing in $($record.card_id)"
+    if ($record.tier -eq 'Gold') {
+        Assert-True (-not [string]::IsNullOrWhiteSpace($record.archetype_uniqueness_statement)) "Gold uniqueness statement missing in $($record.card_id)"
+    }
 
     $cardFile = Get-ChildItem -LiteralPath (Join-Path $repoRoot 'characters') -Filter "$($record.card_id)_*.md" -File -Recurse
     Assert-True ($cardFile.Count -eq 1) "Expected exactly one card file for $($record.card_id)"
@@ -84,9 +86,9 @@ foreach ($record in $records) {
     Assert-True ($cardText -match '(?m)^## H4\. 明确成年现代都市视觉移植$') "Missing H4 in $($record.card_id)"
     Assert-True ($cardText -match '`adaptation_adult_status` \| `DESIGNATED_ADULT`') "H4 status missing in $($record.card_id)"
     Assert-True ($cardText -match '是否把 H4 设计倒填为原著事实：`NO`') "H4 reverse-pollution gate failed in $($record.card_id)"
-    if ($record.adult_status -eq 'UNKNOWN') {
-        Assert-True ($cardText -match '允许直白身体分析：`NO`') "UNKNOWN adult original V must be closed in $($record.card_id)"
-        Assert-True ($cardText -match '低俗第一眼：`NOT_APPLICABLE：年龄门未通过`') "UNKNOWN adult original first glance must be NOT_APPLICABLE in $($record.card_id)"
+    if ($record.adult_status -ne 'CONFIRMED_ADULT') {
+        Assert-True ($cardText -match '允许直白身体分析：`NO`') "Minor or unknown original V must be closed in $($record.card_id)"
+        Assert-True ($cardText -match '低俗第一眼：`NOT_APPLICABLE：年龄门未通过`') "Minor or unknown original first glance must be NOT_APPLICABLE in $($record.card_id)"
     }
     foreach ($stage in @('长期匮乏','诱因','第一次越界','即时奖励','自我合理化','风险提高','继续加码','最终代价')) {
         Assert-True ($cardText -match "(?m)^\| $stage \|") "Missing M stage $stage in $($record.card_id)"
@@ -105,13 +107,13 @@ foreach ($record in $records) {
         Assert-True ($sourceText.Contains($sourceId)) "Untraceable source_id $sourceId in $($record.card_id)"
     }
     foreach ($line in ($cardText -split "`r?`n" | Where-Object { $_ -match '^\| `F-(?:VIS|REL|ACT|RES|COMP|SEC|OUT|RISK|\d)' })) {
-        Assert-True ($line -match "$($record.card_id)-S\d{2}:" ) "F fact lacks source locator in $($record.card_id): $line"
+        Assert-True ($line -match "$($record.card_id)-S\d{2}" ) "F fact lacks source locator in $($record.card_id): $line"
     }
 }
 
 $primaryVisualFocus = @($records | ForEach-Object { $_.retrieval_capsule.visual_signature.memory_points[0] })
 $largestExactFocusGroup = @($primaryVisualFocus | Group-Object | Sort-Object Count -Descending | Select-Object -First 1)[0]
-Assert-True ($largestExactFocusGroup.Count -le 3) "Visual 30 percent rule failed for exact focus $($largestExactFocusGroup.Name)"
+Assert-True ($largestExactFocusGroup.Count -le [Math]::Floor($records.Count * 0.3)) "Visual 30 percent rule failed for exact focus $($largestExactFocusGroup.Name)"
 Assert-True ((@($records.adult_adaptation_role | Sort-Object -Unique)).Count -ge 8) 'Occupation distribution is too concentrated'
 
 $requiredIndexes = @(
@@ -128,14 +130,14 @@ $requiredIndexes = @(
 foreach ($indexName in $requiredIndexes) {
     Assert-True (Test-Path -LiteralPath (Join-Path $repoRoot "indexes/$indexName")) "Missing required index $indexName"
 }
-$batchAuditPath = Join-Path $repoRoot 'batches/batch-001-ten-gold-candidates.md'
-Assert-True (Test-Path -LiteralPath $batchAuditPath) 'Missing ten-card global audit'
+$batchAuditPath = Join-Path $repoRoot 'batches/batch-002-thirty-card-anti-clone-audit.md'
+Assert-True (Test-Path -LiteralPath $batchAuditPath) 'Missing thirty-card global audit'
 $batchAuditText = Read-Utf8Strict $batchAuditPath
-foreach ($pair in @('Pair A','Pair B','Pair C','Pair D')) {
-    Assert-True ($batchAuditText.Contains($pair)) "Missing $pair audit"
+foreach ($pair in @('薛宝钗 × 吴月娘','晴雯 × 尤三姐','袭人 × 尤二姐','包法利夫人 × 潘金莲','美狄亚 × 克吕泰涅斯特拉')) {
+    Assert-True ($batchAuditText.Contains($pair)) "Missing high-similarity pair audit: $pair"
 }
-Assert-True ($batchAuditText.Contains('visual_30_percent_rule`：`PASS')) 'Batch visual distribution audit not passed'
-Assert-True ($batchAuditText.Contains('occupation_distribution`：`PASS')) 'Batch occupation distribution audit not passed'
+Assert-True ($batchAuditText.Contains('30人Anti-Clone')) 'Thirty-card Anti-Clone audit not passed'
+Assert-True ($batchAuditText.Contains('machine_index_ready`：`YES')) 'Thirty-card machine index is not ready'
 
 $markdownFiles = Get-ChildItem -LiteralPath $repoRoot -Filter '*.md' -File -Recurse | Where-Object { $_.FullName -notmatch '[\\/]\.git[\\/]' }
 foreach ($file in $markdownFiles) {

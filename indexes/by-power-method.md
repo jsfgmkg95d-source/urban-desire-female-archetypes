@@ -1,14 +1,34 @@
-# 按权力方式索引
+# 按权力方式检索
 
-| 权力方式 | 候选人物 | 区分 |
-|---|---|---|
-| 注意力与距离调度 | `CN-JPM-001` | 争持续中心 |
-| 秘密定价与交付时点 | `CN-SHZ-001` | 一次性退出交易 |
-| 可移动资源跟随权 | `CN-JPM-002` | 携资择保护者 |
-| 门槛、近身信息与空缺 | `CN-JPM-003` | 低位借权上升 |
-| 正妻名分与资产监护 | `CN-JPM-004` | 守固定容器 |
-| 比较、财物与退出 | `CN-JPM-005` | 换环境保安全 |
-| 制度位置与代理网络 | `CN-HLM-001` | 已有权力执行化 |
-| 照料与低情绪成本 | `CN-HLM-002` | 弱依附型软权力 |
-| 不可得与公开兑现 | `CN-HLM-003` | 尊严边界权 |
-| 隐藏资本与测试时机 | `CN-JSTY-001` | 自我定价反击 |
+| 人物 | 权力方式 | 最怕失去的资源 | 一级原型 |
+|---|---|---|---|
+| [潘金莲](../characters/chinese-classics/jin-ping-mei/CN-JPM-001_潘金莲.md) | 管理可见性、亲疏距离和情绪奖励 | 稳定宠爱、生育名分增益与不可替代性 | `desire-escalation` |
+| [阎婆惜](../characters/chinese-classics/water-margin/CN-SHZ-001_阎婆惜.md) | 掌握秘密、控制交付时点并逐项定条件 | 不损失生活基础即可自由退出关系的能力 | `secret-bargaining` |
+| [李瓶儿](../characters/chinese-classics/jin-ping-mei/CN-JPM-002_李瓶儿.md) | 决定可移动资源跟谁走 | 排他保护、继承位置与资源处置权 | `resource-carrier` |
+| [庞春梅](../characters/chinese-classics/jin-ping-mei/CN-JPM-003_庞春梅.md) | 近身信息、门槛控制与身份空缺 | 名分、孩子、正式权限与服从 | `lower-strata-observer` |
+| [吴月娘](../characters/chinese-classics/jin-ping-mei/CN-JPM-004_吴月娘.md) | 正妻名分、礼仪、人情和资产监护 | 家产、继承人、亲族承认与家庭定义权 | `lawful-wife-order` |
+| [孟玉楼](../characters/chinese-classics/jin-ping-mei/CN-JPM-005_孟玉楼.md) | 比较能力、可移动财物、低冲突与退出 | 随身财物、体面和退出窗口 | `survival-adaptation` |
+| [王熙凤](../characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-001_王熙凤.md) | 制度位置、账目、人事、长辈和代理网 | 正式授权、财权、长辈信任与正妻位置 | `power-queen` |
+| [尤二姐](../characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-002_尤二姐.md) | 照料、和顺与降低伴侣情绪成本 | 正妻制度承认、处置入口与生育保护 | `gentle-dependence` |
+| [尤三姐](../characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-003_尤三姐.md) | 控制可得性、公开羞辱与不可撤回行动 | 自我定义、婚约信用与言行一致性 | `fierce-self-respect` |
+| [杜十娘](../characters/chinese-classics/jingshi-tongyan/CN-JSTY-001_杜十娘.md) | 隐藏资本、筹资测试、姐妹网络和公开时机 | 自我定价权、退出资本与人格解释权 | `resource-carrier` |
+| [白素贞](../characters/chinese-classics/jingshi-tongyan/CN-JSTY-002_白素贞.md) | 先用资源解决现实门槛，再用共同秘密和超常威慑封住退出 | 伴侣的退出权与外部权威的解释权 | `identity-contrast` |
+| [小青](../characters/chinese-classics/jingshi-tongyan/CN-JSTY-003_小青.md) | 门槛控制、行动速度和全链条知情 | 主人对新代理人的信任 | `survival-adaptation` |
+| [聂小倩](../characters/chinese-classics/liaozhai-zhiyi/CN-LZ-001_聂小倩.md) | 掌握捕猎系统内部情报，并能用照料把临时盟友变成长期共同体 | 盟友给予其他人的无条件信任与家庭名分 | `redemption-complicity` |
+| [崔莺莺](../characters/chinese-classics/romance-of-western-chamber/CN-XXJ-001_崔莺莺.md) | 编码表达、撤回、再确认，并借红娘控制信息到达顺序 | 家族能替她定义婚配的最终解释权 | `discipline-awakening` |
+| [杜丽娘](../characters/chinese-classics/peony-pavilion/CN-MDT-001_杜丽娘.md) | 把私人感受物化成画像、题记和可验证叙事 | 别人不必用死亡或奇迹就能获得的自我定义权 | `emotional-obsession` |
+| [霍小玉](../characters/chinese-classics/tale-of-huo-xiaoyu/CN-HXY-001_霍小玉.md) | 书面盟约、时间表、共同见证人和最终公开结算 | 高门女性天然拥有的可执行名分与家庭支持 | `emotional-obsession` |
+| [薛宝钗](../characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-004_薛宝钗.md) | 知识广度、情绪稳定、资源判断与长辈信任 | 无需自我压缩就能被偏爱的任性资格 | `interest-marriage` |
+| [林黛玉](../characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-005_林黛玉.md) | 对共同语言的定义权、情绪撤回和让对方自证理解的能力 | 别人无需解码就能获得的名分、健康和家庭支持 | `neglect-compensation` |
+| [晴雯](../characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-006_晴雯.md) | 稀缺手艺、现场直言和拒绝配合虚伪体面 | 袭人式能把照料转成制度信任的能力 | `fierce-self-respect` |
+| [袭人](../characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-007_袭人.md) | 照料惯例、撤离威胁、目标弱点和上级赞助 | 正式妻妾名分以及无需服务即可获得的家族位置 | `gentle-dependence` |
+| [安娜·卡列尼娜](../characters/world-classics/anna-karenina/WC-AK-001_安娜·卡列尼娜.md) | 社交魅力、情感坦白、退出旧角色的勇气和对恋人的唯一性要求 | 仍能保有孩子、社交与合法名分的女性 | `marital-entrapment-transgression` |
+| [包法利夫人](../characters/world-classics/madame-bovary/WC-MB-001_包法利夫人.md) | 审美包装、情绪戏剧化、分区叙事和让他人替未来买单 | 无需举债就能把浪漫、消费和社会身份统一的人 | `desire-escalation` |
+| [卡门](../characters/world-classics/carmen/WC-CAR-001_卡门.md) | 管理可得性、即时注意、路线信息和社群入口 | 无需解释离开就能被允许自由流动的人 | `temptation-control` |
+| [郝思嘉](../characters/world-classics/gone-with-the-wind/WC-GWTW-001_郝思嘉.md) | 资源优先级、羞耻耐受、危机行动和把名誉迅速折现 | 不必脏手就能继承安全的人 | `survival-adaptation` |
+| [贝姬·夏泼](../characters/world-classics/vanity-fair/WC-VF-001_贝姬·夏泼.md) | 快速读出虚荣点、切换口音表情、制造各自专属的她 | 无需表演就继承姓氏、房产和可信度的人 | `ambition-ascension` |
+| [简·爱](../characters/world-classics/jane-eyre/WC-JE-001_简·爱.md) | 离开的能力、直白语言、经济出口与对秘密条件的拒绝 | 生来拥有家庭、财产和无需感恩的归属者 | `discipline-awakening` |
+| [美狄亚](../characters/mythology-and-epics/greek-tragedy/MY-MED-001_美狄亚.md) | 药物知识、策略延迟、假顺从、庇护谈判和选择损失对象 | 能被城邦和父族自动保护的合法新娘 | `revenge-destruction` |
+| [喀耳刻](../characters/mythology-and-epics/greek-epic/MY-OD-001_喀耳刻.md) | 空间、食物、药物、身体状态和离开所需知识 | 能在外部世界拥有公共合法权力而无需把家变堡垒的人 | `power-queen` |
+| [山鲁佐德](../characters/world-classics/arabian-nights/WC-AN-001_山鲁佐德.md) | 控制信息缺口、停顿时间、嵌套结构和听众的下一步欲望 | 无需持续表演有用就能安全活着的人 | `narrative-manipulation` |
+| [克吕泰涅斯特拉](../characters/mythology-and-epics/greek-tragedy/MY-OR-001_克吕泰涅斯特拉.md) | 长期摄政、烽火信息、宫廷物流、仪式语言和伏击空间 | 丈夫能把家庭损失包装成国家胜利并被欢呼的特权 | `revenge-destruction` |

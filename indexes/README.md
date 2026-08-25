@@ -25,7 +25,7 @@ Stage 3B 起加入 R 快速调用胶囊。`data/characters.jsonl` 是机器摘�
 | `hybridization-pool.json` | 已通过质量门的可输出槽位 | `card_id + slot_id` |
 | `nearest-neighbors.json` | Anti-Clone 最近邻和差异 | `card_id` |
 
-当前人工可读索引为：`master-index.md`、`by-archetype.md`、`by-visual-hook.md`、`by-identity.md`、`by-desire-mechanism.md`、`by-power-method.md`、`by-secret-method.md`、`by-modern-role.md`、`by-relationship-mechanism.md`、`by-plot-engine.md`。Batch 001 已按十卡重算最近邻。
+当前人工可读索引为：`master-index.md`、`by-archetype.md`、`by-visual-hook.md`、`by-identity.md`、`by-desire-mechanism.md`、`by-power-method.md`、`by-secret-method.md`、`by-modern-role.md`、`by-relationship-mechanism.md`、`by-plot-engine.md`。Batch 002 已按30卡重算最近邻。
 
 上述文件只有出现合格人物卡后才创建，不为保持目录好看而生成空伪数据。
 
@@ -57,7 +57,7 @@ Stage 3B 起加入 R 快速调用胶囊。`data/characters.jsonl` 是机器摘�
   "fatal_miscalculation": "normalized phrase",
   "plot_engine_ids": [],
   "urban_preserve": [],
-  "adult_adaptation_age": "21+ explicit age or range",
+  "adult_adaptation_age": "25+ explicit age or range",
   "adult_adaptation_role": "modern original role",
   "adult_visual_signature": [],
   "adult_low_register_first_glance": "adult adaptation only",
@@ -117,7 +117,7 @@ R 默认用于首轮召回：返回一句话母体、视觉签名、欲望链、
 2. 查询 Gold 时必须确认最近邻审计仍有效；库新增卡后可能需要重算。
 3. `UNKNOWN` 不得当作否定值。例如“未知是否有秘密”不能进入“没有秘密”结果。
 4. 视觉查询必须应用成年状态过滤；`CONFIRMED_MINOR` 和 `UNKNOWN` 不进入情色化身体检索。
-   H4 是独立例外路径：只检索 `DESIGNATED_ADULT` 且明确 21+ 的现代原创移植，不得把结果合并为原角色 V 事实。
+   H4 是独立例外路径：只检索 `DESIGNATED_ADULT` 且明确 25+ 的现代原创移植，不得把结果合并为原角色 V 事实。
 5. S 分值只用于排序，最终结果必须同时展示机制理由。
 6. 索引与卡片冲突时，以卡片和来源为准，索引标记过期并重建。
 

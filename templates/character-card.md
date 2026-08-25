@@ -203,7 +203,7 @@
 
 | 字段 | 值 |
 |---|---|
-| `adaptation_age` | `明确 21 岁以上具体年龄或年龄区间` |
+| `adaptation_age` | `明确 25 岁以上具体年龄或年龄区间` |
 | `adaptation_adult_status` | `DESIGNATED_ADULT` |
 | `adaptation_role` |  |
 | `adaptation_marital_status` |  |

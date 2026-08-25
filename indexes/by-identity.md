@@ -1,14 +1,34 @@
-# 按身份与反差索引
+# 按身份反差检索
 
-| `card_id` | 原作制度位置 | H4身份 | 身份身体反差 |
+| 人物 | 原著身份/作品 | H4身份身体反差 | 原角色年龄边界 |
 |---|---|---|---|
-| `CN-JPM-001` | 妾/注意竞争者 | 医美客户转化主管 | 洁净服务×成熟肉感 |
-| `CN-SHZ-001` | 外宅受资助者 | 合规档案主管 | 低位文职×高挑边界 |
-| `CN-JPM-002` | 携资妻妾 | 母婴店出资人/库管 | 温软老板娘×库存控制 |
-| `CN-JPM-003` | 婢女后升夫人 | 宴会酒店调度领班 | 服务制服×发令姿态 |
-| `CN-JPM-004` | 正妻/遗产监护 | 全职伴侣/资产管理员 | 家庭身份×资产执行 |
-| `CN-JPM-005` | 寡妇/多次再婚者 | 面料档口老板 | 成熟美×档口劳动 |
-| `CN-HLM-001` | 荣府管家媳妇 | 家族物业宴会总协调 | 家宴主理×制度执行 |
-| `CN-HLM-002` | 秘密二房 | 月子中心跟单/宿管 | 照料软姿态×宿舍责任 |
-| `CN-HLM-003` | 尤氏姐妹/自选婚配者 | Livehouse主持 | 夜场艳装×强拒绝 |
-| `CN-JSTY-001` | 名妓/自赎者 | 会所客户经理/珠宝寄卖 | 被观看者×资产定价者 |
+| [潘金莲](../characters/chinese-classics/jin-ping-mei/CN-JPM-001_潘金莲.md) | 金瓶梅词话（万历本系统） | 洁净医疗服务身份；成熟肉感与近距离成交姿态 | `CONFIRMED_ADULT` |
+| [阎婆惜](../characters/chinese-classics/water-margin/CN-SHZ-001_阎婆惜.md) | 水浒传（金圣叹评七十回本正文） | 低存在感合规文职；占据空间的高挑边界感 | `CONFIRMED_ADULT` |
+| [李瓶儿](../characters/chinese-classics/jin-ping-mei/CN-JPM-002_李瓶儿.md) | 金瓶梅词话（万历本系统） | 温软老板娘；仓储现金流控制者 | `CONFIRMED_ADULT` |
+| [庞春梅](../characters/chinese-classics/jin-ping-mei/CN-JPM-003_庞春梅.md) | 金瓶梅词话（万历本系统） | 服务制服；发令姿态 | `CONFIRMED_ADULT` |
+| [吴月娘](../characters/chinese-classics/jin-ping-mei/CN-JPM-004_吴月娘.md) | 金瓶梅词话（万历本系统） | 全职家庭身份；资产执行权 | `CONFIRMED_ADULT` |
+| [孟玉楼](../characters/chinese-classics/jin-ping-mei/CN-JPM-005_孟玉楼.md) | 金瓶梅词话（万历本系统） | 成熟长身美感；档口劳动与尽调 | `CONFIRMED_ADULT` |
+| [王熙凤](../characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-001_王熙凤.md) | 红楼梦（程甲本前80回） | 家宴主理人；资源惩罚执行者 | `UNKNOWN` |
+| [尤二姐](../characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-002_尤二姐.md) | 红楼梦（程甲本前80回） | 照料型软姿态；宿舍与餐食执行责任 | `UNKNOWN` |
+| [尤三姐](../characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-003_尤三姐.md) | 红楼梦（程甲本前80回） | 夜场艳装；强拒绝边界 | `UNKNOWN` |
+| [杜十娘](../characters/chinese-classics/jingshi-tongyan/CN-JSTY-001_杜十娘.md) | 警世通言第32卷杜十娘怒沉百宝箱 | 被观看的服务者；隐藏资产定价者 | `CONFIRMED_ADULT` |
+| [白素贞](../characters/chinese-classics/jingshi-tongyan/CN-JSTY-002_白素贞.md) | 《警世通言》第28卷《白娘子永镇雷峰塔》 | 社区私营诊所联合出资人兼执业药师×城市中产；现金流强、合法身份脆弱 | `UNKNOWN` |
+| [小青](../characters/chinese-classics/jingshi-tongyan/CN-JSTY-003_小青.md) | 《警世通言》第28卷《白娘子永镇雷峰塔》 | 连锁药房区域运营助理兼老板专车司机×普通工薪；住员工宿舍，有少量应急金 | `UNKNOWN` |
+| [聂小倩](../characters/chinese-classics/liaozhai-zhiyi/CN-LZ-001_聂小倩.md) | 《聊斋志异》卷二《聂小倩》 | 殡葬服务公司夜班遗物整理师兼反诈协查志愿者×城市底层边缘；住员工宿舍，无房产 | `UNKNOWN` |
+| [崔莺莺](../characters/chinese-classics/romance-of-western-chamber/CN-XXJ-001_崔莺莺.md) | 王实甫《北西厢记》 | 公立博物馆书画修复师×上层文化家庭女儿；个人收入中等、家庭资源高 | `UNKNOWN` |
+| [杜丽娘](../characters/chinese-classics/peony-pavilion/CN-MDT-001_杜丽娘.md) | 汤显祖《牡丹亭》 | 市政设计院景观设计师兼匿名插画作者×稳定工薪中产；住房由父母首付 | `CONFIRMED_MINOR` |
+| [霍小玉](../characters/chinese-classics/tale-of-huo-xiaoyu/CN-HXY-001_霍小玉.md) | 蒋防《霍小玉传》 | 音乐酒馆驻唱兼儿童声乐陪练×没落富裕家庭出身；现金流不稳但审美资本高 | `CONFIRMED_ADULT` |
+| [薛宝钗](../characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-004_薛宝钗.md) | 《红楼梦》程甲本前80回 | 家族医药公司合规经理×富裕民营家庭二代；公司债务上升 | `CONFIRMED_MINOR` |
+| [林黛玉](../characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-005_林黛玉.md) | 《红楼梦》程甲本前80回 | 独立文学编辑兼品牌文案×文化中产边缘；收入不稳、教育资本高 | `CONFIRMED_MINOR` |
+| [晴雯](../characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-006_晴雯.md) | 《红楼梦》程甲本前80回 | 奢侈品修复工作室高级绣补师×技术工薪；收入不低但无产权和管理权 | `UNKNOWN` |
+| [袭人](../characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-007_袭人.md) | 《红楼梦》程甲本前80回 | 高端康复中心VIP家庭照护协调员×普通工薪；职业证书完整但住房依赖关系 | `UNKNOWN` |
+| [安娜·卡列尼娜](../characters/world-classics/anna-karenina/WC-AK-001_安娜·卡列尼娜.md) | Leo Tolstoy, Anna Karenina | 高铁集团公共事务总监×一线城市高资源职业女性；收入高但孩子与资产绑定婚姻 | `UNKNOWN` |
+| [包法利夫人](../characters/world-classics/madame-bovary/WC-MB-001_包法利夫人.md) | Gustave Flaubert, Madame Bovary | 县城医美诊所老板娘兼家居短视频博主×县城小中产；表面精致、负债率高 | `UNKNOWN` |
+| [卡门](../characters/world-classics/carmen/WC-CAR-001_卡门.md) | Prosper Mérimée, Carmen | 口岸商贸翻译兼拉丁舞教练×流动工薪；人脉广、固定资产少 | `UNKNOWN` |
+| [郝思嘉](../characters/world-classics/gone-with-the-wind/WC-GWTW-001_郝思嘉.md) | Margaret Mitchell, Gone with the Wind | 县域烂尾文旅园区盘活运营商×破产地产家庭二代；持有问题资产、现金紧张 | `CONFIRMED_MINOR` |
+| [贝姬·夏泼](../characters/world-classics/vanity-fair/WC-VF-001_贝姬·夏泼.md) | William Makepeace Thackeray, Vanity Fair | 会展公关招商主管兼短视频礼仪培训师×底层艺术家庭出身；收入波动大、社交外观昂贵 | `UNKNOWN` |
+| [简·爱](../characters/world-classics/jane-eyre/WC-JE-001_简·爱.md) | Charlotte Brontë, Jane Eyre | 民办学校奖学金项目老师×普通专业人士；资产小但足以退出雇主家庭 | `CONFIRMED_ADULT` |
+| [美狄亚](../characters/mythology-and-epics/greek-tragedy/MY-MED-001_美狄亚.md) | Euripides, Medea | 生物医药配方研发总监×高技能中产；专业权力高、本地亲属网络弱 | `UNKNOWN` |
+| [喀耳刻](../characters/mythology-and-epics/greek-epic/MY-OD-001_喀耳刻.md) | Homer, Odyssey, Book X and XII | 海岛精品酒店主理人兼食品研发师×高资产小业主；固定资产强、外部网络弱 | `UNKNOWN` |
+| [山鲁佐德](../characters/world-classics/arabian-nights/WC-AN-001_山鲁佐德.md) | The Arabian Nights’ Entertainments（Andrew Lang英译框架） | 调查音频平台内容总编兼晚间直播主持×知识中产；掌握内容但股权和服务器不在手 | `UNKNOWN` |
+| [克吕泰涅斯特拉](../characters/mythology-and-epics/greek-tragedy/MY-OR-001_克吕泰涅斯特拉.md) | Aeschylus, Agamemnon | 家族制造集团代理董事长×高资源家族核心；经营权高、股权受家族制衡 | `UNKNOWN` |

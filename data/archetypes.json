@@ -158,7 +158,7 @@
     "retrieval_one_line_max_chars": 40,
     "retrieval_forbidden_as_required": 3,
     "adult_visual_analysis_requires": "CONFIRMED_ADULT",
-    "adult_adaptation_age_min": 21,
+    "adult_adaptation_age_min": 25,
     "adult_adaptation_status_requires": "DESIGNATED_ADULT",
     "adult_adaptation_visual_signature_min": 1,
     "adult_adaptation_visual_signature_max": 3,
@@ -212,145 +212,265 @@
       "id": "marital-entrapment-transgression",
       "name_zh": "婚姻困局越轨型",
       "definition": "婚姻提供秩序却封死关键需求，秘密越界提供补偿并被暴露成本推动加码。",
-      "search_tags": ["婚姻", "越轨", "双重生活", "补偿"]
+      "search_tags": [
+        "婚姻",
+        "越轨",
+        "双重生活",
+        "补偿"
+      ]
     },
     {
       "id": "neglect-compensation",
       "name_zh": "冷落寻补型",
       "definition": "长期被忽视使精准注意成为高额奖励，补偿关系逐渐替代原关系。",
-      "search_tags": ["冷落", "注意力", "补偿", "替代关系"]
+      "search_tags": [
+        "冷落",
+        "注意力",
+        "补偿",
+        "替代关系"
+      ]
     },
     {
       "id": "identity-contrast",
       "name_zh": "身份反差型",
       "definition": "公共身份与私人欲望冲突，反差同时制造吸引力和暴露杠杆。",
-      "search_tags": ["身份", "反差", "双面", "暴露"]
+      "search_tags": [
+        "身份",
+        "反差",
+        "双面",
+        "暴露"
+      ]
     },
     {
       "id": "desire-escalation",
       "name_zh": "欲望加码型",
       "definition": "一次满足提高基准线，角色不断扩大对象、金额、风险或控制范围。",
-      "search_tags": ["欲望", "加码", "风险", "耐受"]
+      "search_tags": [
+        "欲望",
+        "加码",
+        "风险",
+        "耐受"
+      ]
     },
     {
       "id": "interest-marriage",
       "name_zh": "利益婚姻型",
       "definition": "亲密关系承担联盟、财富、身份或安全功能，情感会强化或破坏交易。",
-      "search_tags": ["婚姻", "利益", "联盟", "交易"]
+      "search_tags": [
+        "婚姻",
+        "利益",
+        "联盟",
+        "交易"
+      ]
     },
     {
       "id": "resource-carrier",
       "name_zh": "资源携带型",
       "definition": "角色控制稀缺入口、身份、关系网、信息或合法性，因此成为竞争中心。",
-      "search_tags": ["资源", "入口", "关系网", "竞争"]
+      "search_tags": [
+        "资源",
+        "入口",
+        "关系网",
+        "竞争"
+      ]
     },
     {
       "id": "inner-court-competition",
       "name_zh": "后宅竞争型",
       "definition": "封闭关系系统中的关注、继承、名分和生存资源有限，联盟反复重组。",
-      "search_tags": ["后宅", "竞争", "名分", "联盟"]
+      "search_tags": [
+        "后宅",
+        "竞争",
+        "名分",
+        "联盟"
+      ]
     },
     {
       "id": "lawful-wife-order",
       "name_zh": "正妻守序型",
       "definition": "角色以规则、名分和长期投入维护秩序，并把秩序转化为权力工具。",
-      "search_tags": ["正妻", "守序", "名分", "规则"]
+      "search_tags": [
+        "正妻",
+        "守序",
+        "名分",
+        "规则"
+      ]
     },
     {
       "id": "secret-bargaining",
       "name_zh": "秘密要价型",
       "definition": "角色把不公开转化为可定价资源，通过控制揭露换取利益。",
-      "search_tags": ["秘密", "要价", "证据", "信息杠杆"]
+      "search_tags": [
+        "秘密",
+        "要价",
+        "证据",
+        "信息杠杆"
+      ]
     },
     {
       "id": "high-intellect-operator",
       "name_zh": "高智操盘型",
       "definition": "角色用信息差、预测和多方安排改变他人选项，而非只处理眼前问题。",
-      "search_tags": ["操盘", "信息差", "预测", "布局"]
+      "search_tags": [
+        "操盘",
+        "信息差",
+        "预测",
+        "布局"
+      ]
     },
     {
       "id": "temptation-control",
       "name_zh": "诱惑控场型",
       "definition": "角色管理距离、可得性和注意力，把他人的欲望转化为可调度行动。",
-      "search_tags": ["诱惑", "控场", "距离", "注意力"]
+      "search_tags": [
+        "诱惑",
+        "控场",
+        "距离",
+        "注意力"
+      ]
     },
     {
       "id": "ambition-ascension",
       "name_zh": "野心上位型",
       "definition": "角色把当前身份视为临时站点，主动夺取更高位置并重估关系成本。",
-      "search_tags": ["野心", "上位", "位置", "台阶"]
+      "search_tags": [
+        "野心",
+        "上位",
+        "位置",
+        "台阶"
+      ]
     },
     {
       "id": "lower-strata-observer",
       "name_zh": "底层观察型",
       "definition": "低权力位置迫使角色精读强者情绪和规则漏洞，观察力成为隐蔽资本。",
-      "search_tags": ["底层", "观察", "漏洞", "隐蔽资本"]
+      "search_tags": [
+        "底层",
+        "观察",
+        "漏洞",
+        "隐蔽资本"
+      ]
     },
     {
       "id": "class-mobility",
       "name_zh": "阶层跃迁型",
       "definition": "稳定、体面和选择权驱动角色跨越阶层门槛，同时产生出身暴露和身份债务。",
-      "search_tags": ["阶层", "跃迁", "体面", "出身"]
+      "search_tags": [
+        "阶层",
+        "跃迁",
+        "体面",
+        "出身"
+      ]
     },
     {
       "id": "fierce-self-respect",
       "name_zh": "烈性自尊型",
       "definition": "角色宁可承受实际损失也拒绝羞辱性位置，自尊同时保护边界和阻断退路。",
-      "search_tags": ["自尊", "羞辱", "边界", "退路"]
+      "search_tags": [
+        "自尊",
+        "羞辱",
+        "边界",
+        "退路"
+      ]
     },
     {
       "id": "emotional-obsession",
       "name_zh": "情感执念型",
       "definition": "单一关系被赋予过高意义，反证越多，投入和解释成本反而越高。",
-      "search_tags": ["执念", "投入", "反证", "关系"]
+      "search_tags": [
+        "执念",
+        "投入",
+        "反证",
+        "关系"
+      ]
     },
     {
       "id": "revenge-destruction",
       "name_zh": "复仇毁灭型",
       "definition": "角色以摧毁对方重建秩序感，最终可能把自我与未来纳入代价。",
-      "search_tags": ["复仇", "毁灭", "秩序", "代价"]
+      "search_tags": [
+        "复仇",
+        "毁灭",
+        "秩序",
+        "代价"
+      ]
     },
     {
       "id": "gentle-dependence",
       "name_zh": "温柔依附型",
       "definition": "角色以照料、顺从或情绪安抚交换安全，依附逐渐成为隐性控制结构。",
-      "search_tags": ["温柔", "依附", "照料", "安全"]
+      "search_tags": [
+        "温柔",
+        "依附",
+        "照料",
+        "安全"
+      ]
     },
     {
       "id": "survival-adaptation",
       "name_zh": "生存适应型",
       "definition": "角色快速读取环境并优先短期存活，连续适应逐步侵蚀稳定自我。",
-      "search_tags": ["生存", "适应", "环境", "自我侵蚀"]
+      "search_tags": [
+        "生存",
+        "适应",
+        "环境",
+        "自我侵蚀"
+      ]
     },
     {
       "id": "innocence-danger",
       "name_zh": "纯真危险型",
       "definition": "真实或表面的纯真让他人降低警惕，却因无知、执拗或不受规训制造风险。",
-      "search_tags": ["纯真", "危险", "低警惕", "无知"]
+      "search_tags": [
+        "纯真",
+        "危险",
+        "低警惕",
+        "无知"
+      ]
     },
     {
       "id": "power-queen",
       "name_zh": "权力女王型",
       "definition": "角色直接控制职位、资源、惩罚和晋升，亲密关系必须在权力结构中重新定价。",
-      "search_tags": ["权力", "女王", "资源", "控制"]
+      "search_tags": [
+        "权力",
+        "女王",
+        "资源",
+        "控制"
+      ]
     },
     {
       "id": "narrative-manipulation",
       "name_zh": "叙事操纵型",
       "definition": "角色选择事实、定义动机并抢占解释权，使叙事产生现实后果。",
-      "search_tags": ["叙事", "操纵", "解释权", "事实选择"]
+      "search_tags": [
+        "叙事",
+        "操纵",
+        "解释权",
+        "事实选择"
+      ]
     },
     {
       "id": "redemption-complicity",
       "name_zh": "救赎共谋型",
       "definition": "双方以救赎为入口共同越界，互相包庇使依赖、罪责和亲密同步增长。",
-      "search_tags": ["救赎", "共谋", "包庇", "依赖"]
+      "search_tags": [
+        "救赎",
+        "共谋",
+        "包庇",
+        "依赖"
+      ]
     },
     {
       "id": "discipline-awakening",
       "name_zh": "规训觉醒型",
       "definition": "角色先内化外部规范，随后发现规则分配不公并夺回自我定义权。",
-      "search_tags": ["规训", "觉醒", "规则", "定义权"]
+      "search_tags": [
+        "规训",
+        "觉醒",
+        "规则",
+        "定义权"
+      ]
     }
   ],
   "character_records": [
@@ -413,6 +533,126 @@
       "name_zh": "杜十娘",
       "tier": "Gold",
       "primary_archetype_id": "resource-carrier"
+    },
+    {
+      "card_id": "CN-JSTY-002",
+      "name_zh": "白素贞",
+      "tier": "Gold",
+      "primary_archetype_id": "identity-contrast"
+    },
+    {
+      "card_id": "CN-JSTY-003",
+      "name_zh": "小青",
+      "tier": "Silver",
+      "primary_archetype_id": "survival-adaptation"
+    },
+    {
+      "card_id": "CN-LZ-001",
+      "name_zh": "聂小倩",
+      "tier": "Gold",
+      "primary_archetype_id": "redemption-complicity"
+    },
+    {
+      "card_id": "CN-XXJ-001",
+      "name_zh": "崔莺莺",
+      "tier": "Gold",
+      "primary_archetype_id": "discipline-awakening"
+    },
+    {
+      "card_id": "CN-MDT-001",
+      "name_zh": "杜丽娘",
+      "tier": "Gold",
+      "primary_archetype_id": "emotional-obsession"
+    },
+    {
+      "card_id": "CN-HXY-001",
+      "name_zh": "霍小玉",
+      "tier": "Gold",
+      "primary_archetype_id": "emotional-obsession"
+    },
+    {
+      "card_id": "CN-HLM-004",
+      "name_zh": "薛宝钗",
+      "tier": "Silver",
+      "primary_archetype_id": "interest-marriage"
+    },
+    {
+      "card_id": "CN-HLM-005",
+      "name_zh": "林黛玉",
+      "tier": "Gold",
+      "primary_archetype_id": "neglect-compensation"
+    },
+    {
+      "card_id": "CN-HLM-006",
+      "name_zh": "晴雯",
+      "tier": "Gold",
+      "primary_archetype_id": "fierce-self-respect"
+    },
+    {
+      "card_id": "CN-HLM-007",
+      "name_zh": "袭人",
+      "tier": "Gold",
+      "primary_archetype_id": "gentle-dependence"
+    },
+    {
+      "card_id": "WC-AK-001",
+      "name_zh": "安娜·卡列尼娜",
+      "tier": "Gold",
+      "primary_archetype_id": "marital-entrapment-transgression"
+    },
+    {
+      "card_id": "WC-MB-001",
+      "name_zh": "包法利夫人",
+      "tier": "Gold",
+      "primary_archetype_id": "desire-escalation"
+    },
+    {
+      "card_id": "WC-CAR-001",
+      "name_zh": "卡门",
+      "tier": "Gold",
+      "primary_archetype_id": "temptation-control"
+    },
+    {
+      "card_id": "WC-GWTW-001",
+      "name_zh": "郝思嘉",
+      "tier": "Gold",
+      "primary_archetype_id": "survival-adaptation"
+    },
+    {
+      "card_id": "WC-VF-001",
+      "name_zh": "贝姬·夏泼",
+      "tier": "Gold",
+      "primary_archetype_id": "ambition-ascension"
+    },
+    {
+      "card_id": "WC-JE-001",
+      "name_zh": "简·爱",
+      "tier": "Gold",
+      "primary_archetype_id": "discipline-awakening"
+    },
+    {
+      "card_id": "MY-MED-001",
+      "name_zh": "美狄亚",
+      "tier": "Gold",
+      "primary_archetype_id": "revenge-destruction"
+    },
+    {
+      "card_id": "MY-OD-001",
+      "name_zh": "喀耳刻",
+      "tier": "Silver",
+      "primary_archetype_id": "power-queen"
+    },
+    {
+      "card_id": "WC-AN-001",
+      "name_zh": "山鲁佐德",
+      "tier": "Gold",
+      "primary_archetype_id": "narrative-manipulation"
+    },
+    {
+      "card_id": "MY-OR-001",
+      "name_zh": "克吕泰涅斯特拉",
+      "tier": "Gold",
+      "primary_archetype_id": "revenge-destruction"
     }
   ]
 }
