@@ -34,6 +34,11 @@ $jsonlText = Read-Utf8Strict $jsonlPath
 $records = @($jsonlText -split "`r?`n" | Where-Object { $_.Trim() } | ForEach-Object { $_ | ConvertFrom-Json })
 Assert-True ($records.Count -ge 2) 'At least two calibrated records are required'
 Assert-True ((@($records.card_id | Sort-Object -Unique)).Count -eq $records.Count) 'Duplicate card_id in characters.jsonl'
+Assert-True ($records.Count -eq 10) 'Batch 001 must contain exactly ten production records'
+Assert-True ((@($archetypes.character_records.card_id | Sort-Object -Unique)).Count -eq $records.Count) 'archetypes.json character_records count mismatch'
+foreach ($recordId in $records.card_id) {
+    Assert-True ($archetypes.character_records.card_id -contains $recordId) "Missing character_records entry for $recordId"
+}
 
 foreach ($record in $records) {
     foreach ($field in $requiredMachineFields) {
@@ -79,6 +84,10 @@ foreach ($record in $records) {
     Assert-True ($cardText -match '(?m)^## H4\. 明确成年现代都市视觉移植$') "Missing H4 in $($record.card_id)"
     Assert-True ($cardText -match '`adaptation_adult_status` \| `DESIGNATED_ADULT`') "H4 status missing in $($record.card_id)"
     Assert-True ($cardText -match '是否把 H4 设计倒填为原著事实：`NO`') "H4 reverse-pollution gate failed in $($record.card_id)"
+    if ($record.adult_status -eq 'UNKNOWN') {
+        Assert-True ($cardText -match '允许直白身体分析：`NO`') "UNKNOWN adult original V must be closed in $($record.card_id)"
+        Assert-True ($cardText -match '低俗第一眼：`NOT_APPLICABLE：年龄门未通过`') "UNKNOWN adult original first glance must be NOT_APPLICABLE in $($record.card_id)"
+    }
     foreach ($stage in @('长期匮乏','诱因','第一次越界','即时奖励','自我合理化','风险提高','继续加码','最终代价')) {
         Assert-True ($cardText -match "(?m)^\| $stage \|") "Missing M stage $stage in $($record.card_id)"
     }
@@ -99,6 +108,34 @@ foreach ($record in $records) {
         Assert-True ($line -match "$($record.card_id)-S\d{2}:" ) "F fact lacks source locator in $($record.card_id): $line"
     }
 }
+
+$primaryVisualFocus = @($records | ForEach-Object { $_.retrieval_capsule.visual_signature.memory_points[0] })
+$largestExactFocusGroup = @($primaryVisualFocus | Group-Object | Sort-Object Count -Descending | Select-Object -First 1)[0]
+Assert-True ($largestExactFocusGroup.Count -le 3) "Visual 30 percent rule failed for exact focus $($largestExactFocusGroup.Name)"
+Assert-True ((@($records.adult_adaptation_role | Sort-Object -Unique)).Count -ge 8) 'Occupation distribution is too concentrated'
+
+$requiredIndexes = @(
+    'master-index.md',
+    'by-archetype.md',
+    'by-visual-hook.md',
+    'by-identity.md',
+    'by-desire-mechanism.md',
+    'by-power-method.md',
+    'by-secret-method.md',
+    'by-modern-role.md',
+    'by-plot-engine.md'
+)
+foreach ($indexName in $requiredIndexes) {
+    Assert-True (Test-Path -LiteralPath (Join-Path $repoRoot "indexes/$indexName")) "Missing required index $indexName"
+}
+$batchAuditPath = Join-Path $repoRoot 'batches/batch-001-ten-gold-candidates.md'
+Assert-True (Test-Path -LiteralPath $batchAuditPath) 'Missing ten-card global audit'
+$batchAuditText = Read-Utf8Strict $batchAuditPath
+foreach ($pair in @('Pair A','Pair B','Pair C','Pair D')) {
+    Assert-True ($batchAuditText.Contains($pair)) "Missing $pair audit"
+}
+Assert-True ($batchAuditText.Contains('visual_30_percent_rule`：`PASS')) 'Batch visual distribution audit not passed'
+Assert-True ($batchAuditText.Contains('occupation_distribution`：`PASS')) 'Batch occupation distribution audit not passed'
 
 $markdownFiles = Get-ChildItem -LiteralPath $repoRoot -Filter '*.md' -File -Recurse | Where-Object { $_.FullName -notmatch '[\\/]\.git[\\/]' }
 foreach ($file in $markdownFiles) {

@@ -8,3 +8,11 @@
 | `CN-SHZ-001` | 下沉都市 | 商演经纪助理 | 仅容器提案 | 住房依赖、外部合作与账目秘密 |
 | `CN-SHZ-001` | 中产都市（PRIMARY） | 30岁商业地产项目合规档案主管/室内乐主唱 | `DESIGNATED_ADULT` | 同居财产退出与项目秘密同场清算 |
 | `CN-SHZ-001` | 高资源都市 | 家族基金会捐赠合规秘书 | 仅容器提案 | 非公开关系、关联交易与声誉和解 |
+| `CN-JPM-002` | 小生意（PRIMARY） | 33岁县域母婴连锁出资人兼库管 | `DESIGNATED_ADULT` | 把经营权借给保护者 |
+| `CN-JPM-003` | 下沉服务（PRIMARY） | 29岁宴会酒店包厢调度领班 | `DESIGNATED_ADULT` | 临时总钥匙变个人领地 |
+| `CN-JPM-004` | 全职伴侣（PRIMARY） | 41岁家庭资产管理员 | `DESIGNATED_ADULT` | 丈夫失能后冻结家庭公司风险 |
+| `CN-JPM-005` | 小生意（PRIMARY） | 36岁面料档口女老板 | `DESIGNATED_ADULT` | 亲属伴侣争夺库存租约决策 |
+| `CN-HLM-001` | 高资源（PRIMARY） | 34岁家族物业与宴会总协调 | `DESIGNATED_ADULT` | 以资产合规整顿处理丈夫外宅 |
+| `CN-HLM-002` | 下沉服务（PRIMARY） | 31岁月子中心跟单兼宿管 | `DESIGNATED_ADULT` | 正妻以正规化之名收走退路 |
+| `CN-HLM-003` | 灰色边缘合法（PRIMARY） | 27岁Livehouse酒水招商主管兼主持 | `DESIGNATED_ADULT` | 流言导致退婚与公开决裂 |
+| `CN-JSTY-001` | 灰色边缘合法/微商（PRIMARY） | 30岁会所客户经理兼珠宝寄卖人 | `DESIGNATED_ADULT` | 男友接受竞争方转签报价 |

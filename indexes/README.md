@@ -25,7 +25,7 @@ Stage 3B 起加入 R 快速调用胶囊。`data/characters.jsonl` 是机器摘�
 | `hybridization-pool.json` | 已通过质量门的可输出槽位 | `card_id + slot_id` |
 | `nearest-neighbors.json` | Anti-Clone 最近邻和差异 | `card_id` |
 
-当前人工可读索引为：`master-index.md`、`by-archetype.md`、`by-visual-hook.md`、`by-modern-role.md`、`by-relationship-mechanism.md`、`by-plot-engine.md`。首批只有两张卡时，最近邻互指；后续入库必须重算。
+当前人工可读索引为：`master-index.md`、`by-archetype.md`、`by-visual-hook.md`、`by-identity.md`、`by-desire-mechanism.md`、`by-power-method.md`、`by-secret-method.md`、`by-modern-role.md`、`by-relationship-mechanism.md`、`by-plot-engine.md`。Batch 001 已按十卡重算最近邻。
 
 上述文件只有出现合格人物卡后才创建，不为保持目录好看而生成空伪数据。
 

@@ -365,6 +365,54 @@
       "name_zh": "阎婆惜",
       "tier": "Gold",
       "primary_archetype_id": "secret-bargaining"
+    },
+    {
+      "card_id": "CN-JPM-002",
+      "name_zh": "李瓶儿",
+      "tier": "Gold",
+      "primary_archetype_id": "resource-carrier"
+    },
+    {
+      "card_id": "CN-JPM-003",
+      "name_zh": "庞春梅",
+      "tier": "Gold",
+      "primary_archetype_id": "lower-strata-observer"
+    },
+    {
+      "card_id": "CN-JPM-004",
+      "name_zh": "吴月娘",
+      "tier": "Gold",
+      "primary_archetype_id": "lawful-wife-order"
+    },
+    {
+      "card_id": "CN-JPM-005",
+      "name_zh": "孟玉楼",
+      "tier": "Gold",
+      "primary_archetype_id": "survival-adaptation"
+    },
+    {
+      "card_id": "CN-HLM-001",
+      "name_zh": "王熙凤",
+      "tier": "Gold",
+      "primary_archetype_id": "power-queen"
+    },
+    {
+      "card_id": "CN-HLM-002",
+      "name_zh": "尤二姐",
+      "tier": "Gold",
+      "primary_archetype_id": "gentle-dependence"
+    },
+    {
+      "card_id": "CN-HLM-003",
+      "name_zh": "尤三姐",
+      "tier": "Gold",
+      "primary_archetype_id": "fierce-self-respect"
+    },
+    {
+      "card_id": "CN-JSTY-001",
+      "name_zh": "杜十娘",
+      "tier": "Gold",
+      "primary_archetype_id": "resource-carrier"
     }
   ]
 }
