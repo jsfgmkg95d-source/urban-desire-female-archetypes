@@ -7,7 +7,7 @@
 | 字段 | 值 |
 |---|---|
 | `card_id` | `人物稳定ID，建议：来源类别-作品-人物` |
-| `schema_version` | `1.0.0` |
+| `schema_version` | `1.1.0` |
 | `tier` | `Gold / Silver / Reference` |
 | `name_zh` |  |
 | `name_original` |  |
@@ -195,6 +195,58 @@
 - 最小可行剧情场景：
 - 明确禁止照搬的原剧情：
 
+## H4. 明确成年现代都市视觉移植
+
+> 本节全部属于 `ADAPTATION`，是与原角色完全分离的原创现代人物设计。原角色为 `UNKNOWN` 或 `CONFIRMED_MINOR` 时，V 层仍须保持非情色；H4 不得反向证明原角色成年，也不得倒填为原著身体事实。
+
+### H4.1 成人设计门
+
+| 字段 | 值 |
+|---|---|
+| `adaptation_age` | `明确 21 岁以上具体年龄或年龄区间` |
+| `adaptation_adult_status` | `DESIGNATED_ADULT` |
+| `adaptation_role` |  |
+| `adaptation_marital_status` |  |
+| `adaptation_class_position` |  |
+
+### H4.2 现代身体签名（只允许 1—3 个）
+
+| `visual_id` | 核心记忆点 | 直接视觉描述 | 为什么适合人物机制 | 与职业/婚姻/阶层的身份反差 | 产生的欲望、误判、竞争、权力或危险 |
+|---|---|---|---|---|---|
+| `H4-V01` | `胸/腰/臀/腿/肩颈/丰润度/骨感/高挑/成熟肉感/姿态/比例/其他` |  |  |  |  |
+
+### H4.3 都市低俗第一眼
+
+> 只针对 H4 的明确成年原创人物写 1—3 句。允许直白、下沉的男性第一视觉，但不得写性器官或具体性行为；必须指出人物误读或剧情后果。
+
+- `ADAPTATION` 低俗第一眼：
+- 最可能造成的误读：
+- 触发的剧情功能：
+
+### H4.4 穿衣反差
+
+| 状态 | 衣着、姿态或动作 | 身份与身体反差 | 误判/吸引/关系升级后果 |
+|---|---|---|---|
+| 工作/公共身份状态 |  |  |  |
+| 身份反差最强状态 |  |  |  |
+| 危险场景状态 |  |  |  |
+
+### H4.5 机器检索摘要
+
+- `adult_adaptation_age`：
+- `adult_adaptation_role`：
+- `adult_visual_signature`：
+- `adult_low_register_first_glance`：
+- `adult_identity_body_contrast`：
+- `adult_clothing_contrast`：
+- `adult_visual_plot_functions`：
+
+### H4.6 边界声明
+
+- H4 是否全部标记为 `ADAPTATION`：`YES / NO`
+- 是否保持原角色 F/V 年龄门不变：`YES / NO`
+- 是否把 H4 设计倒填为原著事实：`YES / NO`（必须为 `NO`）
+
 ---
 
 # X = 人物杂交接口
@@ -313,6 +365,7 @@
 - [ ] 已按 `references/visual-language.md` 完成年龄门和视觉功能审计。
 - [ ] 已按 `references/quality-gate.md` 定级，没有为填满模板而脑补。
 - [ ] 已按 `references/hybridization-rules.md` 检查 X 层。
+- [ ] H4 已通过明确成年现代移植门，且没有反向污染原角色 F/V 层。
 - [ ] 已更新机器记录与索引，字段值符合 `data/archetypes.json` 和 `indexes/README.md`。
 - [ ] 本卡没有复制原作专有剧情，也没有生成其他人物条目。
 

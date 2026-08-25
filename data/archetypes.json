@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "library": {
     "slug": "urban-desire-female-archetypes",
     "name_zh": "都市欲望女性原型库",
@@ -66,6 +66,13 @@
       "fatal_miscalculation",
       "plot_engine_ids",
       "urban_preserve",
+      "adult_adaptation_age",
+      "adult_adaptation_role",
+      "adult_visual_signature",
+      "adult_low_register_first_glance",
+      "adult_identity_body_contrast",
+      "adult_clothing_contrast",
+      "adult_visual_plot_functions",
       "hybridization_slots",
       "scores",
       "nearest_neighbor_card_id",
@@ -89,6 +96,9 @@
       "CONFIRMED_ADULT",
       "CONFIRMED_MINOR",
       "UNKNOWN"
+    ],
+    "adaptation_adult_status": [
+      "DESIGNATED_ADULT"
     ],
     "record_status": [
       "DRAFT",
@@ -141,6 +151,12 @@
     "gold_plot_engines_min": 3,
     "gold_questions_required": 12,
     "adult_visual_analysis_requires": "CONFIRMED_ADULT",
+    "adult_adaptation_age_min": 21,
+    "adult_adaptation_status_requires": "DESIGNATED_ADULT",
+    "adult_adaptation_visual_signature_min": 1,
+    "adult_adaptation_visual_signature_max": 3,
+    "adult_adaptation_statement_type": "ADAPTATION",
+    "adult_adaptation_must_not_enable_original_v": true,
     "score_min": 0,
     "score_max": 5,
     "evidence_confidence_min": 0,

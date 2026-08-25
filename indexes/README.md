@@ -55,6 +55,13 @@
   "fatal_miscalculation": "normalized phrase",
   "plot_engine_ids": [],
   "urban_preserve": [],
+  "adult_adaptation_age": "21+ explicit age or range",
+  "adult_adaptation_role": "modern original role",
+  "adult_visual_signature": [],
+  "adult_low_register_first_glance": "adult adaptation only",
+  "adult_identity_body_contrast": [],
+  "adult_clothing_contrast": {},
+  "adult_visual_plot_functions": [],
   "hybridization_slots": [],
   "scores": {},
   "nearest_neighbor_card_id": null,
@@ -81,7 +88,7 @@
 
 ### 都市剧情
 
-按2020年代必须保留项、职业/城市容器、三个剧情发动机、危险等级和可移植性筛选。
+按2020年代必须保留项、职业/城市容器、三个剧情发动机、危险等级和可移植性筛选。H4 成人视觉检索必须同时返回 `adult_adaptation_age`、`adult_adaptation_role`、视觉签名、身份身体反差、穿衣反差和剧情功能，并明确标记为 `ADAPTATION`。
 
 ### 杂交
 
@@ -93,6 +100,7 @@
 2. 查询 Gold 时必须确认最近邻审计仍有效；库新增卡后可能需要重算。
 3. `UNKNOWN` 不得当作否定值。例如“未知是否有秘密”不能进入“没有秘密”结果。
 4. 视觉查询必须应用成年状态过滤；`CONFIRMED_MINOR` 和 `UNKNOWN` 不进入情色化身体检索。
+   H4 是独立例外路径：只检索 `DESIGNATED_ADULT` 且明确 21+ 的现代原创移植，不得把结果合并为原角色 V 事实。
 5. S 分值只用于排序，最终结果必须同时展示机制理由。
 6. 索引与卡片冲突时，以卡片和来源为准，索引标记过期并重建。
 
