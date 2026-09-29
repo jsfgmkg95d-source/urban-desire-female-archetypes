@@ -1,0 +1,32 @@
+name: Validate library
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Library / ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    env:
+      PYTHONUTF8: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check generated views
+        run: python scripts/build-indexes.py --check
+      - name: Validate library
+        run: python scripts/validate-library.py
+      - name: Check PowerShell entry point
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: ./scripts/validate-library.ps1
