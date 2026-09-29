@@ -1,0 +1,3379 @@
+{
+  "format_version": "1.0.0",
+  "library_version": "v0.1.0",
+  "schema_version": "1.2.0",
+  "quality_status": "research-preview",
+  "generated_by": "scripts/build-discovery.py",
+  "hash_basis": "utf8-lf-text",
+  "library": {
+    "slug": "urban-desire-female-archetypes",
+    "name_zh": "都市欲望女性原型库",
+    "record_type": "female_archetype_character_card",
+    "fact_interpretation_adaptation_separated": true
+  },
+  "inputs": {
+    "contract": {
+      "path": "data/archetypes.json",
+      "sha256": "d5735e64e1f37fed2c4fc921d925fd94635233a8c199c6ce59642374f05d0896",
+      "hash_basis": "utf8-lf-text",
+      "byte_size": 16814,
+      "urls": {
+        "main": {
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/data/archetypes.json",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/data/archetypes.json"
+        },
+        "release": {
+          "ref": "v0.1.0",
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/data/archetypes.json",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/data/archetypes.json"
+        }
+      }
+    },
+    "reviewed_summaries": {
+      "path": "data/characters.jsonl",
+      "sha256": "27e5fac88de2e34849c0342c7e13bf6aebb1aab08e3319794e3dad0c34b77ffd",
+      "hash_basis": "utf8-lf-text",
+      "byte_size": 155067,
+      "urls": {
+        "main": {
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/data/characters.jsonl",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/data/characters.jsonl"
+        },
+        "release": {
+          "ref": "v0.1.0",
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/data/characters.jsonl",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/data/characters.jsonl"
+        }
+      }
+    },
+    "generator": {
+      "path": "scripts/build-discovery.py",
+      "sha256": "20a60d70825c90233140b18986fdac5558229f1c82ab8baa13c4053612a23ddb",
+      "hash_basis": "utf8-lf-text",
+      "byte_size": 16720,
+      "urls": {
+        "main": {
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/scripts/build-discovery.py",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/scripts/build-discovery.py"
+        },
+        "release": {
+          "ref": "v0.1.0",
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/scripts/build-discovery.py",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/scripts/build-discovery.py"
+        }
+      }
+    },
+    "stable_path_resolver": {
+      "path": "scripts/build-indexes.py",
+      "sha256": "72c52506611a7f00307c2cb4c45615a0910d00cf4e8a8a5ddbe256ff72039b48",
+      "hash_basis": "utf8-lf-text",
+      "byte_size": 14806,
+      "urls": {
+        "main": {
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/scripts/build-indexes.py",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/scripts/build-indexes.py"
+        },
+        "release": {
+          "ref": "v0.1.0",
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/scripts/build-indexes.py",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/scripts/build-indexes.py"
+        }
+      }
+    }
+  },
+  "counts": {
+    "character_cards": 30,
+    "source_records": 30,
+    "source_ids": 98,
+    "archetypes": 24,
+    "internal_tiers": {
+      "Gold": 27,
+      "Silver": 3
+    },
+    "source_categories": {
+      "chinese-classics": 20,
+      "mythology-and-epics": 3,
+      "world-classics": 7
+    },
+    "original_character_adult_status": {
+      "CONFIRMED_ADULT": 9,
+      "CONFIRMED_MINOR": 4,
+      "UNKNOWN": 17
+    }
+  },
+  "quality": {
+    "status": "research-preview",
+    "tier_scope": "internal-assessment",
+    "independent_certification": false,
+    "known_limitations": [
+      "Some fact locators remain placeholders; follow card and source records and verify before factual use.",
+      "Gold, Silver, PASS, scores, and confidence values are internal judgments, not external verification.",
+      "Interpretations and modern adaptations must not be promoted to source facts or copied as original plots.",
+      "Original character adult_status and designated modern adaptation age are separate fields."
+    ],
+    "assessment_path": "docs/open-source-assessment.md"
+  },
+  "licensing": {
+    "original_content": {
+      "identifier": "CC-BY-4.0",
+      "license_path": "LICENSE",
+      "scope": "Original documentation, analysis, templates, and data expressions the contributor is entitled to license"
+    },
+    "code": {
+      "identifier": "MIT",
+      "license_path": "LICENSES/MIT.txt",
+      "scope": "Scripts, tests, and workflow code"
+    },
+    "third_party_material": {
+      "included_in_project_license": false,
+      "notice_path": "THIRD_PARTY_NOTICES.md",
+      "scope": "Source works, translations, quotes, linked pages, and other third-party expressions retain their own rights"
+    },
+    "attribution_and_scope_path": "COPYRIGHT.md"
+  },
+  "records": [
+    {
+      "card_id": "CN-HLM-001",
+      "name_zh": "王熙凤",
+      "aliases": [
+        "凤姐",
+        "琏二奶奶",
+        "凤辣子"
+      ],
+      "source_category": "chinese-classics",
+      "source_work": "红楼梦（程甲本前80回）",
+      "primary_archetype": {
+        "id": "power-queen",
+        "name_zh": "权力女王型"
+      },
+      "secondary_archetype_ids": [
+        "high-intellect-operator",
+        "narrative-manipulation",
+        "inner-court-competition"
+      ],
+      "original_character_adult_status": "UNKNOWN",
+      "modern_adaptation_age": 34,
+      "layer_completion": {
+        "F": true,
+        "V": true,
+        "M": true,
+        "P": true,
+        "H": true,
+        "X": true,
+        "S": true,
+        "A": true,
+        "R": true
+      },
+      "internal_assessment": {
+        "tier": "Gold",
+        "anti_clone_result": "PASS",
+        "scope": "internal-assessment",
+        "independently_certified": false
+      },
+      "search_terms": [
+        "王熙凤",
+        "凤姐",
+        "琏二奶奶",
+        "凤辣子",
+        "红楼梦（程甲本前80回）",
+        "power-queen",
+        "权力女王型",
+        "权力",
+        "女王",
+        "资源",
+        "控制",
+        "high-intellect-operator",
+        "narrative-manipulation",
+        "inner-court-competition"
+      ],
+      "mechanism_summary": {
+        "statement_type": "INTERPRETATION",
+        "long_term_lack": "不靠持续办事也能保有的独立安全与爱",
+        "power_method": "制度位置、账目、人事、长辈和代理网",
+        "secret_leverage": "分类延迟公开并让代理人执行",
+        "escalation_logic": "诉讼舆论住房等合法动作组合成围堵",
+        "fatal_miscalculation": "程序可无限延期私人化用权代价"
+      },
+      "modern_adaptation": {
+        "statement_type": "ADAPTATION",
+        "role": "高资源家族物业与宴会事务总协调"
+      },
+      "card": {
+        "path": "characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-001_王熙凤.md",
+        "sha256": "5c7f4f763161d456545343f04078a6cba89df4a03bad1cb9ccf75f05becc97be",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 12375,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-001_%E7%8E%8B%E7%86%99%E5%87%A4.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-001_%E7%8E%8B%E7%86%99%E5%87%A4.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-001_%E7%8E%8B%E7%86%99%E5%87%A4.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-001_%E7%8E%8B%E7%86%99%E5%87%A4.md"
+          }
+        }
+      },
+      "source_record": {
+        "path": "sources/CN-HLM-001_sources.md",
+        "sha256": "18a72f0319c8ab4fc458855cd60da744005bf46b19e8192c45ba7d34aa6c83ae",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 1097,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/sources/CN-HLM-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/sources/CN-HLM-001_sources.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/sources/CN-HLM-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/sources/CN-HLM-001_sources.md"
+          }
+        }
+      },
+      "source_ids": [
+        "CN-HLM-001-S01",
+        "CN-HLM-001-S02",
+        "CN-HLM-001-S03",
+        "CN-HLM-001-S04"
+      ],
+      "summary_lookup": {
+        "path": "data/characters.jsonl",
+        "key": "card_id",
+        "value": "CN-HLM-001"
+      }
+    },
+    {
+      "card_id": "CN-HLM-002",
+      "name_zh": "尤二姐",
+      "aliases": [
+        "二姐儿"
+      ],
+      "source_category": "chinese-classics",
+      "source_work": "红楼梦（程甲本前80回）",
+      "primary_archetype": {
+        "id": "gentle-dependence",
+        "name_zh": "温柔依附型"
+      },
+      "secondary_archetype_ids": [
+        "interest-marriage",
+        "survival-adaptation",
+        "inner-court-competition"
+      ],
+      "original_character_adult_status": "UNKNOWN",
+      "modern_adaptation_age": 31,
+      "layer_completion": {
+        "F": true,
+        "V": true,
+        "M": true,
+        "P": true,
+        "H": true,
+        "X": true,
+        "S": true,
+        "A": true,
+        "R": true
+      },
+      "internal_assessment": {
+        "tier": "Gold",
+        "anti_clone_result": "PASS",
+        "scope": "internal-assessment",
+        "independently_certified": false
+      },
+      "search_terms": [
+        "尤二姐",
+        "二姐儿",
+        "红楼梦（程甲本前80回）",
+        "gentle-dependence",
+        "温柔依附型",
+        "温柔",
+        "依附",
+        "照料",
+        "安全",
+        "interest-marriage",
+        "survival-adaptation",
+        "inner-court-competition"
+      ],
+      "mechanism_summary": {
+        "statement_type": "INTERPRETATION",
+        "long_term_lack": "独立生计与合法容身",
+        "power_method": "照料、和顺与降低伴侣情绪成本",
+        "secret_leverage": "前期配合隐瞒，入府后失去秘密控制",
+        "escalation_logic": "进入敌手流程并持续用顺从换正式接纳",
+        "fatal_miscalculation": "施害者提供的正式接纳是合法化通道"
+      },
+      "modern_adaptation": {
+        "statement_type": "ADAPTATION",
+        "role": "城郊月子中心餐食跟单兼宿舍管理员"
+      },
+      "card": {
+        "path": "characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-002_尤二姐.md",
+        "sha256": "a0535e01640f3088c0596af8f2d6f0f83fb0f07939b04f12dd1c00009cad07ad",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 12387,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-002_%E5%B0%A4%E4%BA%8C%E5%A7%90.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-002_%E5%B0%A4%E4%BA%8C%E5%A7%90.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-002_%E5%B0%A4%E4%BA%8C%E5%A7%90.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-002_%E5%B0%A4%E4%BA%8C%E5%A7%90.md"
+          }
+        }
+      },
+      "source_record": {
+        "path": "sources/CN-HLM-002_sources.md",
+        "sha256": "0a92b1788d823c628bc03b27c5fcbf049044179a21a8cbdcba5d1cdbc5ccd8c2",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 1106,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/sources/CN-HLM-002_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/sources/CN-HLM-002_sources.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/sources/CN-HLM-002_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/sources/CN-HLM-002_sources.md"
+          }
+        }
+      },
+      "source_ids": [
+        "CN-HLM-002-S01",
+        "CN-HLM-002-S02",
+        "CN-HLM-002-S03",
+        "CN-HLM-002-S04"
+      ],
+      "summary_lookup": {
+        "path": "data/characters.jsonl",
+        "key": "card_id",
+        "value": "CN-HLM-002"
+      }
+    },
+    {
+      "card_id": "CN-HLM-003",
+      "name_zh": "尤三姐",
+      "aliases": [
+        "三姐儿",
+        "尤三姑娘"
+      ],
+      "source_category": "chinese-classics",
+      "source_work": "红楼梦（程甲本前80回）",
+      "primary_archetype": {
+        "id": "fierce-self-respect",
+        "name_zh": "烈性自尊型"
+      },
+      "secondary_archetype_ids": [
+        "emotional-obsession",
+        "narrative-manipulation"
+      ],
+      "original_character_adult_status": "UNKNOWN",
+      "modern_adaptation_age": 27,
+      "layer_completion": {
+        "F": true,
+        "V": true,
+        "M": true,
+        "P": true,
+        "H": true,
+        "X": true,
+        "S": true,
+        "A": true,
+        "R": true
+      },
+      "internal_assessment": {
+        "tier": "Gold",
+        "anti_clone_result": "PASS",
+        "scope": "internal-assessment",
+        "independently_certified": false
+      },
+      "search_terms": [
+        "尤三姐",
+        "三姐儿",
+        "尤三姑娘",
+        "红楼梦（程甲本前80回）",
+        "fierce-self-respect",
+        "烈性自尊型",
+        "自尊",
+        "羞辱",
+        "边界",
+        "退路",
+        "emotional-obsession",
+        "narrative-manipulation"
+      ],
+      "mechanism_summary": {
+        "statement_type": "INTERPRETATION",
+        "long_term_lack": "过去不取消当下选择资格的尊严",
+        "power_method": "控制可得性、公开羞辱与不可撤回行动",
+        "secret_leverage": "几乎不用秘密，倾向公开宣言和测试",
+        "escalation_logic": "把未来压在单一候选、誓言和信物上",
+        "fatal_miscalculation": "只有不可逆行动才能证明自己说真话"
+      },
+      "modern_adaptation": {
+        "statement_type": "ADAPTATION",
+        "role": "Livehouse酒水招商主管兼驻场主持"
+      },
+      "card": {
+        "path": "characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-003_尤三姐.md",
+        "sha256": "f9c7dcb5db0ab9c39c9bfd494cfad252a9e01b8cd5e3b92ae04138c5b9c390e4",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 11862,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-003_%E5%B0%A4%E4%B8%89%E5%A7%90.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-003_%E5%B0%A4%E4%B8%89%E5%A7%90.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-003_%E5%B0%A4%E4%B8%89%E5%A7%90.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-003_%E5%B0%A4%E4%B8%89%E5%A7%90.md"
+          }
+        }
+      },
+      "source_record": {
+        "path": "sources/CN-HLM-003_sources.md",
+        "sha256": "b946318c90dfda2e0b9bbdd39b7709355b84a6de04dca933d8728773dca2f5a3",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 916,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/sources/CN-HLM-003_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/sources/CN-HLM-003_sources.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/sources/CN-HLM-003_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/sources/CN-HLM-003_sources.md"
+          }
+        }
+      },
+      "source_ids": [
+        "CN-HLM-003-S01",
+        "CN-HLM-003-S02",
+        "CN-HLM-003-S03"
+      ],
+      "summary_lookup": {
+        "path": "data/characters.jsonl",
+        "key": "card_id",
+        "value": "CN-HLM-003"
+      }
+    },
+    {
+      "card_id": "CN-HLM-004",
+      "name_zh": "薛宝钗",
+      "aliases": [
+        "宝姐姐",
+        "蘅芜君"
+      ],
+      "source_category": "chinese-classics",
+      "source_work": "《红楼梦》程甲本前80回",
+      "primary_archetype": {
+        "id": "interest-marriage",
+        "name_zh": "利益婚姻型"
+      },
+      "secondary_archetype_ids": [
+        "lawful-wife-order",
+        "discipline-awakening",
+        "resource-carrier"
+      ],
+      "original_character_adult_status": "CONFIRMED_MINOR",
+      "modern_adaptation_age": 28,
+      "layer_completion": {
+        "F": true,
+        "V": true,
+        "M": true,
+        "P": true,
+        "H": true,
+        "X": true,
+        "S": true,
+        "A": true,
+        "R": true
+      },
+      "internal_assessment": {
+        "tier": "Silver",
+        "anti_clone_result": "PASS",
+        "scope": "internal-assessment",
+        "independently_certified": false
+      },
+      "search_terms": [
+        "薛宝钗",
+        "宝姐姐",
+        "蘅芜君",
+        "《红楼梦》程甲本前80回",
+        "interest-marriage",
+        "利益婚姻型",
+        "婚姻",
+        "利益",
+        "联盟",
+        "交易",
+        "lawful-wife-order",
+        "discipline-awakening",
+        "resource-carrier"
+      ],
+      "mechanism_summary": {
+        "statement_type": "INTERPRETATION",
+        "long_term_lack": "让商贾家庭出身在高门秩序里获得稳定、无可挑剔的资格",
+        "power_method": "知识广度、情绪稳定、资源判断与长辈信任",
+        "secret_leverage": "迅速改写现场叙事，保护自己及系统体面",
+        "escalation_logic": "从自我克制升级到替他人修补秩序、管理资源和承担情绪成本",
+        "fatal_miscalculation": "把“适合进入婚姻”误当成“会在婚姻里被真正选择”"
+      },
+      "modern_adaptation": {
+        "statement_type": "ADAPTATION",
+        "role": "家族医药公司合规经理"
+      },
+      "card": {
+        "path": "characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-004_薛宝钗.md",
+        "sha256": "b6c3e917f4a787f6936f0f0f08e49519a0ed1bd7f045d67d95ccd90c969d57bc",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 16548,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-004_%E8%96%9B%E5%AE%9D%E9%92%97.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-004_%E8%96%9B%E5%AE%9D%E9%92%97.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-004_%E8%96%9B%E5%AE%9D%E9%92%97.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-004_%E8%96%9B%E5%AE%9D%E9%92%97.md"
+          }
+        }
+      },
+      "source_record": {
+        "path": "sources/CN-HLM-004_sources.md",
+        "sha256": "3580ac5586c458a6392d4e5e087d061c5c2e4afd5008e5bf953fee283c6c98bd",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 1010,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/sources/CN-HLM-004_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/sources/CN-HLM-004_sources.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/sources/CN-HLM-004_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/sources/CN-HLM-004_sources.md"
+          }
+        }
+      },
+      "source_ids": [
+        "CN-HLM-004-S01",
+        "CN-HLM-004-S02",
+        "CN-HLM-004-S03"
+      ],
+      "summary_lookup": {
+        "path": "data/characters.jsonl",
+        "key": "card_id",
+        "value": "CN-HLM-004"
+      }
+    },
+    {
+      "card_id": "CN-HLM-005",
+      "name_zh": "林黛玉",
+      "aliases": [
+        "林妹妹",
+        "潇湘妃子"
+      ],
+      "source_category": "chinese-classics",
+      "source_work": "《红楼梦》程甲本前80回",
+      "primary_archetype": {
+        "id": "neglect-compensation",
+        "name_zh": "冷落寻补型"
+      },
+      "secondary_archetype_ids": [
+        "emotional-obsession",
+        "narrative-manipulation",
+        "fierce-self-respect"
+      ],
+      "original_character_adult_status": "CONFIRMED_MINOR",
+      "modern_adaptation_age": 26,
+      "layer_completion": {
+        "F": true,
+        "V": true,
+        "M": true,
+        "P": true,
+        "H": true,
+        "X": true,
+        "S": true,
+        "A": true,
+        "R": true
+      },
+      "internal_assessment": {
+        "tier": "Gold",
+        "anti_clone_result": "PASS",
+        "scope": "internal-assessment",
+        "independently_certified": false
+      },
+      "search_terms": [
+        "林黛玉",
+        "林妹妹",
+        "潇湘妃子",
+        "《红楼梦》程甲本前80回",
+        "neglect-compensation",
+        "冷落寻补型",
+        "冷落",
+        "注意力",
+        "补偿",
+        "替代关系",
+        "emotional-obsession",
+        "narrative-manipulation",
+        "fierce-self-respect"
+      ],
+      "mechanism_summary": {
+        "statement_type": "INTERPRETATION",
+        "long_term_lack": "在寄居与丧亲之后获得无需反复证明的排他理解",
+        "power_method": "对共同语言的定义权、情绪撤回和让对方自证理解的能力",
+        "secret_leverage": "把真实需求加密进诗、典故和反话，只奖励能读懂的人",
+        "escalation_logic": "从轻微讥刺升级到沉默、诗语、身体性撤回和让旁人代为试探",
+        "fatal_miscalculation": "把测试做得越痛，对方的追认就越能提供长期安全"
+      },
+      "modern_adaptation": {
+        "statement_type": "ADAPTATION",
+        "role": "独立文学编辑兼品牌文案"
+      },
+      "card": {
+        "path": "characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-005_林黛玉.md",
+        "sha256": "a838730fcae1c3f46c70a52eb4f195c3b12017971f8312937094711085a54cb4",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 16859,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-005_%E6%9E%97%E9%BB%9B%E7%8E%89.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-005_%E6%9E%97%E9%BB%9B%E7%8E%89.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-005_%E6%9E%97%E9%BB%9B%E7%8E%89.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-005_%E6%9E%97%E9%BB%9B%E7%8E%89.md"
+          }
+        }
+      },
+      "source_record": {
+        "path": "sources/CN-HLM-005_sources.md",
+        "sha256": "f04f1ed56947368c456f40abac939cfc14224ff9dccc3f226afdcb2a70306c38",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 1044,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/sources/CN-HLM-005_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/sources/CN-HLM-005_sources.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/sources/CN-HLM-005_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/sources/CN-HLM-005_sources.md"
+          }
+        }
+      },
+      "source_ids": [
+        "CN-HLM-005-S01",
+        "CN-HLM-005-S02",
+        "CN-HLM-005-S03"
+      ],
+      "summary_lookup": {
+        "path": "data/characters.jsonl",
+        "key": "card_id",
+        "value": "CN-HLM-005"
+      }
+    },
+    {
+      "card_id": "CN-HLM-006",
+      "name_zh": "晴雯",
+      "aliases": [],
+      "source_category": "chinese-classics",
+      "source_work": "《红楼梦》程甲本前80回",
+      "primary_archetype": {
+        "id": "fierce-self-respect",
+        "name_zh": "烈性自尊型"
+      },
+      "secondary_archetype_ids": [
+        "lower-strata-observer",
+        "discipline-awakening",
+        "identity-contrast"
+      ],
+      "original_character_adult_status": "UNKNOWN",
+      "modern_adaptation_age": 27,
+      "layer_completion": {
+        "F": true,
+        "V": true,
+        "M": true,
+        "P": true,
+        "H": true,
+        "X": true,
+        "S": true,
+        "A": true,
+        "R": true
+      },
+      "internal_assessment": {
+        "tier": "Gold",
+        "anti_clone_result": "PASS",
+        "scope": "internal-assessment",
+        "independently_certified": false
+      },
+      "search_terms": [
+        "晴雯",
+        "《红楼梦》程甲本前80回",
+        "fierce-self-respect",
+        "烈性自尊型",
+        "自尊",
+        "羞辱",
+        "边界",
+        "退路",
+        "lower-strata-observer",
+        "discipline-awakening",
+        "identity-contrast"
+      ],
+      "mechanism_summary": {
+        "statement_type": "INTERPRETATION",
+        "long_term_lack": "让低身份的熟练劳动者不必用顺从来换人格尊重",
+        "power_method": "稀缺手艺、现场直言和拒绝配合虚伪体面",
+        "secret_leverage": "更常当场挑明而非延迟要价，秘密权力低、边界权力高",
+        "escalation_logic": "从顶嘴、毁物升级到病中硬撑技能、面对审查仍拒绝低头",
+        "fatal_miscalculation": "把一个人的私下偏爱误认为足以对冲整套雇佣制度"
+      },
+      "modern_adaptation": {
+        "statement_type": "ADAPTATION",
+        "role": "奢侈品修复工作室高级绣补师"
+      },
+      "card": {
+        "path": "characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-006_晴雯.md",
+        "sha256": "d984a1e53aa51ce3ae92155e03a78f3a1bbfaa6e2c7a1e072af794edf96dfb86",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 16532,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-006_%E6%99%B4%E9%9B%AF.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-006_%E6%99%B4%E9%9B%AF.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-006_%E6%99%B4%E9%9B%AF.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-006_%E6%99%B4%E9%9B%AF.md"
+          }
+        }
+      },
+      "source_record": {
+        "path": "sources/CN-HLM-006_sources.md",
+        "sha256": "fe008146c1e05333456e378a9e2b32a845d02ed5a4d64a767e53dcf8d13faf7e",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 961,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/sources/CN-HLM-006_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/sources/CN-HLM-006_sources.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/sources/CN-HLM-006_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/sources/CN-HLM-006_sources.md"
+          }
+        }
+      },
+      "source_ids": [
+        "CN-HLM-006-S01",
+        "CN-HLM-006-S02",
+        "CN-HLM-006-S03"
+      ],
+      "summary_lookup": {
+        "path": "data/characters.jsonl",
+        "key": "card_id",
+        "value": "CN-HLM-006"
+      }
+    },
+    {
+      "card_id": "CN-HLM-007",
+      "name_zh": "袭人",
+      "aliases": [
+        "花珍珠",
+        "袭人"
+      ],
+      "source_category": "chinese-classics",
+      "source_work": "《红楼梦》程甲本前80回",
+      "primary_archetype": {
+        "id": "gentle-dependence",
+        "name_zh": "温柔依附型"
+      },
+      "secondary_archetype_ids": [
+        "lawful-wife-order",
+        "secret-bargaining",
+        "lower-strata-observer"
+      ],
+      "original_character_adult_status": "UNKNOWN",
+      "modern_adaptation_age": 30,
+      "layer_completion": {
+        "F": true,
+        "V": true,
+        "M": true,
+        "P": true,
+        "H": true,
+        "X": true,
+        "S": true,
+        "A": true,
+        "R": true
+      },
+      "internal_assessment": {
+        "tier": "Gold",
+        "anti_clone_result": "PASS",
+        "scope": "internal-assessment",
+        "independently_certified": false
+      },
+      "search_terms": [
+        "袭人",
+        "花珍珠",
+        "《红楼梦》程甲本前80回",
+        "gentle-dependence",
+        "温柔依附型",
+        "温柔",
+        "依附",
+        "照料",
+        "安全",
+        "lawful-wife-order",
+        "secret-bargaining",
+        "lower-strata-observer"
+      ],
+      "mechanism_summary": {
+        "statement_type": "INTERPRETATION",
+        "long_term_lack": "把可被随时转卖的照料劳动变成稳定、可升级的家庭位置",
+        "power_method": "照料惯例、撤离威胁、目标弱点和上级赞助",
+        "secret_leverage": "先内部消化，风险过阈值后向权威上报以换制度保护",
+        "escalation_logic": "从生活条件升级到风险上报、资源待遇和半公开制度赞助",
+        "fatal_miscalculation": "以为制度奖励她的照料，就会同时保护她与被照料者的私人关系"
+      },
+      "modern_adaptation": {
+        "statement_type": "ADAPTATION",
+        "role": "高端康复中心VIP家庭照护协调员"
+      },
+      "card": {
+        "path": "characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-007_袭人.md",
+        "sha256": "36f6473fe71c13cb2372cbf0b6da9e68499af358aa06290c26fce146ee61ce03",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 17112,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-007_%E8%A2%AD%E4%BA%BA.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-007_%E8%A2%AD%E4%BA%BA.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-007_%E8%A2%AD%E4%BA%BA.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/characters/chinese-classics/dream-of-the-red-chamber/CN-HLM-007_%E8%A2%AD%E4%BA%BA.md"
+          }
+        }
+      },
+      "source_record": {
+        "path": "sources/CN-HLM-007_sources.md",
+        "sha256": "ce13c8ede05e4f5f3b4b2585ac4c6d3adac3859c74ec57ef6f8fefe5c5ee1ef6",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 999,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/sources/CN-HLM-007_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/sources/CN-HLM-007_sources.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/sources/CN-HLM-007_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/sources/CN-HLM-007_sources.md"
+          }
+        }
+      },
+      "source_ids": [
+        "CN-HLM-007-S01",
+        "CN-HLM-007-S02",
+        "CN-HLM-007-S03"
+      ],
+      "summary_lookup": {
+        "path": "data/characters.jsonl",
+        "key": "card_id",
+        "value": "CN-HLM-007"
+      }
+    },
+    {
+      "card_id": "CN-HXY-001",
+      "name_zh": "霍小玉",
+      "aliases": [
+        "小玉"
+      ],
+      "source_category": "chinese-classics",
+      "source_work": "蒋防《霍小玉传》",
+      "primary_archetype": {
+        "id": "emotional-obsession",
+        "name_zh": "情感执念型"
+      },
+      "secondary_archetype_ids": [
+        "secret-bargaining",
+        "fierce-self-respect",
+        "revenge-destruction"
+      ],
+      "original_character_adult_status": "CONFIRMED_ADULT",
+      "modern_adaptation_age": 29,
+      "layer_completion": {
+        "F": true,
+        "V": true,
+        "M": true,
+        "P": true,
+        "H": true,
+        "X": true,
+        "S": true,
+        "A": true,
+        "R": true
+      },
+      "internal_assessment": {
+        "tier": "Gold",
+        "anti_clone_result": "PASS",
+        "scope": "internal-assessment",
+        "independently_certified": false
+      },
+      "search_terms": [
+        "霍小玉",
+        "小玉",
+        "蒋防《霍小玉传》",
+        "emotional-obsession",
+        "情感执念型",
+        "执念",
+        "投入",
+        "反证",
+        "关系",
+        "secret-bargaining",
+        "fierce-self-respect",
+        "revenge-destruction"
+      ],
+      "mechanism_summary": {
+        "statement_type": "INTERPRETATION",
+        "long_term_lack": "在阶层注定不对等的关系里获得一段可核验、按期履行的尊严",
+        "power_method": "书面盟约、时间表、共同见证人和最终公开结算",
+        "secret_leverage": "先私下催履约，失败后把私约转成全城可评价的道德债",
+        "escalation_logic": "从等信、买消息升级到出售纪念物、动员全城舆论并要求当面对质",
+        "fatal_miscalculation": "以为条款足够克制、时间足够有限，就能绕过阶层和母命"
+      },
+      "modern_adaptation": {
+        "statement_type": "ADAPTATION",
+        "role": "音乐酒馆驻唱兼儿童声乐陪练"
+      },
+      "card": {
+        "path": "characters/chinese-classics/tale-of-huo-xiaoyu/CN-HXY-001_霍小玉.md",
+        "sha256": "636c2d6ae036ec6edc44391c2bdc2a9f34580c66ce3eda93680256e3706c03d6",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 17141,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/characters/chinese-classics/tale-of-huo-xiaoyu/CN-HXY-001_%E9%9C%8D%E5%B0%8F%E7%8E%89.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/characters/chinese-classics/tale-of-huo-xiaoyu/CN-HXY-001_%E9%9C%8D%E5%B0%8F%E7%8E%89.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/characters/chinese-classics/tale-of-huo-xiaoyu/CN-HXY-001_%E9%9C%8D%E5%B0%8F%E7%8E%89.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/characters/chinese-classics/tale-of-huo-xiaoyu/CN-HXY-001_%E9%9C%8D%E5%B0%8F%E7%8E%89.md"
+          }
+        }
+      },
+      "source_record": {
+        "path": "sources/CN-HXY-001_sources.md",
+        "sha256": "1a83a52183412e1b3f49448604f4a28e7bed4286a882beb69aee973bf8c80fb0",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 945,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/sources/CN-HXY-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/sources/CN-HXY-001_sources.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/sources/CN-HXY-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/sources/CN-HXY-001_sources.md"
+          }
+        }
+      },
+      "source_ids": [
+        "CN-HXY-001-S01",
+        "CN-HXY-001-S02",
+        "CN-HXY-001-S03"
+      ],
+      "summary_lookup": {
+        "path": "data/characters.jsonl",
+        "key": "card_id",
+        "value": "CN-HXY-001"
+      }
+    },
+    {
+      "card_id": "CN-JPM-001",
+      "name_zh": "潘金莲",
+      "aliases": [
+        "潘六姐",
+        "五娘"
+      ],
+      "source_category": "chinese-classics",
+      "source_work": "金瓶梅词话（万历本系统）",
+      "primary_archetype": {
+        "id": "desire-escalation",
+        "name_zh": "欲望加码型"
+      },
+      "secondary_archetype_ids": [
+        "marital-entrapment-transgression",
+        "inner-court-competition",
+        "temptation-control"
+      ],
+      "original_character_adult_status": "CONFIRMED_ADULT",
+      "modern_adaptation_age": 28,
+      "layer_completion": {
+        "F": true,
+        "V": true,
+        "M": true,
+        "P": true,
+        "H": true,
+        "X": true,
+        "S": true,
+        "A": true,
+        "R": true
+      },
+      "internal_assessment": {
+        "tier": "Gold",
+        "anti_clone_result": "PASS",
+        "scope": "internal-assessment",
+        "independently_certified": false
+      },
+      "search_terms": [
+        "潘金莲",
+        "潘六姐",
+        "五娘",
+        "金瓶梅词话（万历本系统）",
+        "desire-escalation",
+        "欲望加码型",
+        "欲望",
+        "加码",
+        "风险",
+        "耐受",
+        "marital-entrapment-transgression",
+        "inner-court-competition",
+        "temptation-control"
+      ],
+      "mechanism_summary": {
+        "statement_type": "INTERPRETATION",
+        "long_term_lack": "稳定选择权与不可替代位置",
+        "power_method": "管理可见性、亲疏距离和情绪奖励",
+        "secret_leverage": "遮掩、否认和抢先解释以维持中心位置",
+        "escalation_logic": "每次成功选择都抬高下一次证明门槛",
+        "fatal_miscalculation": "把强烈选择当成长期安全"
+      },
+      "modern_adaptation": {
+        "statement_type": "ADAPTATION",
+        "role": "医美机构客户转化主管/直播轮值出镜人"
+      },
+      "card": {
+        "path": "characters/chinese-classics/jin-ping-mei/CN-JPM-001_潘金莲.md",
+        "sha256": "feae0b045c0cf56b8b4293e0aa777d301db478fa07243170d1b9664a04c7a251",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 30724,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/characters/chinese-classics/jin-ping-mei/CN-JPM-001_%E6%BD%98%E9%87%91%E8%8E%B2.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/characters/chinese-classics/jin-ping-mei/CN-JPM-001_%E6%BD%98%E9%87%91%E8%8E%B2.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/characters/chinese-classics/jin-ping-mei/CN-JPM-001_%E6%BD%98%E9%87%91%E8%8E%B2.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/characters/chinese-classics/jin-ping-mei/CN-JPM-001_%E6%BD%98%E9%87%91%E8%8E%B2.md"
+          }
+        }
+      },
+      "source_record": {
+        "path": "sources/CN-JPM-001_sources.md",
+        "sha256": "734e5e846c1895116998857f55bb0c2b186d2f83d0a75d0c03aa2401b4a2358f",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 6243,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/sources/CN-JPM-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/sources/CN-JPM-001_sources.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/sources/CN-JPM-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/sources/CN-JPM-001_sources.md"
+          }
+        }
+      },
+      "source_ids": [
+        "CN-JPM-001-S01",
+        "CN-JPM-001-S02",
+        "CN-JPM-001-S03",
+        "CN-JPM-001-S04",
+        "CN-JPM-001-S05"
+      ],
+      "summary_lookup": {
+        "path": "data/characters.jsonl",
+        "key": "card_id",
+        "value": "CN-JPM-001"
+      }
+    },
+    {
+      "card_id": "CN-JPM-002",
+      "name_zh": "李瓶儿",
+      "aliases": [
+        "瓶儿",
+        "李六娘"
+      ],
+      "source_category": "chinese-classics",
+      "source_work": "金瓶梅词话（万历本系统）",
+      "primary_archetype": {
+        "id": "resource-carrier",
+        "name_zh": "资源携带型"
+      },
+      "secondary_archetype_ids": [
+        "interest-marriage",
+        "gentle-dependence",
+        "inner-court-competition"
+      ],
+      "original_character_adult_status": "CONFIRMED_ADULT",
+      "modern_adaptation_age": 33,
+      "layer_completion": {
+        "F": true,
+        "V": true,
+        "M": true,
+        "P": true,
+        "H": true,
+        "X": true,
+        "S": true,
+        "A": true,
+        "R": true
+      },
+      "internal_assessment": {
+        "tier": "Gold",
+        "anti_clone_result": "PASS",
+        "scope": "internal-assessment",
+        "independently_certified": false
+      },
+      "search_terms": [
+        "李瓶儿",
+        "瓶儿",
+        "李六娘",
+        "金瓶梅词话（万历本系统）",
+        "resource-carrier",
+        "资源携带型",
+        "资源",
+        "入口",
+        "关系网",
+        "竞争",
+        "interest-marriage",
+        "gentle-dependence",
+        "inner-court-competition"
+      ],
+      "mechanism_summary": {
+        "statement_type": "INTERPRETATION",
+        "long_term_lack": "财产与人身同时安全的保护结构",
+        "power_method": "决定可移动资源跟谁走",
+        "secret_leverage": "隐蔽接触与财物转移以换保护",
+        "escalation_logic": "从财物到婚配和孩子连续押注",
+        "fatal_miscalculation": "资源能自动兑换排他保护"
+      },
+      "modern_adaptation": {
+        "statement_type": "ADAPTATION",
+        "role": "县域连锁母婴店实际出资人兼库房管理员"
+      },
+      "card": {
+        "path": "characters/chinese-classics/jin-ping-mei/CN-JPM-002_李瓶儿.md",
+        "sha256": "ae35bbf882165a1e061e83d964e1ee4496b40085efa200a376309e076eccfb2e",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 14020,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/characters/chinese-classics/jin-ping-mei/CN-JPM-002_%E6%9D%8E%E7%93%B6%E5%84%BF.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/characters/chinese-classics/jin-ping-mei/CN-JPM-002_%E6%9D%8E%E7%93%B6%E5%84%BF.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/characters/chinese-classics/jin-ping-mei/CN-JPM-002_%E6%9D%8E%E7%93%B6%E5%84%BF.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/characters/chinese-classics/jin-ping-mei/CN-JPM-002_%E6%9D%8E%E7%93%B6%E5%84%BF.md"
+          }
+        }
+      },
+      "source_record": {
+        "path": "sources/CN-JPM-002_sources.md",
+        "sha256": "285a1c06b984f735897f141fc43d30987cccc3ebf817f59b3231a62a9c13f37e",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 1065,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/sources/CN-JPM-002_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/sources/CN-JPM-002_sources.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/sources/CN-JPM-002_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/sources/CN-JPM-002_sources.md"
+          }
+        }
+      },
+      "source_ids": [
+        "CN-JPM-002-S01",
+        "CN-JPM-002-S02",
+        "CN-JPM-002-S03",
+        "CN-JPM-002-S04"
+      ],
+      "summary_lookup": {
+        "path": "data/characters.jsonl",
+        "key": "card_id",
+        "value": "CN-JPM-002"
+      }
+    },
+    {
+      "card_id": "CN-JPM-003",
+      "name_zh": "庞春梅",
+      "aliases": [
+        "春梅",
+        "庞大姐"
+      ],
+      "source_category": "chinese-classics",
+      "source_work": "金瓶梅词话（万历本系统）",
+      "primary_archetype": {
+        "id": "lower-strata-observer",
+        "name_zh": "底层观察型"
+      },
+      "secondary_archetype_ids": [
+        "ambition-ascension",
+        "survival-adaptation",
+        "desire-escalation"
+      ],
+      "original_character_adult_status": "CONFIRMED_ADULT",
+      "modern_adaptation_age": 29,
+      "layer_completion": {
+        "F": true,
+        "V": true,
+        "M": true,
+        "P": true,
+        "H": true,
+        "X": true,
+        "S": true,
+        "A": true,
+        "R": true
+      },
+      "internal_assessment": {
+        "tier": "Gold",
+        "anti_clone_result": "PASS",
+        "scope": "internal-assessment",
+        "independently_certified": false
+      },
+      "search_terms": [
+        "庞春梅",
+        "春梅",
+        "庞大姐",
+        "金瓶梅词话（万历本系统）",
+        "lower-strata-observer",
+        "底层观察型",
+        "底层",
+        "观察",
+        "漏洞",
+        "隐蔽资本",
+        "ambition-ascension",
+        "survival-adaptation",
+        "desire-escalation"
+      ],
+      "mechanism_summary": {
+        "statement_type": "INTERPRETATION",
+        "long_term_lack": "不可被买卖的正式身份与自主支配",
+        "power_method": "近身信息、门槛控制与身份空缺",
+        "secret_leverage": "先替主遮掩传递，后按旧账识人惩罚",
+        "escalation_logic": "上位后把旧账、报复与私欲并入正式权力",
+        "fatal_miscalculation": "能支配别人就等于位置已稳"
+      },
+      "modern_adaptation": {
+        "statement_type": "ADAPTATION",
+        "role": "连锁宴会酒店包厢调度领班"
+      },
+      "card": {
+        "path": "characters/chinese-classics/jin-ping-mei/CN-JPM-003_庞春梅.md",
+        "sha256": "7c08f96f8683686ea7a2c2fdcf3707cd84aa88145b33011565c6f6a843f59ce2",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 12752,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/characters/chinese-classics/jin-ping-mei/CN-JPM-003_%E5%BA%9E%E6%98%A5%E6%A2%85.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/characters/chinese-classics/jin-ping-mei/CN-JPM-003_%E5%BA%9E%E6%98%A5%E6%A2%85.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/characters/chinese-classics/jin-ping-mei/CN-JPM-003_%E5%BA%9E%E6%98%A5%E6%A2%85.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/characters/chinese-classics/jin-ping-mei/CN-JPM-003_%E5%BA%9E%E6%98%A5%E6%A2%85.md"
+          }
+        }
+      },
+      "source_record": {
+        "path": "sources/CN-JPM-003_sources.md",
+        "sha256": "7ab19caf96778b5a75a9a5d9c4f09cb5110dfbb3ddcd72ecf2ad963f78a40ad6",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 1140,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/sources/CN-JPM-003_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/sources/CN-JPM-003_sources.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/sources/CN-JPM-003_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/sources/CN-JPM-003_sources.md"
+          }
+        }
+      },
+      "source_ids": [
+        "CN-JPM-003-S01",
+        "CN-JPM-003-S02",
+        "CN-JPM-003-S03",
+        "CN-JPM-003-S04"
+      ],
+      "summary_lookup": {
+        "path": "data/characters.jsonl",
+        "key": "card_id",
+        "value": "CN-JPM-003"
+      }
+    },
+    {
+      "card_id": "CN-JPM-004",
+      "name_zh": "吴月娘",
+      "aliases": [
+        "月娘",
+        "大娘"
+      ],
+      "source_category": "chinese-classics",
+      "source_work": "金瓶梅词话（万历本系统）",
+      "primary_archetype": {
+        "id": "lawful-wife-order",
+        "name_zh": "正妻守序型"
+      },
+      "secondary_archetype_ids": [
+        "interest-marriage",
+        "resource-carrier"
+      ],
+      "original_character_adult_status": "CONFIRMED_ADULT",
+      "modern_adaptation_age": 41,
+      "layer_completion": {
+        "F": true,
+        "V": true,
+        "M": true,
+        "P": true,
+        "H": true,
+        "X": true,
+        "S": true,
+        "A": true,
+        "R": true
+      },
+      "internal_assessment": {
+        "tier": "Gold",
+        "anti_clone_result": "PASS",
+        "scope": "internal-assessment",
+        "independently_certified": false
+      },
+      "search_terms": [
+        "吴月娘",
+        "月娘",
+        "大娘",
+        "金瓶梅词话（万历本系统）",
+        "lawful-wife-order",
+        "正妻守序型",
+        "正妻",
+        "守序",
+        "名分",
+        "规则",
+        "interest-marriage",
+        "resource-carrier"
+      ],
+      "mechanism_summary": {
+        "statement_type": "INTERPRETATION",
+        "long_term_lack": "成员共同遵守且不靠她无限修补的秩序",
+        "power_method": "正妻名分、礼仪、人情和资产监护",
+        "secret_leverage": "先压住核实，威胁继承时转作家法证据",
+        "escalation_logic": "诉讼、宗教承诺、亲族和迁徙守住家庭容器",
+        "fatal_miscalculation": "保住形式钱和孩子就能恢复家庭"
+      },
+      "modern_adaptation": {
+        "statement_type": "ADAPTATION",
+        "role": "全职伴侣兼家庭资产管理员"
+      },
+      "card": {
+        "path": "characters/chinese-classics/jin-ping-mei/CN-JPM-004_吴月娘.md",
+        "sha256": "c73da359dcef0512ad5f33d17b73b51f18dee66e13f2abba3a079190ca28dc78",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 12331,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/characters/chinese-classics/jin-ping-mei/CN-JPM-004_%E5%90%B4%E6%9C%88%E5%A8%98.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/characters/chinese-classics/jin-ping-mei/CN-JPM-004_%E5%90%B4%E6%9C%88%E5%A8%98.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/characters/chinese-classics/jin-ping-mei/CN-JPM-004_%E5%90%B4%E6%9C%88%E5%A8%98.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/characters/chinese-classics/jin-ping-mei/CN-JPM-004_%E5%90%B4%E6%9C%88%E5%A8%98.md"
+          }
+        }
+      },
+      "source_record": {
+        "path": "sources/CN-JPM-004_sources.md",
+        "sha256": "07d657abbffbf6827c5eb985cac800037097d59af1717b5327d474db2282f843",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 1122,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/sources/CN-JPM-004_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/sources/CN-JPM-004_sources.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/sources/CN-JPM-004_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/sources/CN-JPM-004_sources.md"
+          }
+        }
+      },
+      "source_ids": [
+        "CN-JPM-004-S01",
+        "CN-JPM-004-S02",
+        "CN-JPM-004-S03",
+        "CN-JPM-004-S04"
+      ],
+      "summary_lookup": {
+        "path": "data/characters.jsonl",
+        "key": "card_id",
+        "value": "CN-JPM-004"
+      }
+    },
+    {
+      "card_id": "CN-JPM-005",
+      "name_zh": "孟玉楼",
+      "aliases": [
+        "玉楼",
+        "孟三娘"
+      ],
+      "source_category": "chinese-classics",
+      "source_work": "金瓶梅词话（万历本系统）",
+      "primary_archetype": {
+        "id": "survival-adaptation",
+        "name_zh": "生存适应型"
+      },
+      "secondary_archetype_ids": [
+        "interest-marriage",
+        "resource-carrier"
+      ],
+      "original_character_adult_status": "CONFIRMED_ADULT",
+      "modern_adaptation_age": 36,
+      "layer_completion": {
+        "F": true,
+        "V": true,
+        "M": true,
+        "P": true,
+        "H": true,
+        "X": true,
+        "S": true,
+        "A": true,
+        "R": true
+      },
+      "internal_assessment": {
+        "tier": "Gold",
+        "anti_clone_result": "PASS",
+        "scope": "internal-assessment",
+        "independently_certified": false
+      },
+      "search_terms": [
+        "孟玉楼",
+        "玉楼",
+        "孟三娘",
+        "金瓶梅词话（万历本系统）",
+        "survival-adaptation",
+        "生存适应型",
+        "生存",
+        "适应",
+        "环境",
+        "自我侵蚀",
+        "interest-marriage",
+        "resource-carrier"
+      ],
+      "mechanism_summary": {
+        "statement_type": "INTERPRETATION",
+        "long_term_lack": "保留再选择的稳定生活容器",
+        "power_method": "比较能力、可移动财物、低冲突与退出",
+        "secret_leverage": "观察环境并控制自己披露多少",
+        "escalation_logic": "低暴露调停，系统崩塌后换合法环境",
+        "fatal_miscalculation": "持续选对环境即可免付身份成本"
+      },
+      "modern_adaptation": {
+        "statement_type": "ADAPTATION",
+        "role": "服装批发市场面料档口女老板"
+      },
+      "card": {
+        "path": "characters/chinese-classics/jin-ping-mei/CN-JPM-005_孟玉楼.md",
+        "sha256": "eabc6c0dca20405b7ed692f3a1c3105d70df593aa2b245c9218acfe930cc96d1",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 12129,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/characters/chinese-classics/jin-ping-mei/CN-JPM-005_%E5%AD%9F%E7%8E%89%E6%A5%BC.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/characters/chinese-classics/jin-ping-mei/CN-JPM-005_%E5%AD%9F%E7%8E%89%E6%A5%BC.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/characters/chinese-classics/jin-ping-mei/CN-JPM-005_%E5%AD%9F%E7%8E%89%E6%A5%BC.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/characters/chinese-classics/jin-ping-mei/CN-JPM-005_%E5%AD%9F%E7%8E%89%E6%A5%BC.md"
+          }
+        }
+      },
+      "source_record": {
+        "path": "sources/CN-JPM-005_sources.md",
+        "sha256": "70163b2af4e944628ff577afd16b767ee5aac471a33fdf2735798247231dead6",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 1084,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/sources/CN-JPM-005_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/sources/CN-JPM-005_sources.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/sources/CN-JPM-005_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/sources/CN-JPM-005_sources.md"
+          }
+        }
+      },
+      "source_ids": [
+        "CN-JPM-005-S01",
+        "CN-JPM-005-S02",
+        "CN-JPM-005-S03",
+        "CN-JPM-005-S04"
+      ],
+      "summary_lookup": {
+        "path": "data/characters.jsonl",
+        "key": "card_id",
+        "value": "CN-JPM-005"
+      }
+    },
+    {
+      "card_id": "CN-JSTY-001",
+      "name_zh": "杜十娘",
+      "aliases": [
+        "杜媺",
+        "十娘"
+      ],
+      "source_category": "chinese-classics",
+      "source_work": "警世通言第32卷杜十娘怒沉百宝箱",
+      "primary_archetype": {
+        "id": "resource-carrier",
+        "name_zh": "资源携带型"
+      },
+      "secondary_archetype_ids": [
+        "fierce-self-respect",
+        "interest-marriage",
+        "narrative-manipulation"
+      ],
+      "original_character_adult_status": "CONFIRMED_ADULT",
+      "modern_adaptation_age": 30,
+      "layer_completion": {
+        "F": true,
+        "V": true,
+        "M": true,
+        "P": true,
+        "H": true,
+        "X": true,
+        "S": true,
+        "A": true,
+        "R": true
+      },
+      "internal_assessment": {
+        "tier": "Gold",
+        "anti_clone_result": "PASS",
+        "scope": "internal-assessment",
+        "independently_certified": false
+      },
+      "search_terms": [
+        "杜十娘",
+        "杜媺",
+        "十娘",
+        "警世通言第32卷杜十娘怒沉百宝箱",
+        "resource-carrier",
+        "资源携带型",
+        "资源",
+        "入口",
+        "关系网",
+        "竞争",
+        "fierce-self-respect",
+        "interest-marriage",
+        "narrative-manipulation"
+      ],
+      "mechanism_summary": {
+        "statement_type": "INTERPRETATION",
+        "long_term_lack": "不按价格定义的自我所有权",
+        "power_method": "隐藏资本、筹资测试、姐妹网络和公开时机",
+        "secret_leverage": "隐藏百宝箱直到伴侣先作选择",
+        "escalation_logic": "把资产、名誉和返乡入口押给惧父代理人",
+        "fatal_miscalculation": "一次筹资测试足以证明长期担当"
+      },
+      "modern_adaptation": {
+        "statement_type": "ADAPTATION",
+        "role": "商务会所客户经理兼二手珠宝寄卖人"
+      },
+      "card": {
+        "path": "characters/chinese-classics/jingshi-tongyan/CN-JSTY-001_杜十娘.md",
+        "sha256": "43866ed21bc121176fe994de0ae62098dd392b5c3210d66a5c8d74b2a839faf8",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 12737,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/characters/chinese-classics/jingshi-tongyan/CN-JSTY-001_%E6%9D%9C%E5%8D%81%E5%A8%98.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/characters/chinese-classics/jingshi-tongyan/CN-JSTY-001_%E6%9D%9C%E5%8D%81%E5%A8%98.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/characters/chinese-classics/jingshi-tongyan/CN-JSTY-001_%E6%9D%9C%E5%8D%81%E5%A8%98.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/characters/chinese-classics/jingshi-tongyan/CN-JSTY-001_%E6%9D%9C%E5%8D%81%E5%A8%98.md"
+          }
+        }
+      },
+      "source_record": {
+        "path": "sources/CN-JSTY-001_sources.md",
+        "sha256": "a55f84e24efa4337b4ef5f7bcb3f3556b63514db8bb76f6f3f769ab4aa15617b",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 1103,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/sources/CN-JSTY-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/sources/CN-JSTY-001_sources.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/sources/CN-JSTY-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/sources/CN-JSTY-001_sources.md"
+          }
+        }
+      },
+      "source_ids": [
+        "CN-JSTY-001-S01",
+        "CN-JSTY-001-S02",
+        "CN-JSTY-001-S03",
+        "CN-JSTY-001-S04"
+      ],
+      "summary_lookup": {
+        "path": "data/characters.jsonl",
+        "key": "card_id",
+        "value": "CN-JSTY-001"
+      }
+    },
+    {
+      "card_id": "CN-JSTY-002",
+      "name_zh": "白素贞",
+      "aliases": [
+        "白娘子"
+      ],
+      "source_category": "chinese-classics",
+      "source_work": "《警世通言》第28卷《白娘子永镇雷峰塔》",
+      "primary_archetype": {
+        "id": "identity-contrast",
+        "name_zh": "身份反差型"
+      },
+      "secondary_archetype_ids": [
+        "resource-carrier",
+        "secret-bargaining",
+        "desire-escalation"
+      ],
+      "original_character_adult_status": "UNKNOWN",
+      "modern_adaptation_age": 32,
+      "layer_completion": {
+        "F": true,
+        "V": true,
+        "M": true,
+        "P": true,
+        "H": true,
+        "X": true,
+        "S": true,
+        "A": true,
+        "R": true
+      },
+      "internal_assessment": {
+        "tier": "Gold",
+        "anti_clone_result": "PASS",
+        "scope": "internal-assessment",
+        "independently_certified": false
+      },
+      "search_terms": [
+        "白素贞",
+        "白娘子",
+        "《警世通言》第28卷《白娘子永镇雷峰塔》",
+        "identity-contrast",
+        "身份反差型",
+        "身份",
+        "反差",
+        "双面",
+        "暴露",
+        "resource-carrier",
+        "secret-bargaining",
+        "desire-escalation"
+      ],
+      "mechanism_summary": {
+        "statement_type": "INTERPRETATION",
+        "long_term_lack": "把危险的真实身份变成可长期被承认的家庭位置",
+        "power_method": "先用资源解决现实门槛，再用共同秘密和超常威慑封住退出",
+        "secret_leverage": "先隐瞒以建立家庭，暴露后改作共同风险与威慑",
+        "escalation_logic": "伴侣每次试图退出，她都从解释升级到追随、恐吓和显露力量",
+        "fatal_miscalculation": "把对方被资源绑定后的留下误认成知情同意"
+      },
+      "modern_adaptation": {
+        "statement_type": "ADAPTATION",
+        "role": "社区私营诊所联合出资人兼执业药师"
+      },
+      "card": {
+        "path": "characters/chinese-classics/jingshi-tongyan/CN-JSTY-002_白素贞.md",
+        "sha256": "5a2824eb858c019c06febe7146d26b21baeac03b04cf3f481db8cac22901ef40",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 16724,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/characters/chinese-classics/jingshi-tongyan/CN-JSTY-002_%E7%99%BD%E7%B4%A0%E8%B4%9E.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/characters/chinese-classics/jingshi-tongyan/CN-JSTY-002_%E7%99%BD%E7%B4%A0%E8%B4%9E.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/characters/chinese-classics/jingshi-tongyan/CN-JSTY-002_%E7%99%BD%E7%B4%A0%E8%B4%9E.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/characters/chinese-classics/jingshi-tongyan/CN-JSTY-002_%E7%99%BD%E7%B4%A0%E8%B4%9E.md"
+          }
+        }
+      },
+      "source_record": {
+        "path": "sources/CN-JSTY-002_sources.md",
+        "sha256": "cdf47afc41d3b12a73cc9ff4c7fa9a3dce331b7c92547c22aa46a3cc1969734f",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 1035,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/sources/CN-JSTY-002_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/sources/CN-JSTY-002_sources.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/sources/CN-JSTY-002_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/sources/CN-JSTY-002_sources.md"
+          }
+        }
+      },
+      "source_ids": [
+        "CN-JSTY-002-S01",
+        "CN-JSTY-002-S02",
+        "CN-JSTY-002-S03"
+      ],
+      "summary_lookup": {
+        "path": "data/characters.jsonl",
+        "key": "card_id",
+        "value": "CN-JSTY-002"
+      }
+    },
+    {
+      "card_id": "CN-JSTY-003",
+      "name_zh": "小青",
+      "aliases": [
+        "青青",
+        "青蛇"
+      ],
+      "source_category": "chinese-classics",
+      "source_work": "《警世通言》第28卷《白娘子永镇雷峰塔》",
+      "primary_archetype": {
+        "id": "survival-adaptation",
+        "name_zh": "生存适应型"
+      },
+      "secondary_archetype_ids": [
+        "lower-strata-observer",
+        "secret-bargaining"
+      ],
+      "original_character_adult_status": "UNKNOWN",
+      "modern_adaptation_age": 27,
+      "layer_completion": {
+        "F": true,
+        "V": true,
+        "M": true,
+        "P": true,
+        "H": true,
+        "X": true,
+        "S": true,
+        "A": true,
+        "R": true
+      },
+      "internal_assessment": {
+        "tier": "Silver",
+        "anti_clone_result": "PASS",
+        "scope": "internal-assessment",
+        "independently_certified": false
+      },
+      "search_terms": [
+        "小青",
+        "青青",
+        "青蛇",
+        "《警世通言》第28卷《白娘子永镇雷峰塔》",
+        "survival-adaptation",
+        "生存适应型",
+        "生存",
+        "适应",
+        "环境",
+        "自我侵蚀",
+        "lower-strata-observer",
+        "secret-bargaining"
+      ],
+      "mechanism_summary": {
+        "statement_type": "INTERPRETATION",
+        "long_term_lack": "在强势主人的秘密共同体里获得不可替代的位置和安全",
+        "power_method": "门槛控制、行动速度和全链条知情",
+        "secret_leverage": "替主人搬运、补叙事、劝关键人留下而不直接要价",
+        "escalation_logic": "主人关系失稳时，她从跑腿升级为劝和、遮掩和共同对外",
+        "fatal_miscalculation": "以为知道全部秘密就等于拥有独立免死金牌"
+      },
+      "modern_adaptation": {
+        "statement_type": "ADAPTATION",
+        "role": "连锁药房区域运营助理兼老板专车司机"
+      },
+      "card": {
+        "path": "characters/chinese-classics/jingshi-tongyan/CN-JSTY-003_小青.md",
+        "sha256": "e1f3d06db83c5823aa010e45b2478614b36a04b03bdf067a674762ebf619b1b6",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 15883,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/characters/chinese-classics/jingshi-tongyan/CN-JSTY-003_%E5%B0%8F%E9%9D%92.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/characters/chinese-classics/jingshi-tongyan/CN-JSTY-003_%E5%B0%8F%E9%9D%92.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/characters/chinese-classics/jingshi-tongyan/CN-JSTY-003_%E5%B0%8F%E9%9D%92.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/characters/chinese-classics/jingshi-tongyan/CN-JSTY-003_%E5%B0%8F%E9%9D%92.md"
+          }
+        }
+      },
+      "source_record": {
+        "path": "sources/CN-JSTY-003_sources.md",
+        "sha256": "bb94389ef57ef6e9d7e187492c0450b0251152db82a0756544a86b8c14fa1b8e",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 928,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/sources/CN-JSTY-003_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/sources/CN-JSTY-003_sources.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/sources/CN-JSTY-003_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/sources/CN-JSTY-003_sources.md"
+          }
+        }
+      },
+      "source_ids": [
+        "CN-JSTY-003-S01",
+        "CN-JSTY-003-S02",
+        "CN-JSTY-003-S03"
+      ],
+      "summary_lookup": {
+        "path": "data/characters.jsonl",
+        "key": "card_id",
+        "value": "CN-JSTY-003"
+      }
+    },
+    {
+      "card_id": "CN-LZ-001",
+      "name_zh": "聂小倩",
+      "aliases": [
+        "小倩"
+      ],
+      "source_category": "chinese-classics",
+      "source_work": "《聊斋志异》卷二《聂小倩》",
+      "primary_archetype": {
+        "id": "redemption-complicity",
+        "name_zh": "救赎共谋型"
+      },
+      "secondary_archetype_ids": [
+        "survival-adaptation",
+        "identity-contrast",
+        "gentle-dependence"
+      ],
+      "original_character_adult_status": "UNKNOWN",
+      "modern_adaptation_age": 26,
+      "layer_completion": {
+        "F": true,
+        "V": true,
+        "M": true,
+        "P": true,
+        "H": true,
+        "X": true,
+        "S": true,
+        "A": true,
+        "R": true
+      },
+      "internal_assessment": {
+        "tier": "Gold",
+        "anti_clone_result": "PASS",
+        "scope": "internal-assessment",
+        "independently_certified": false
+      },
+      "search_terms": [
+        "聂小倩",
+        "小倩",
+        "《聊斋志异》卷二《聂小倩》",
+        "redemption-complicity",
+        "救赎共谋型",
+        "救赎",
+        "共谋",
+        "包庇",
+        "依赖",
+        "survival-adaptation",
+        "identity-contrast",
+        "gentle-dependence"
+      ],
+      "mechanism_summary": {
+        "statement_type": "INTERPRETATION",
+        "long_term_lack": "从被迫充当诱饵的身体与身份中夺回选择权",
+        "power_method": "掌握捕猎系统内部情报，并能用照料把临时盟友变成长期共同体",
+        "secret_leverage": "从诱饵脚本中抽出关键弱点，定向交给能执行救援的人",
+        "escalation_logic": "从泄密求救升级为迁葬、入户、照料和共同防御",
+        "fatal_miscalculation": "以为只要停止害人并足够有用，新家庭就自然承认她的主体性"
+      },
+      "modern_adaptation": {
+        "statement_type": "ADAPTATION",
+        "role": "殡葬服务公司夜班遗物整理师兼反诈协查志愿者"
+      },
+      "card": {
+        "path": "characters/chinese-classics/liaozhai-zhiyi/CN-LZ-001_聂小倩.md",
+        "sha256": "1cc881002a0df9cfa4b9fe5c88c4d02419906a0e3fcb9c44001c90ebc9f89107",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 16703,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/characters/chinese-classics/liaozhai-zhiyi/CN-LZ-001_%E8%81%82%E5%B0%8F%E5%80%A9.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/characters/chinese-classics/liaozhai-zhiyi/CN-LZ-001_%E8%81%82%E5%B0%8F%E5%80%A9.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/characters/chinese-classics/liaozhai-zhiyi/CN-LZ-001_%E8%81%82%E5%B0%8F%E5%80%A9.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/characters/chinese-classics/liaozhai-zhiyi/CN-LZ-001_%E8%81%82%E5%B0%8F%E5%80%A9.md"
+          }
+        }
+      },
+      "source_record": {
+        "path": "sources/CN-LZ-001_sources.md",
+        "sha256": "09ef7c3842fa3634330ebbdf2729c4dc73e2f3d09a1b680a37ed07cf9f872ab1",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 1052,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/sources/CN-LZ-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/sources/CN-LZ-001_sources.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/sources/CN-LZ-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/sources/CN-LZ-001_sources.md"
+          }
+        }
+      },
+      "source_ids": [
+        "CN-LZ-001-S01",
+        "CN-LZ-001-S02",
+        "CN-LZ-001-S03"
+      ],
+      "summary_lookup": {
+        "path": "data/characters.jsonl",
+        "key": "card_id",
+        "value": "CN-LZ-001"
+      }
+    },
+    {
+      "card_id": "CN-MDT-001",
+      "name_zh": "杜丽娘",
+      "aliases": [
+        "丽娘"
+      ],
+      "source_category": "chinese-classics",
+      "source_work": "汤显祖《牡丹亭》",
+      "primary_archetype": {
+        "id": "emotional-obsession",
+        "name_zh": "情感执念型"
+      },
+      "secondary_archetype_ids": [
+        "discipline-awakening",
+        "narrative-manipulation",
+        "identity-contrast"
+      ],
+      "original_character_adult_status": "CONFIRMED_MINOR",
+      "modern_adaptation_age": 26,
+      "layer_completion": {
+        "F": true,
+        "V": true,
+        "M": true,
+        "P": true,
+        "H": true,
+        "X": true,
+        "S": true,
+        "A": true,
+        "R": true
+      },
+      "internal_assessment": {
+        "tier": "Gold",
+        "anti_clone_result": "PASS",
+        "scope": "internal-assessment",
+        "independently_certified": false
+      },
+      "search_terms": [
+        "杜丽娘",
+        "丽娘",
+        "汤显祖《牡丹亭》",
+        "emotional-obsession",
+        "情感执念型",
+        "执念",
+        "投入",
+        "反证",
+        "关系",
+        "discipline-awakening",
+        "narrative-manipulation",
+        "identity-contrast"
+      ],
+      "mechanism_summary": {
+        "statement_type": "INTERPRETATION",
+        "long_term_lack": "让被规训压住的私人感受获得“真实存在”的资格",
+        "power_method": "把私人感受物化成画像、题记和可验证叙事",
+        "secret_leverage": "把秘密做成未来证据和行动地图，而非即时要价",
+        "escalation_logic": "从记梦、写真升级到以画像召唤、指引掘墓并要求制度承认复生",
+        "fatal_miscalculation": "以为感受足够真实，亲人就应当自动承认它的社会效力"
+      },
+      "modern_adaptation": {
+        "statement_type": "ADAPTATION",
+        "role": "市政设计院景观设计师兼匿名插画作者"
+      },
+      "card": {
+        "path": "characters/chinese-classics/peony-pavilion/CN-MDT-001_杜丽娘.md",
+        "sha256": "a955d26ffe3e958778b80769b925ade8df761dbd7bd733ef14484d22ad482d9f",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 16649,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/characters/chinese-classics/peony-pavilion/CN-MDT-001_%E6%9D%9C%E4%B8%BD%E5%A8%98.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/characters/chinese-classics/peony-pavilion/CN-MDT-001_%E6%9D%9C%E4%B8%BD%E5%A8%98.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/characters/chinese-classics/peony-pavilion/CN-MDT-001_%E6%9D%9C%E4%B8%BD%E5%A8%98.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/characters/chinese-classics/peony-pavilion/CN-MDT-001_%E6%9D%9C%E4%B8%BD%E5%A8%98.md"
+          }
+        }
+      },
+      "source_record": {
+        "path": "sources/CN-MDT-001_sources.md",
+        "sha256": "4e0a10fd1b59dcc71aa0d2d23312906bc23d5ff71598fd7694ad921fe7ee9d27",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 1002,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/sources/CN-MDT-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/sources/CN-MDT-001_sources.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/sources/CN-MDT-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/sources/CN-MDT-001_sources.md"
+          }
+        }
+      },
+      "source_ids": [
+        "CN-MDT-001-S01",
+        "CN-MDT-001-S02",
+        "CN-MDT-001-S03"
+      ],
+      "summary_lookup": {
+        "path": "data/characters.jsonl",
+        "key": "card_id",
+        "value": "CN-MDT-001"
+      }
+    },
+    {
+      "card_id": "CN-SHZ-001",
+      "name_zh": "阎婆惜",
+      "aliases": [
+        "婆惜"
+      ],
+      "source_category": "chinese-classics",
+      "source_work": "水浒传（金圣叹评七十回本正文）",
+      "primary_archetype": {
+        "id": "secret-bargaining",
+        "name_zh": "秘密要价型"
+      },
+      "secondary_archetype_ids": [
+        "neglect-compensation",
+        "narrative-manipulation"
+      ],
+      "original_character_adult_status": "CONFIRMED_ADULT",
+      "modern_adaptation_age": 30,
+      "layer_completion": {
+        "F": true,
+        "V": true,
+        "M": true,
+        "P": true,
+        "H": true,
+        "X": true,
+        "S": true,
+        "A": true,
+        "R": true
+      },
+      "internal_assessment": {
+        "tier": "Gold",
+        "anti_clone_result": "PASS",
+        "scope": "internal-assessment",
+        "independently_certified": false
+      },
+      "search_terms": [
+        "阎婆惜",
+        "婆惜",
+        "水浒传（金圣叹评七十回本正文）",
+        "secret-bargaining",
+        "秘密要价型",
+        "秘密",
+        "要价",
+        "证据",
+        "信息杠杆",
+        "neglect-compensation",
+        "narrative-manipulation"
+      ],
+      "mechanism_summary": {
+        "statement_type": "INTERPRETATION",
+        "long_term_lack": "关系退出权与独立生计",
+        "power_method": "掌握秘密、控制交付时点并逐项定条件",
+        "secret_leverage": "延迟归还、逐项报价并以公开渠道施压",
+        "escalation_logic": "把对方让步解释为继续提价空间，坚持即时交割",
+        "fatal_miscalculation": "把信息价值等同人身安全"
+      },
+      "modern_adaptation": {
+        "statement_type": "ADAPTATION",
+        "role": "商业地产项目合规档案主管/业余室内乐主唱"
+      },
+      "card": {
+        "path": "characters/chinese-classics/water-margin/CN-SHZ-001_阎婆惜.md",
+        "sha256": "aa091a99a0b37c720bb0b1ce954049019ecf8e1032079a2a04f9cee7edccace5",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 29597,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/characters/chinese-classics/water-margin/CN-SHZ-001_%E9%98%8E%E5%A9%86%E6%83%9C.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/characters/chinese-classics/water-margin/CN-SHZ-001_%E9%98%8E%E5%A9%86%E6%83%9C.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/characters/chinese-classics/water-margin/CN-SHZ-001_%E9%98%8E%E5%A9%86%E6%83%9C.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/characters/chinese-classics/water-margin/CN-SHZ-001_%E9%98%8E%E5%A9%86%E6%83%9C.md"
+          }
+        }
+      },
+      "source_record": {
+        "path": "sources/CN-SHZ-001_sources.md",
+        "sha256": "c9ff10864d22cfadf422aeeb2c1e3eeb9abbf8929db57a4e3a5a16a91a7aa729",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 4654,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/sources/CN-SHZ-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/sources/CN-SHZ-001_sources.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/sources/CN-SHZ-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/sources/CN-SHZ-001_sources.md"
+          }
+        }
+      },
+      "source_ids": [
+        "CN-SHZ-001-S01",
+        "CN-SHZ-001-S02"
+      ],
+      "summary_lookup": {
+        "path": "data/characters.jsonl",
+        "key": "card_id",
+        "value": "CN-SHZ-001"
+      }
+    },
+    {
+      "card_id": "CN-XXJ-001",
+      "name_zh": "崔莺莺",
+      "aliases": [
+        "莺莺"
+      ],
+      "source_category": "chinese-classics",
+      "source_work": "王实甫《北西厢记》",
+      "primary_archetype": {
+        "id": "discipline-awakening",
+        "name_zh": "规训觉醒型"
+      },
+      "secondary_archetype_ids": [
+        "secret-bargaining",
+        "identity-contrast",
+        "emotional-obsession"
+      ],
+      "original_character_adult_status": "UNKNOWN",
+      "modern_adaptation_age": 27,
+      "layer_completion": {
+        "F": true,
+        "V": true,
+        "M": true,
+        "P": true,
+        "H": true,
+        "X": true,
+        "S": true,
+        "A": true,
+        "R": true
+      },
+      "internal_assessment": {
+        "tier": "Gold",
+        "anti_clone_result": "PASS",
+        "scope": "internal-assessment",
+        "independently_certified": false
+      },
+      "search_terms": [
+        "崔莺莺",
+        "莺莺",
+        "王实甫《北西厢记》",
+        "discipline-awakening",
+        "规训觉醒型",
+        "规训",
+        "觉醒",
+        "规则",
+        "定义权",
+        "secret-bargaining",
+        "identity-contrast",
+        "emotional-obsession"
+      ],
+      "mechanism_summary": {
+        "statement_type": "INTERPRETATION",
+        "long_term_lack": "把别人许下又收回的婚配承诺变成自己的选择",
+        "power_method": "编码表达、撤回、再确认，并借红娘控制信息到达顺序",
+        "secret_leverage": "用诗简制造只有目标和中介能读懂的行动指令",
+        "escalation_logic": "从含混暗示升级到书简、夜约，再逼制度承认既成选择",
+        "fatal_miscalculation": "以为两个人足够聪明地互相读懂，就能自动跨过制度门槛"
+      },
+      "modern_adaptation": {
+        "statement_type": "ADAPTATION",
+        "role": "公立博物馆书画修复师"
+      },
+      "card": {
+        "path": "characters/chinese-classics/romance-of-western-chamber/CN-XXJ-001_崔莺莺.md",
+        "sha256": "acf2016a0a0a31f317adb78ba3f0dcd9c628d7a87e3aae08b872e42ca54fb1ae",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 16630,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/characters/chinese-classics/romance-of-western-chamber/CN-XXJ-001_%E5%B4%94%E8%8E%BA%E8%8E%BA.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/characters/chinese-classics/romance-of-western-chamber/CN-XXJ-001_%E5%B4%94%E8%8E%BA%E8%8E%BA.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/characters/chinese-classics/romance-of-western-chamber/CN-XXJ-001_%E5%B4%94%E8%8E%BA%E8%8E%BA.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/characters/chinese-classics/romance-of-western-chamber/CN-XXJ-001_%E5%B4%94%E8%8E%BA%E8%8E%BA.md"
+          }
+        }
+      },
+      "source_record": {
+        "path": "sources/CN-XXJ-001_sources.md",
+        "sha256": "4721f9fd78d06c54eb1fb9016497a000b8e47833342adf39df601d443f0746d4",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 1010,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/sources/CN-XXJ-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/sources/CN-XXJ-001_sources.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/sources/CN-XXJ-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/sources/CN-XXJ-001_sources.md"
+          }
+        }
+      },
+      "source_ids": [
+        "CN-XXJ-001-S01",
+        "CN-XXJ-001-S02",
+        "CN-XXJ-001-S03"
+      ],
+      "summary_lookup": {
+        "path": "data/characters.jsonl",
+        "key": "card_id",
+        "value": "CN-XXJ-001"
+      }
+    },
+    {
+      "card_id": "MY-MED-001",
+      "name_zh": "美狄亚",
+      "aliases": [
+        "Medea"
+      ],
+      "source_category": "mythology-and-epics",
+      "source_work": "Euripides, Medea",
+      "primary_archetype": {
+        "id": "revenge-destruction",
+        "name_zh": "复仇毁灭型"
+      },
+      "secondary_archetype_ids": [
+        "high-intellect-operator",
+        "identity-contrast",
+        "power-queen"
+      ],
+      "original_character_adult_status": "UNKNOWN",
+      "modern_adaptation_age": 38,
+      "layer_completion": {
+        "F": true,
+        "V": true,
+        "M": true,
+        "P": true,
+        "H": true,
+        "X": true,
+        "S": true,
+        "A": true,
+        "R": true
+      },
+      "internal_assessment": {
+        "tier": "Gold",
+        "anti_clone_result": "PASS",
+        "scope": "internal-assessment",
+        "independently_certified": false
+      },
+      "search_terms": [
+        "美狄亚",
+        "Medea",
+        "Euripides, Medea",
+        "revenge-destruction",
+        "复仇毁灭型",
+        "复仇",
+        "毁灭",
+        "秩序",
+        "代价",
+        "high-intellect-operator",
+        "identity-contrast",
+        "power-queen"
+      ],
+      "mechanism_summary": {
+        "statement_type": "INTERPRETATION",
+        "long_term_lack": "让自己为关系付出的叛乡、犯罪和生育成本重新具有约束力",
+        "power_method": "药物知识、策略延迟、假顺从、庇护谈判和选择损失对象",
+        "secret_leverage": "把真实目标藏进和解、母亲身份与礼物流程",
+        "escalation_logic": "从驱逐反击升级为摧毁新婚、王权与血脉，使对方不存在可替代未来",
+        "fatal_miscalculation": "以为让对方失去全部未来，就能恢复自己被抹掉的身份"
+      },
+      "modern_adaptation": {
+        "statement_type": "ADAPTATION",
+        "role": "生物医药配方研发总监"
+      },
+      "card": {
+        "path": "characters/mythology-and-epics/greek-tragedy/MY-MED-001_美狄亚.md",
+        "sha256": "2af204d5310dcb1e2e075fe5ce36f5af6f3a6fc769fb35f8928ce801a6da213d",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 17158,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/characters/mythology-and-epics/greek-tragedy/MY-MED-001_%E7%BE%8E%E7%8B%84%E4%BA%9A.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/characters/mythology-and-epics/greek-tragedy/MY-MED-001_%E7%BE%8E%E7%8B%84%E4%BA%9A.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/characters/mythology-and-epics/greek-tragedy/MY-MED-001_%E7%BE%8E%E7%8B%84%E4%BA%9A.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/characters/mythology-and-epics/greek-tragedy/MY-MED-001_%E7%BE%8E%E7%8B%84%E4%BA%9A.md"
+          }
+        }
+      },
+      "source_record": {
+        "path": "sources/MY-MED-001_sources.md",
+        "sha256": "2dabddb4a54777828c8909f0ddf4895ce22010e7f0a683a970201c1df57c93f0",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 1030,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/sources/MY-MED-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/sources/MY-MED-001_sources.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/sources/MY-MED-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/sources/MY-MED-001_sources.md"
+          }
+        }
+      },
+      "source_ids": [
+        "MY-MED-001-S01",
+        "MY-MED-001-S02",
+        "MY-MED-001-S03"
+      ],
+      "summary_lookup": {
+        "path": "data/characters.jsonl",
+        "key": "card_id",
+        "value": "MY-MED-001"
+      }
+    },
+    {
+      "card_id": "MY-OD-001",
+      "name_zh": "喀耳刻",
+      "aliases": [
+        "瑟西",
+        "Kirke"
+      ],
+      "source_category": "mythology-and-epics",
+      "source_work": "Homer, Odyssey, Book X and XII",
+      "primary_archetype": {
+        "id": "power-queen",
+        "name_zh": "权力女王型"
+      },
+      "secondary_archetype_ids": [
+        "temptation-control",
+        "identity-contrast",
+        "resource-carrier"
+      ],
+      "original_character_adult_status": "UNKNOWN",
+      "modern_adaptation_age": 35,
+      "layer_completion": {
+        "F": true,
+        "V": true,
+        "M": true,
+        "P": true,
+        "H": true,
+        "X": true,
+        "S": true,
+        "A": true,
+        "R": true
+      },
+      "internal_assessment": {
+        "tier": "Silver",
+        "anti_clone_result": "PASS",
+        "scope": "internal-assessment",
+        "independently_certified": false
+      },
+      "search_terms": [
+        "喀耳刻",
+        "瑟西",
+        "Kirke",
+        "Homer, Odyssey, Book X and XII",
+        "power-queen",
+        "权力女王型",
+        "权力",
+        "女王",
+        "资源",
+        "控制",
+        "temptation-control",
+        "identity-contrast",
+        "resource-carrier"
+      ],
+      "mechanism_summary": {
+        "statement_type": "INTERPRETATION",
+        "long_term_lack": "在孤立领地里确保每个进入者先接受她定义的规则",
+        "power_method": "空间、食物、药物、身体状态和离开所需知识",
+        "secret_leverage": "把配方、身体变化和航路信息分阶段释放",
+        "escalation_logic": "从身体控制转为招待、知识和航路控制，以更柔性的资源留住对方",
+        "fatal_miscalculation": "先把所有来客降格后，仍能准确区分危险者与平等合作者"
+      },
+      "modern_adaptation": {
+        "statement_type": "ADAPTATION",
+        "role": "海岛精品酒店主理人兼食品研发师"
+      },
+      "card": {
+        "path": "characters/mythology-and-epics/greek-epic/MY-OD-001_喀耳刻.md",
+        "sha256": "a0e14a63b1bf7d78656e08afe809f8cd68105f0a9d5e59f41930e5883b2764ef",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 16800,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/characters/mythology-and-epics/greek-epic/MY-OD-001_%E5%96%80%E8%80%B3%E5%88%BB.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/characters/mythology-and-epics/greek-epic/MY-OD-001_%E5%96%80%E8%80%B3%E5%88%BB.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/characters/mythology-and-epics/greek-epic/MY-OD-001_%E5%96%80%E8%80%B3%E5%88%BB.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/characters/mythology-and-epics/greek-epic/MY-OD-001_%E5%96%80%E8%80%B3%E5%88%BB.md"
+          }
+        }
+      },
+      "source_record": {
+        "path": "sources/MY-OD-001_sources.md",
+        "sha256": "4fe7e259310a4f180f52479d5ae7f56fb08f0b8e9fb708b6f16abce49d5140c1",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 1076,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/sources/MY-OD-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/sources/MY-OD-001_sources.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/sources/MY-OD-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/sources/MY-OD-001_sources.md"
+          }
+        }
+      },
+      "source_ids": [
+        "MY-OD-001-S01",
+        "MY-OD-001-S02",
+        "MY-OD-001-S03"
+      ],
+      "summary_lookup": {
+        "path": "data/characters.jsonl",
+        "key": "card_id",
+        "value": "MY-OD-001"
+      }
+    },
+    {
+      "card_id": "MY-OR-001",
+      "name_zh": "克吕泰涅斯特拉",
+      "aliases": [
+        "克吕泰墨斯特拉",
+        "Clytaemnestra"
+      ],
+      "source_category": "mythology-and-epics",
+      "source_work": "Aeschylus, Agamemnon",
+      "primary_archetype": {
+        "id": "revenge-destruction",
+        "name_zh": "复仇毁灭型"
+      },
+      "secondary_archetype_ids": [
+        "power-queen",
+        "high-intellect-operator",
+        "narrative-manipulation"
+      ],
+      "original_character_adult_status": "UNKNOWN",
+      "modern_adaptation_age": 44,
+      "layer_completion": {
+        "F": true,
+        "V": true,
+        "M": true,
+        "P": true,
+        "H": true,
+        "X": true,
+        "S": true,
+        "A": true,
+        "R": true
+      },
+      "internal_assessment": {
+        "tier": "Gold",
+        "anti_clone_result": "PASS",
+        "scope": "internal-assessment",
+        "independently_certified": false
+      },
+      "search_terms": [
+        "克吕泰涅斯特拉",
+        "克吕泰墨斯特拉",
+        "Clytaemnestra",
+        "Aeschylus, Agamemnon",
+        "revenge-destruction",
+        "复仇毁灭型",
+        "复仇",
+        "毁灭",
+        "秩序",
+        "代价",
+        "power-queen",
+        "high-intellect-operator",
+        "narrative-manipulation"
+      ],
+      "mechanism_summary": {
+        "statement_type": "INTERPRETATION",
+        "long_term_lack": "让女儿被牺牲、自己被长期留守的损失获得王权级别的公开结算",
+        "power_method": "长期摄政、烽火信息、宫廷物流、仪式语言和伏击空间",
+        "secret_leverage": "把杀意分散进每个看似合法的欢迎动作，最后公开抢占解释权",
+        "escalation_logic": "从信息先手、仪式引导升级到杀戮、公开认领和政权重组",
+        "fatal_miscalculation": "以为杀死债务人并接管国家，就能让血债在她这一代结案"
+      },
+      "modern_adaptation": {
+        "statement_type": "ADAPTATION",
+        "role": "家族制造集团代理董事长"
+      },
+      "card": {
+        "path": "characters/mythology-and-epics/greek-tragedy/MY-OR-001_克吕泰涅斯特拉.md",
+        "sha256": "8f756ca141deca0c3647466401aa75a553273fd28719644a14d6cb32ddd4e4a6",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 17530,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/characters/mythology-and-epics/greek-tragedy/MY-OR-001_%E5%85%8B%E5%90%95%E6%B3%B0%E6%B6%85%E6%96%AF%E7%89%B9%E6%8B%89.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/characters/mythology-and-epics/greek-tragedy/MY-OR-001_%E5%85%8B%E5%90%95%E6%B3%B0%E6%B6%85%E6%96%AF%E7%89%B9%E6%8B%89.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/characters/mythology-and-epics/greek-tragedy/MY-OR-001_%E5%85%8B%E5%90%95%E6%B3%B0%E6%B6%85%E6%96%AF%E7%89%B9%E6%8B%89.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/characters/mythology-and-epics/greek-tragedy/MY-OR-001_%E5%85%8B%E5%90%95%E6%B3%B0%E6%B6%85%E6%96%AF%E7%89%B9%E6%8B%89.md"
+          }
+        }
+      },
+      "source_record": {
+        "path": "sources/MY-OR-001_sources.md",
+        "sha256": "386abf5073fa51efd017db2c13df131f08a7c5deb966b5920643b11b2ed7e1d5",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 1014,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/sources/MY-OR-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/sources/MY-OR-001_sources.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/sources/MY-OR-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/sources/MY-OR-001_sources.md"
+          }
+        }
+      },
+      "source_ids": [
+        "MY-OR-001-S01",
+        "MY-OR-001-S02",
+        "MY-OR-001-S03"
+      ],
+      "summary_lookup": {
+        "path": "data/characters.jsonl",
+        "key": "card_id",
+        "value": "MY-OR-001"
+      }
+    },
+    {
+      "card_id": "WC-AK-001",
+      "name_zh": "安娜·卡列尼娜",
+      "aliases": [
+        "Anna Karenina",
+        "安娜"
+      ],
+      "source_category": "world-classics",
+      "source_work": "Leo Tolstoy, Anna Karenina",
+      "primary_archetype": {
+        "id": "marital-entrapment-transgression",
+        "name_zh": "婚姻困局越轨型"
+      },
+      "secondary_archetype_ids": [
+        "identity-contrast",
+        "emotional-obsession",
+        "desire-escalation"
+      ],
+      "original_character_adult_status": "UNKNOWN",
+      "modern_adaptation_age": 37,
+      "layer_completion": {
+        "F": true,
+        "V": true,
+        "M": true,
+        "P": true,
+        "H": true,
+        "X": true,
+        "S": true,
+        "A": true,
+        "R": true
+      },
+      "internal_assessment": {
+        "tier": "Gold",
+        "anti_clone_result": "PASS",
+        "scope": "internal-assessment",
+        "independently_certified": false
+      },
+      "search_terms": [
+        "安娜·卡列尼娜",
+        "Anna Karenina",
+        "安娜",
+        "Leo Tolstoy, Anna Karenina",
+        "marital-entrapment-transgression",
+        "婚姻困局越轨型",
+        "婚姻",
+        "越轨",
+        "双重生活",
+        "补偿",
+        "identity-contrast",
+        "emotional-obsession",
+        "desire-escalation"
+      ],
+      "mechanism_summary": {
+        "statement_type": "INTERPRETATION",
+        "long_term_lack": "在不失去母亲身份与社会人格的前提下活得情感真实",
+        "power_method": "社交魅力、情感坦白、退出旧角色的勇气和对恋人的唯一性要求",
+        "secret_leverage": "早期隐瞒维持结构，后期用坦白逼各方停止假装",
+        "escalation_logic": "制度不给完整出口，她便要求恋人承担越来越多家庭、社交和身份功能",
+        "fatal_miscalculation": "以为一个恋人可以接管婚姻、母职、社会和自我价值四套制度"
+      },
+      "modern_adaptation": {
+        "statement_type": "ADAPTATION",
+        "role": "高铁集团公共事务总监"
+      },
+      "card": {
+        "path": "characters/world-classics/anna-karenina/WC-AK-001_安娜·卡列尼娜.md",
+        "sha256": "ae46724530d1338e4cd24a382ca0ea8e2c901ee9bdb9cdf9a85d6d5d78dd8d10",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 17689,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/characters/world-classics/anna-karenina/WC-AK-001_%E5%AE%89%E5%A8%9C%C2%B7%E5%8D%A1%E5%88%97%E5%B0%BC%E5%A8%9C.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/characters/world-classics/anna-karenina/WC-AK-001_%E5%AE%89%E5%A8%9C%C2%B7%E5%8D%A1%E5%88%97%E5%B0%BC%E5%A8%9C.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/characters/world-classics/anna-karenina/WC-AK-001_%E5%AE%89%E5%A8%9C%C2%B7%E5%8D%A1%E5%88%97%E5%B0%BC%E5%A8%9C.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/characters/world-classics/anna-karenina/WC-AK-001_%E5%AE%89%E5%A8%9C%C2%B7%E5%8D%A1%E5%88%97%E5%B0%BC%E5%A8%9C.md"
+          }
+        }
+      },
+      "source_record": {
+        "path": "sources/WC-AK-001_sources.md",
+        "sha256": "b13ed5abf8e020609f6a9b4724c690ae0a4fefa3d0ae117dc508030275ad4e2c",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 1022,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/sources/WC-AK-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/sources/WC-AK-001_sources.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/sources/WC-AK-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/sources/WC-AK-001_sources.md"
+          }
+        }
+      },
+      "source_ids": [
+        "WC-AK-001-S01",
+        "WC-AK-001-S02",
+        "WC-AK-001-S03"
+      ],
+      "summary_lookup": {
+        "path": "data/characters.jsonl",
+        "key": "card_id",
+        "value": "WC-AK-001"
+      }
+    },
+    {
+      "card_id": "WC-AN-001",
+      "name_zh": "山鲁佐德",
+      "aliases": [
+        "舍赫拉查德",
+        "Scheherazade"
+      ],
+      "source_category": "world-classics",
+      "source_work": "The Arabian Nights’ Entertainments（Andrew Lang英译框架）",
+      "primary_archetype": {
+        "id": "narrative-manipulation",
+        "name_zh": "叙事操纵型"
+      },
+      "secondary_archetype_ids": [
+        "survival-adaptation",
+        "high-intellect-operator",
+        "redemption-complicity"
+      ],
+      "original_character_adult_status": "UNKNOWN",
+      "modern_adaptation_age": 33,
+      "layer_completion": {
+        "F": true,
+        "V": true,
+        "M": true,
+        "P": true,
+        "H": true,
+        "X": true,
+        "S": true,
+        "A": true,
+        "R": true
+      },
+      "internal_assessment": {
+        "tier": "Gold",
+        "anti_clone_result": "PASS",
+        "scope": "internal-assessment",
+        "independently_certified": false
+      },
+      "search_terms": [
+        "山鲁佐德",
+        "舍赫拉查德",
+        "Scheherazade",
+        "The Arabian Nights’ Entertainments（Andrew Lang英译框架）",
+        "narrative-manipulation",
+        "叙事操纵型",
+        "叙事",
+        "操纵",
+        "解释权",
+        "事实选择",
+        "survival-adaptation",
+        "high-intellect-operator",
+        "redemption-complicity"
+      ],
+      "mechanism_summary": {
+        "statement_type": "INTERPRETATION",
+        "long_term_lack": "在无法直接反抗的处决制度里取得一天又一天的生存时间和改写规则机会",
+        "power_method": "控制信息缺口、停顿时间、嵌套结构和听众的下一步欲望",
+        "secret_leverage": "不靠揭露私密事实，而靠延迟结局制造必须继续听的缺口",
+        "escalation_logic": "从单个悬念升级到故事套故事、主题回响和对听众判断的间接训练",
+        "fatal_miscalculation": "只要持续提供足够好的内容，掌权者就会把好奇心转成稳定伦理"
+      },
+      "modern_adaptation": {
+        "statement_type": "ADAPTATION",
+        "role": "调查音频平台内容总编兼晚间直播主持"
+      },
+      "card": {
+        "path": "characters/world-classics/arabian-nights/WC-AN-001_山鲁佐德.md",
+        "sha256": "60abc2b059dca0e4da400f0f6598b6ba308c740cd7d3a14e6c4668e64ba95fb7",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 17809,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/characters/world-classics/arabian-nights/WC-AN-001_%E5%B1%B1%E9%B2%81%E4%BD%90%E5%BE%B7.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/characters/world-classics/arabian-nights/WC-AN-001_%E5%B1%B1%E9%B2%81%E4%BD%90%E5%BE%B7.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/characters/world-classics/arabian-nights/WC-AN-001_%E5%B1%B1%E9%B2%81%E4%BD%90%E5%BE%B7.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/characters/world-classics/arabian-nights/WC-AN-001_%E5%B1%B1%E9%B2%81%E4%BD%90%E5%BE%B7.md"
+          }
+        }
+      },
+      "source_record": {
+        "path": "sources/WC-AN-001_sources.md",
+        "sha256": "9021fd1f734c3df4b0a3eaa9a64e2dd662e6ddd3bfc15eafea2a95199d4aff57",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 967,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/sources/WC-AN-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/sources/WC-AN-001_sources.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/sources/WC-AN-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/sources/WC-AN-001_sources.md"
+          }
+        }
+      },
+      "source_ids": [
+        "WC-AN-001-S01",
+        "WC-AN-001-S02",
+        "WC-AN-001-S03"
+      ],
+      "summary_lookup": {
+        "path": "data/characters.jsonl",
+        "key": "card_id",
+        "value": "WC-AN-001"
+      }
+    },
+    {
+      "card_id": "WC-CAR-001",
+      "name_zh": "卡门",
+      "aliases": [],
+      "source_category": "world-classics",
+      "source_work": "Prosper Mérimée, Carmen",
+      "primary_archetype": {
+        "id": "temptation-control",
+        "name_zh": "诱惑控场型"
+      },
+      "secondary_archetype_ids": [
+        "fierce-self-respect",
+        "survival-adaptation",
+        "secret-bargaining"
+      ],
+      "original_character_adult_status": "UNKNOWN",
+      "modern_adaptation_age": 29,
+      "layer_completion": {
+        "F": true,
+        "V": true,
+        "M": true,
+        "P": true,
+        "H": true,
+        "X": true,
+        "S": true,
+        "A": true,
+        "R": true
+      },
+      "internal_assessment": {
+        "tier": "Gold",
+        "anti_clone_result": "PASS",
+        "scope": "internal-assessment",
+        "independently_certified": false
+      },
+      "search_terms": [
+        "卡门",
+        "Prosper Mérimée, Carmen",
+        "temptation-control",
+        "诱惑控场型",
+        "诱惑",
+        "控场",
+        "距离",
+        "注意力",
+        "fierce-self-respect",
+        "survival-adaptation",
+        "secret-bargaining"
+      ],
+      "mechanism_summary": {
+        "statement_type": "INTERPRETATION",
+        "long_term_lack": "保持随时离开任何男人、工作和组织的身体自主权",
+        "power_method": "管理可得性、即时注意、路线信息和社群入口",
+        "secret_leverage": "只在需要行动时释放一段信息或希望，不建立永久透明",
+        "escalation_logic": "对方越想收紧控制，她越换路线、对象和公开拒绝，迫使冲突从欲望升级为所有权战争",
+        "fatal_miscalculation": "以为清楚声明“当下不等于所有权”足以让欲望者接受边界"
+      },
+      "modern_adaptation": {
+        "statement_type": "ADAPTATION",
+        "role": "口岸商贸翻译兼拉丁舞教练"
+      },
+      "card": {
+        "path": "characters/world-classics/carmen/WC-CAR-001_卡门.md",
+        "sha256": "76f867d960472b229d285a63cdff9d9bf31d455f4b2a3705de054e5395b76eca",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 16741,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/characters/world-classics/carmen/WC-CAR-001_%E5%8D%A1%E9%97%A8.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/characters/world-classics/carmen/WC-CAR-001_%E5%8D%A1%E9%97%A8.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/characters/world-classics/carmen/WC-CAR-001_%E5%8D%A1%E9%97%A8.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/characters/world-classics/carmen/WC-CAR-001_%E5%8D%A1%E9%97%A8.md"
+          }
+        }
+      },
+      "source_record": {
+        "path": "sources/WC-CAR-001_sources.md",
+        "sha256": "e0a3c5a263f37167bda773e803fd941ad1d60ce90d9f8dc76ffa9807c99c803a",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 922,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/sources/WC-CAR-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/sources/WC-CAR-001_sources.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/sources/WC-CAR-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/sources/WC-CAR-001_sources.md"
+          }
+        }
+      },
+      "source_ids": [
+        "WC-CAR-001-S01",
+        "WC-CAR-001-S02",
+        "WC-CAR-001-S03"
+      ],
+      "summary_lookup": {
+        "path": "data/characters.jsonl",
+        "key": "card_id",
+        "value": "WC-CAR-001"
+      }
+    },
+    {
+      "card_id": "WC-GWTW-001",
+      "name_zh": "郝思嘉",
+      "aliases": [
+        "斯嘉丽·奥哈拉",
+        "Scarlett"
+      ],
+      "source_category": "world-classics",
+      "source_work": "Margaret Mitchell, Gone with the Wind",
+      "primary_archetype": {
+        "id": "survival-adaptation",
+        "name_zh": "生存适应型"
+      },
+      "secondary_archetype_ids": [
+        "class-mobility",
+        "resource-carrier",
+        "ambition-ascension"
+      ],
+      "original_character_adult_status": "CONFIRMED_MINOR",
+      "modern_adaptation_age": 30,
+      "layer_completion": {
+        "F": true,
+        "V": true,
+        "M": true,
+        "P": true,
+        "H": true,
+        "X": true,
+        "S": true,
+        "A": true,
+        "R": true
+      },
+      "internal_assessment": {
+        "tier": "Gold",
+        "anti_clone_result": "PASS",
+        "scope": "internal-assessment",
+        "independently_certified": false
+      },
+      "search_terms": [
+        "郝思嘉",
+        "斯嘉丽·奥哈拉",
+        "Scarlett",
+        "Margaret Mitchell, Gone with the Wind",
+        "survival-adaptation",
+        "生存适应型",
+        "生存",
+        "适应",
+        "环境",
+        "自我侵蚀",
+        "class-mobility",
+        "resource-carrier",
+        "ambition-ascension"
+      ],
+      "mechanism_summary": {
+        "statement_type": "INTERPRETATION",
+        "long_term_lack": "在秩序崩塌后拥有永不再挨饿、永不失去土地的现实控制",
+        "power_method": "资源优先级、羞耻耐受、危机行动和把名誉迅速折现",
+        "secret_leverage": "隐瞒绝望、暴力和真实财务意图，先把资源拿到手再解释",
+        "escalation_logic": "从务农、借款升级到工具婚姻、压价经营和公开挑战性别规则",
+        "fatal_miscalculation": "以为所有感情损失都能在资产安全后重新买回或说服回来"
+      },
+      "modern_adaptation": {
+        "statement_type": "ADAPTATION",
+        "role": "县域烂尾文旅园区盘活运营商"
+      },
+      "card": {
+        "path": "characters/world-classics/gone-with-the-wind/WC-GWTW-001_郝思嘉.md",
+        "sha256": "b1b1ec0e16c554dc4f3b8748b814a4055a9b9710034c3d0e394f7daa4af7a12e",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 17168,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/characters/world-classics/gone-with-the-wind/WC-GWTW-001_%E9%83%9D%E6%80%9D%E5%98%89.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/characters/world-classics/gone-with-the-wind/WC-GWTW-001_%E9%83%9D%E6%80%9D%E5%98%89.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/characters/world-classics/gone-with-the-wind/WC-GWTW-001_%E9%83%9D%E6%80%9D%E5%98%89.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/characters/world-classics/gone-with-the-wind/WC-GWTW-001_%E9%83%9D%E6%80%9D%E5%98%89.md"
+          }
+        }
+      },
+      "source_record": {
+        "path": "sources/WC-GWTW-001_sources.md",
+        "sha256": "60195be5af4d3267a6b516c48e9b8085f628847ed98e4fe1932d9c3a969c9919",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 1000,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/sources/WC-GWTW-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/sources/WC-GWTW-001_sources.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/sources/WC-GWTW-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/sources/WC-GWTW-001_sources.md"
+          }
+        }
+      },
+      "source_ids": [
+        "WC-GWTW-001-S01",
+        "WC-GWTW-001-S02",
+        "WC-GWTW-001-S03"
+      ],
+      "summary_lookup": {
+        "path": "data/characters.jsonl",
+        "key": "card_id",
+        "value": "WC-GWTW-001"
+      }
+    },
+    {
+      "card_id": "WC-JE-001",
+      "name_zh": "简·爱",
+      "aliases": [
+        "Jane"
+      ],
+      "source_category": "world-classics",
+      "source_work": "Charlotte Brontë, Jane Eyre",
+      "primary_archetype": {
+        "id": "discipline-awakening",
+        "name_zh": "规训觉醒型"
+      },
+      "secondary_archetype_ids": [
+        "fierce-self-respect",
+        "class-mobility",
+        "identity-contrast"
+      ],
+      "original_character_adult_status": "CONFIRMED_ADULT",
+      "modern_adaptation_age": 28,
+      "layer_completion": {
+        "F": true,
+        "V": true,
+        "M": true,
+        "P": true,
+        "H": true,
+        "X": true,
+        "S": true,
+        "A": true,
+        "R": true
+      },
+      "internal_assessment": {
+        "tier": "Gold",
+        "anti_clone_result": "PASS",
+        "scope": "internal-assessment",
+        "independently_certified": false
+      },
+      "search_terms": [
+        "简·爱",
+        "Jane",
+        "Charlotte Brontë, Jane Eyre",
+        "discipline-awakening",
+        "规训觉醒型",
+        "规训",
+        "觉醒",
+        "规则",
+        "定义权",
+        "fierce-self-respect",
+        "class-mobility",
+        "identity-contrast"
+      ],
+      "mechanism_summary": {
+        "statement_type": "INTERPRETATION",
+        "long_term_lack": "获得不以服从、感恩或秘密附属为代价的平等归属",
+        "power_method": "离开的能力、直白语言、经济出口与对秘密条件的拒绝",
+        "secret_leverage": "不靠秘密要价；一旦秘密改变同意条件，就退出其控制范围",
+        "escalation_logic": "获得财产后，她进一步拒绝以使命压掉情感的另一种不平等婚姻",
+        "fatal_miscalculation": "有时把独立等同于不接受任何依赖，险些让使命取代欲望"
+      },
+      "modern_adaptation": {
+        "statement_type": "ADAPTATION",
+        "role": "民办学校奖学金项目老师"
+      },
+      "card": {
+        "path": "characters/world-classics/jane-eyre/WC-JE-001_简·爱.md",
+        "sha256": "d8009c7bd50cc26fc4cbd52bcde8f3ba28998ea7038639918f97aacf0f1582cc",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 17100,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/characters/world-classics/jane-eyre/WC-JE-001_%E7%AE%80%C2%B7%E7%88%B1.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/characters/world-classics/jane-eyre/WC-JE-001_%E7%AE%80%C2%B7%E7%88%B1.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/characters/world-classics/jane-eyre/WC-JE-001_%E7%AE%80%C2%B7%E7%88%B1.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/characters/world-classics/jane-eyre/WC-JE-001_%E7%AE%80%C2%B7%E7%88%B1.md"
+          }
+        }
+      },
+      "source_record": {
+        "path": "sources/WC-JE-001_sources.md",
+        "sha256": "2094c64f3209760343cdcb506b80396b22016f15a387a3e5de089881eb7f4b5a",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 949,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/sources/WC-JE-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/sources/WC-JE-001_sources.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/sources/WC-JE-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/sources/WC-JE-001_sources.md"
+          }
+        }
+      },
+      "source_ids": [
+        "WC-JE-001-S01",
+        "WC-JE-001-S02",
+        "WC-JE-001-S03"
+      ],
+      "summary_lookup": {
+        "path": "data/characters.jsonl",
+        "key": "card_id",
+        "value": "WC-JE-001"
+      }
+    },
+    {
+      "card_id": "WC-MB-001",
+      "name_zh": "包法利夫人",
+      "aliases": [
+        "艾玛·包法利",
+        "Madame Bovary"
+      ],
+      "source_category": "world-classics",
+      "source_work": "Gustave Flaubert, Madame Bovary",
+      "primary_archetype": {
+        "id": "desire-escalation",
+        "name_zh": "欲望加码型"
+      },
+      "secondary_archetype_ids": [
+        "class-mobility",
+        "marital-entrapment-transgression",
+        "narrative-manipulation"
+      ],
+      "original_character_adult_status": "UNKNOWN",
+      "modern_adaptation_age": 31,
+      "layer_completion": {
+        "F": true,
+        "V": true,
+        "M": true,
+        "P": true,
+        "H": true,
+        "X": true,
+        "S": true,
+        "A": true,
+        "R": true
+      },
+      "internal_assessment": {
+        "tier": "Gold",
+        "anti_clone_result": "PASS",
+        "scope": "internal-assessment",
+        "independently_certified": false
+      },
+      "search_terms": [
+        "包法利夫人",
+        "艾玛·包法利",
+        "Madame Bovary",
+        "Gustave Flaubert, Madame Bovary",
+        "desire-escalation",
+        "欲望加码型",
+        "欲望",
+        "加码",
+        "风险",
+        "耐受",
+        "class-mobility",
+        "marital-entrapment-transgression",
+        "narrative-manipulation"
+      ],
+      "mechanism_summary": {
+        "statement_type": "INTERPRETATION",
+        "long_term_lack": "让普通生活持续拥有小说和消费图像里的浓度、阶层和主角感",
+        "power_method": "审美包装、情绪戏剧化、分区叙事和让他人替未来买单",
+        "secret_leverage": "让丈夫、情人和债权人分别相信不兼容的未来版本",
+        "escalation_logic": "浪漫的刺激衰减后，必须增加消费、城市往返、承诺和信用额度",
+        "fatal_miscalculation": "以为下一次更强的爱情或更大信用能够为全部旧缺口再融资"
+      },
+      "modern_adaptation": {
+        "statement_type": "ADAPTATION",
+        "role": "县城医美诊所老板娘兼家居短视频博主"
+      },
+      "card": {
+        "path": "characters/world-classics/madame-bovary/WC-MB-001_包法利夫人.md",
+        "sha256": "6d0217abec03ac0db9e2b02c24c424b56db183713b467d8ae8542fd08091c9e4",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 17416,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/characters/world-classics/madame-bovary/WC-MB-001_%E5%8C%85%E6%B3%95%E5%88%A9%E5%A4%AB%E4%BA%BA.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/characters/world-classics/madame-bovary/WC-MB-001_%E5%8C%85%E6%B3%95%E5%88%A9%E5%A4%AB%E4%BA%BA.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/characters/world-classics/madame-bovary/WC-MB-001_%E5%8C%85%E6%B3%95%E5%88%A9%E5%A4%AB%E4%BA%BA.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/characters/world-classics/madame-bovary/WC-MB-001_%E5%8C%85%E6%B3%95%E5%88%A9%E5%A4%AB%E4%BA%BA.md"
+          }
+        }
+      },
+      "source_record": {
+        "path": "sources/WC-MB-001_sources.md",
+        "sha256": "71e36389ff49aae8d70948968c28e806c5fb00ccb863d550f47be83914e6f5e0",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 1011,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/sources/WC-MB-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/sources/WC-MB-001_sources.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/sources/WC-MB-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/sources/WC-MB-001_sources.md"
+          }
+        }
+      },
+      "source_ids": [
+        "WC-MB-001-S01",
+        "WC-MB-001-S02",
+        "WC-MB-001-S03"
+      ],
+      "summary_lookup": {
+        "path": "data/characters.jsonl",
+        "key": "card_id",
+        "value": "WC-MB-001"
+      }
+    },
+    {
+      "card_id": "WC-VF-001",
+      "name_zh": "贝姬·夏泼",
+      "aliases": [
+        "Rebecca Sharp",
+        "Becky Sharp",
+        "蓓基·夏泼"
+      ],
+      "source_category": "world-classics",
+      "source_work": "William Makepeace Thackeray, Vanity Fair",
+      "primary_archetype": {
+        "id": "ambition-ascension",
+        "name_zh": "野心上位型"
+      },
+      "secondary_archetype_ids": [
+        "narrative-manipulation",
+        "high-intellect-operator",
+        "class-mobility"
+      ],
+      "original_character_adult_status": "UNKNOWN",
+      "modern_adaptation_age": 28,
+      "layer_completion": {
+        "F": true,
+        "V": true,
+        "M": true,
+        "P": true,
+        "H": true,
+        "X": true,
+        "S": true,
+        "A": true,
+        "R": true
+      },
+      "internal_assessment": {
+        "tier": "Gold",
+        "anti_clone_result": "PASS",
+        "scope": "internal-assessment",
+        "independently_certified": false
+      },
+      "search_terms": [
+        "贝姬·夏泼",
+        "Rebecca Sharp",
+        "Becky Sharp",
+        "蓓基·夏泼",
+        "William Makepeace Thackeray, Vanity Fair",
+        "ambition-ascension",
+        "野心上位型",
+        "野心",
+        "上位",
+        "位置",
+        "台阶",
+        "narrative-manipulation",
+        "high-intellect-operator",
+        "class-mobility"
+      ],
+      "mechanism_summary": {
+        "statement_type": "INTERPRETATION",
+        "long_term_lack": "在没有姓氏、财产和保护人的起点上获得不再被赶走的上层通行证",
+        "power_method": "快速读出虚荣点、切换口音表情、制造各自专属的她",
+        "secret_leverage": "给每个赞助人一套定制真相，并阻止他们互相校验",
+        "escalation_logic": "单一讨好不再够用，她必须叠加秘密婚姻、债务、暧昧和更高阶赞助",
+        "fatal_miscalculation": "以为所有观众可以永久隔离，且自己能无限切换而不耗损"
+      },
+      "modern_adaptation": {
+        "statement_type": "ADAPTATION",
+        "role": "会展公关招商主管兼短视频礼仪培训师"
+      },
+      "card": {
+        "path": "characters/world-classics/vanity-fair/WC-VF-001_贝姬·夏泼.md",
+        "sha256": "b403573cb4bb5f94cd00c9449a5119a166792c87ab886f55d091a995d4d8d40f",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 17599,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/characters/world-classics/vanity-fair/WC-VF-001_%E8%B4%9D%E5%A7%AC%C2%B7%E5%A4%8F%E6%B3%BC.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/characters/world-classics/vanity-fair/WC-VF-001_%E8%B4%9D%E5%A7%AC%C2%B7%E5%A4%8F%E6%B3%BC.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/characters/world-classics/vanity-fair/WC-VF-001_%E8%B4%9D%E5%A7%AC%C2%B7%E5%A4%8F%E6%B3%BC.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/characters/world-classics/vanity-fair/WC-VF-001_%E8%B4%9D%E5%A7%AC%C2%B7%E5%A4%8F%E6%B3%BC.md"
+          }
+        }
+      },
+      "source_record": {
+        "path": "sources/WC-VF-001_sources.md",
+        "sha256": "a556c72e7f884d88da9a1645edd3925f2c1058029b0c63616cfaf6e2931e9382",
+        "hash_basis": "utf8-lf-text",
+        "byte_size": 956,
+        "urls": {
+          "main": {
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/sources/WC-VF-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/sources/WC-VF-001_sources.md"
+          },
+          "release": {
+            "ref": "v0.1.0",
+            "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/sources/WC-VF-001_sources.md",
+            "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/sources/WC-VF-001_sources.md"
+          }
+        }
+      },
+      "source_ids": [
+        "WC-VF-001-S01",
+        "WC-VF-001-S02",
+        "WC-VF-001-S03"
+      ],
+      "summary_lookup": {
+        "path": "data/characters.jsonl",
+        "key": "card_id",
+        "value": "WC-VF-001"
+      }
+    }
+  ]
+}

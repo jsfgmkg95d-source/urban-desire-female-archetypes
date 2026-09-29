@@ -1,134 +1,58 @@
-# 索引规范
+# 检索导航与索引规范
 
-本目录保存从人物卡派生的检索索引，不保存新的事实。索引值必须能回到人物卡、来源记录和稳定 `card_id`；索引不允许修正或补写人物卡。
+十个视图从 `data/characters.jsonl` 自动生成，只提供召回与比较，不新增事实。命中后回读完整人物卡和来源。
 
-Stage 3B 起加入 R 快速调用胶囊。`data/characters.jsonl` 是机器摘要；本目录中的 Markdown 文件是人工可读派生索引。二者都不得补写人物卡没有的事实，R 也只能压缩卡片已有层。
+总索引登记所有等级。应用视图显示等级，只收录 Gold / Silver 的相关已完成层；Reference 保留为资料条目，未设计 H4 或未完成 R 的记录不进入相应视图。
 
-## 1. 稳定标识
+## 选择入口
 
-- `card_id`：全库唯一、创建后不因改名或译名变化而改变。
-- `source_id`：定位一条来源记录。
-- `archetype_id`：使用 `data/archetypes.json` 中的一级原型 ID。
-- `engine_id`：人物卡内部唯一，推荐 `<card_id>-P01`。
-- `hybrid_id`：杂交结果唯一，不复用来源卡 ID。
-- 别名只用于查询，不作为主键。
-
-## 2. 未来索引产物
-
-| 文件 | 用途 | 主键/粒度 |
+| 视图 | 适合回答的问题 | 主要字段 / 所属层 |
 |---|---|---|
-| `characters.jsonl` | 一行一张卡的机器检索摘要 | `card_id` |
-| `by-archetype.json` | 一级/次级原型到人物卡 | `archetype_id` |
-| `by-visual-function.json` | 身份反差、欲望、误会、竞争、权力、危险、剧情推进 | `visual_plot_function` |
-| `by-mechanism.json` | 匮乏、越界、奖励、权力、秘密、加码和代价 | 规范化机制词 |
-| `by-source.json` | 来源作品、版本、媒介和分类 | 来源键 |
-| `hybridization-pool.json` | 已通过质量门的可输出槽位 | `card_id + slot_id` |
-| `nearest-neighbors.json` | Anti-Clone 最近邻和差异 | `card_id` |
+| [人物总索引](master-index.md) | 库里有什么？等级、来源和最近邻是什么？ | 稳定 ID、Metadata、A |
+| [一级原型](by-archetype.md) | 哪些人物以同类机制持续行动？ | 主原型、R1 |
+| [视觉签名](by-visual-hook.md) | 现代设计如何被辨识或误读？ | H4 / R2，`ADAPTATION` |
+| [身份反差](by-identity.md) | 哪种公共位置与私人需求形成张力？ | 来源边界、H4 |
+| [欲望机制](by-desire-mechanism.md) | 匮乏怎样变成奖励与加码？ | M 的机器摘要 |
+| [权力方式](by-power-method.md) | 她如何改变关系中的选项？ | M 的机器摘要 |
+| [秘密杠杆](by-secret-method.md) | 信息如何成为要价、解释或退出工具？ | F / M 的机器摘要 |
+| [现代角色](by-modern-role.md) | 哪个都市职业和资源容器适合该机制？ | H4 / R5，`ADAPTATION` |
+| [关系机制](by-relationship-mechanism.md) | 亲密、控制和最怕失去的资源如何关联？ | R1 / R4 |
+| [剧情发动机](by-plot-engine.md) | 哪张卡包含可继续读的 P 发动机？ | 发动机 ID、都市冲突、R3 |
 
-当前人工可读索引为：`master-index.md`、`by-archetype.md`、`by-visual-hook.md`、`by-identity.md`、`by-desire-mechanism.md`、`by-power-method.md`、`by-secret-method.md`、`by-modern-role.md`、`by-relationship-mechanism.md`、`by-plot-engine.md`。Batch 002 已按30卡重算最近邻。
+剧情视图合并同一卡的发动机 ID；完整触发、行动、阻力、收益、升级、代价与重复条件保存在卡片 P 层。表中的都市冲突和欲望链是卡片摘要，不冒充逐发动机内容。
 
-上述文件只有出现合格人物卡后才创建，不为保持目录好看而生成空伪数据。
+## 内容依据与稳定标识
 
-## 3. `characters.jsonl` 最小字段
+人物卡与来源记录是内容依据，JSONL 是人工复核的机器摘要，索引与 `character_records` 登记缓存是生成物。派生内容与卡片冲突时，先查卡片和来源，再修订摘要并重建。
 
-每行是一个 JSON 对象，至少包含：
+| 标识 | 规则 |
+|---|---|
+| `card_id` | 全库唯一，改名或换译名时保持稳定 |
+| `source_id` | 回链对应来源记录 |
+| `archetype_id` | 使用 `data/archetypes.json` 的分类 ID |
+| `engine_id` | 卡内唯一，通常为 `<card_id>-P01` |
+| `hybrid_id` | 新的组合设计另建 ID，不复用来源卡 ID |
 
-```json
-{
-  "card_id": "stable-id",
-  "tier": "Silver",
-  "name_zh": "示意值，不是实际人物",
-  "aliases": [],
-  "source_category": "world-classics",
-  "source_work": "work-id-or-title",
-  "primary_archetype_id": "identity-contrast",
-  "secondary_archetype_ids": [],
-  "adult_status": "UNKNOWN",
-  "layer_completion": {"F": true, "V": false, "M": true, "P": true, "H": true, "X": true, "S": true, "A": false, "R": false},
-  "visual_signature": [],
-  "visual_plot_functions": [],
-  "long_term_lack": "normalized phrase",
-  "first_crossing": "normalized phrase",
-  "immediate_reward": "normalized phrase",
-  "power_method": "normalized phrase",
-  "jealous_resource": "normalized phrase",
-  "secret_leverage": "normalized phrase",
-  "escalation_logic": "normalized phrase",
-  "fatal_miscalculation": "normalized phrase",
-  "plot_engine_ids": [],
-  "urban_preserve": [],
-  "adult_adaptation_age": "25+ explicit age or range",
-  "adult_adaptation_role": "modern original role",
-  "adult_visual_signature": [],
-  "adult_low_register_first_glance": "adult adaptation only",
-  "adult_identity_body_contrast": [],
-  "adult_clothing_contrast": {},
-  "adult_visual_plot_functions": [],
-  "hybridization_slots": [],
-  "scores": {},
-  "nearest_neighbor_card_id": null,
-  "anti_clone_result": "REVISE",
-  "archetype_uniqueness_statement": "Gold only, max 60 Chinese characters",
-  "retrieval_capsule": {
-    "one_line_archetype": "max 40 Chinese characters",
-    "visual_signature": {"memory_points": [], "identity_body_contrast": "", "clothing_effect": ""},
-    "desire_chain": "lack → first crossing → reward → escalation → cost",
-    "power_interface": {"power_method": "", "secret_use": "", "feared_resource_loss": ""},
-    "best_urban_container": {"age": 28, "identity": "", "marital_status": "", "class_position": "", "core_conflict": ""},
-    "hybrid_recommendation": {"inherit": "", "conflict": "", "never_copy_together": ""},
-    "forbidden_as": ["", "", ""],
-    "machine_call_string": ""
-  },
-  "source_ids": []
-}
+别名用于查询，不作主键。机器字段、枚举和层约定见[数据说明](../data/README.md)及[字段契约](../data/archetypes.json)。未来若新增 JSON 视图或第三方导出，先明确用途与生成方式；当前不创建空的计划产物。
+
+## 查询与返回规则
+
+1. 默认返回 `card_id`、姓名、内部等级、匹配字段、匹配原因、所属层与来源入口。
+2. R 用于首轮召回；选中后回读 F / V / M / P / H / X / S / A，R 不能覆盖完整卡。
+3. `UNKNOWN` 不等于否定值。未知是否有秘密的卡不能被当成“没有秘密”。
+4. 原角色视觉查询应用成年状态限制；`CONFIRMED_MINOR` 和 `UNKNOWN` 的 V 不进入情色身体检索。
+5. H4 查询独立返回明确的现代年龄、角色、视觉签名、身份与衣着反差、剧情功能，并标为 `ADAPTATION`；不得合并成原角色事实。
+6. S 数值只供排序，展示机制理由；Gold 与 `PASS` 只表示内部审阅结论。
+7. 新卡可能改变最近邻。机器索引不会重算语义相似度，需要另做反克隆审阅。
+
+## 重建与检查
+
+```shell
+python scripts/build-indexes.py
+python scripts/build-indexes.py --check
+python scripts/validate-library.py
 ```
 
-该代码块只说明字段，不构成已生产人物。
+构建器更新十个 Markdown 视图与 `archetypes.json.character_records` 缓存，不改写人物、来源、JSONL、评分或等级。`--check` 只比较输入和生成物，发现过期时返回失败。
 
-## 4. 检索维度
-
-### 来源与可信度
-
-按来源类别、作品、版本、事实截止点、来源可靠性、成年状态和卡片等级筛选。
-
-### 视觉辨识
-
-按 `body_focus`、视觉签名轴、七类剧情功能和年龄门筛选。查询身体特征时必须同时返回它服务的剧情功能，禁止只输出身体目录。
-
-### 人物机制
-
-按一级/次级原型、长期匮乏、诱因、第一次越界、即时奖励、自我合理化、权力方法、嫉妒资源、秘密杠杆、加码和最终代价筛选。
-
-### 都市剧情
-
-按2020年代必须保留项、职业/城市容器、三个剧情发动机、危险等级和可移植性筛选。H4 成人视觉检索必须同时返回 `adult_adaptation_age`、`adult_adaptation_role`、视觉签名、身份身体反差、穿衣反差和剧情功能，并明确标记为 `ADAPTATION`。
-
-### 杂交
-
-按可输出槽位、兼容原型、冲突原型、禁止继承项和克隆风险筛选。检索结果必须带槽位来源，不返回不可追溯的“混合灵感”。
-
-### R 快速调用
-
-R 默认用于首轮召回：返回一句话母体、视觉签名、欲望链、权力接口、最佳都市容器、三槽杂交建议、三项禁止写法和机器调用串。命中后必须回读完整卡片；R 不得作为事实来源，也不得覆盖 F/V/M/H/X/S/A。
-
-## 5. 查询返回规则
-
-1. 默认返回 `card_id`、名称、tier、匹配字段、匹配原因、事实/解释类型和来源定位。
-2. 查询 Gold 时必须确认最近邻审计仍有效；库新增卡后可能需要重算。
-3. `UNKNOWN` 不得当作否定值。例如“未知是否有秘密”不能进入“没有秘密”结果。
-4. 视觉查询必须应用成年状态过滤；`CONFIRMED_MINOR` 和 `UNKNOWN` 不进入情色化身体检索。
-   H4 是独立例外路径：只检索 `DESIGNATED_ADULT` 且明确 25+ 的现代原创移植，不得把结果合并为原角色 V 事实。
-5. S 分值只用于排序，最终结果必须同时展示机制理由。
-6. 索引与卡片冲突时，以卡片和来源为准，索引标记过期并重建。
-
-## 6. 更新顺序
-
-1. 人物卡通过对应等级质量门；
-2. 来源记录已落盘；
-3. 生成或更新 `characters.jsonl`；
-4. 更新原型、视觉、机制、来源和杂交索引；
-5. 重算最近邻并运行 Anti-Clone；
-6. 抽查索引值能回链到卡片字段；
-7. 保存批次审计结果。
-
-禁止手工只改索引而不改权威人物卡。
+内容更新顺序为：人物卡与来源 → 质量和最近邻审阅 → JSONL 摘要 → 重建 → 校验 → 人工回读抽查。完整要求见[贡献说明](../CONTRIBUTING.md)，第一次使用见[指南](../docs/guide.md)与[检索示例](../examples/retrieval.md)。

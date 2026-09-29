@@ -1,11 +1,32 @@
 ---
 name: urban-desire-female-archetypes
-description: Create, audit, index, retrieve, or hybridize source-traceable female archetype cards for modern Chinese urban male-oriented fiction. Use for this library's F/V/M/P/H/X/S/A/R workflow; do not use it to copy original plots or eroticize minors or age-unknown characters.
+description: Retrieve and compare source-linked female character mechanisms for Chinese urban fiction, or create and audit cards in this library. Use for character design, archetype search, and controlled hybridization; keep source facts, interpretation, and modern adaptation separate.
 ---
 
 # 都市欲望女性原型库
 
 把经典女性角色转换为可检索、可审计、可杂交的人物机制资产，而不是文学百科或原剧情复刻。
+
+本目录是自包含技能；相对路径均以技能所在目录为根。保留整个仓库及引用资源，不能只复制本文件。数据以中文为主，`v0.1.0` 为研究预览。入口与版本见 `data/library-manifest.json`，浏览或接入方法见 `docs/ai-integration.md`。
+
+## 检索与调用
+
+先读 `AGENTS.md` 和 `references/source-rules.md`。从 `data/catalog.json`、`data/characters.jsonl` 或下列只读命令找候选，按 `card_id` 回读人物卡与 `sources/<card_id>_sources.md`；筛选摘要不能代替读源。
+
+```shell
+python scripts/archetypes.py search --query "秘密 退出" --limit 3
+python scripts/archetypes.py get --id CN-HLM-001
+python scripts/archetypes.py list --limit 30 --offset 0
+python scripts/archetypes.py rules --name hybridization-rules
+```
+
+可用等价的 MCP 工具 `search_archetypes`、`get_archetype`、`list_archetypes` 和 `read_rules`。没有命令执行能力时，按 `llms.txt` 与 catalog 的完整 URL 浏览相关文件；不得假装已经运行工具或读过原作。
+
+示例命令在技能根目录执行；跨目录调用时用脚本的绝对路径。
+
+比较候选时说明长期匮乏、奖励、权力接口、升级与代价的差异，附 `card_id` 和卡片/来源定位。机制借用遵循 `references/hybridization-rules.md`：选择互补槽位，重新设计人物身份、关系、事件和解决路径，明确哪些内容是 `ADAPTATION`。
+
+`Gold / Silver / PASS`、评分及置信度都是内部评估，不是独立核验或原创性认证；部分事实定位与现代设计仍待复核，见 `docs/open-source-assessment.md`。原角色的年龄未知或未成年时，不做情色化身体分析；现代成年设计不能覆盖原角色年龄证据。源作品、译文与摘录的权利不由本库许可覆盖，见 `COPYRIGHT.md` 和 `THIRD_PARTY_NOTICES.md`。
 
 ## 先读规则
 
@@ -15,7 +36,7 @@ description: Create, audit, index, retrieve, or hybridize source-traceable femal
 - 只做事实审计：读 `references/source-rules.md` 和 `references/quality-gate.md`。
 - 只做视觉层：读 `references/source-rules.md` 和 `references/visual-language.md`；必须先通过年龄门。
 - 人物杂交：在上述规则外，再读 `references/hybridization-rules.md`。
-- 建索引或检索：读 `indexes/README.md`，并以 `data/archetypes.json` 的 ID、枚举和字段约定为准。
+- 建索引或维护接入：读 `indexes/README.md`、`CONTRIBUTING.md`，并以 `data/archetypes.json` 的 ID、枚举和字段约定为准。llms.txt、catalog、manifest 与索引均是派生视图，不能手改。
 
 引用的文件缺失时停止生产并报告，不得凭记忆补出规范。
 
@@ -39,3 +60,4 @@ description: Create, audit, index, retrieve, or hybridize source-traceable femal
 - 每批完成后执行事实、成人视觉、重复度、反克隆、R 压缩忠实度、机器字段和杂交接口审计。
 - 未经明确授权，不开始人物批量生产；第一阶段不得直接生产 500 人。
 - 任一事实来源、年龄门或质量门失败时停止升级等级，保留 `UNKNOWN` 或降级记录。
+- 同步卡片与人工复核摘要后，运行 `python scripts/build-indexes.py`、`python scripts/build-discovery.py` 与 `python scripts/validate-library.py`；用两个构建器的 `--check` 确认没有过期生成物。结构与字节检查只验证同步，不能代替事实审计。

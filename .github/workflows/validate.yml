@@ -1,0 +1,37 @@
+name: Validate library
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Library / ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    env:
+      PYTHONUTF8: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check generated views
+        run: python scripts/build-indexes.py --check
+      - name: Check AI discovery assets
+        run: python scripts/build-discovery.py --check
+      - name: Validate library
+        run: python scripts/validate-library.py
+      - name: Test CLI and MCP
+        run: python -m unittest discover -s tests -v
+      - name: Check PowerShell entry point
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: ./scripts/validate-library.ps1

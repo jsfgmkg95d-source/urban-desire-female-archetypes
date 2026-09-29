@@ -1,0 +1,324 @@
+#!/usr/bin/env python3
+"""Build a reading map, source-linked catalog, and library manifest with stdlib.
+
+Reads the maintained contract, reviewed summaries, cards, and source records.
+Never repairs claims, changes grades, or turns internal review into certification.
+Hashes use UTF-8 text with LF line endings, matching Git's declared text policy.
+"""
+
+import argparse
+import hashlib
+import json
+import runpy
+import sys
+from collections import Counter
+from pathlib import Path
+from urllib.parse import quote
+
+
+REPOSITORY = "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes"
+RAW_BASE = "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes"
+DEFAULT_REF = "main"
+LIBRARY_VERSION = "v0.1.0"
+QUALITY_STATUS = "research-preview"
+GENERATOR = "scripts/build-discovery.py"
+HASH_BASIS = "utf8-lf-text"
+CATALOG_PATH = "data/catalog.json"
+MANIFEST_PATH = "data/library-manifest.json"
+READING_MAP_PATH = "llms.txt"
+
+READING_MAP_SECTIONS = (
+    ("Start here", (
+        ("Reader entry", "README.md", "Purpose, scope, and quick start in Chinese."),
+        ("Agent skill", "SKILL.md", "Retrieval, comparison, controlled adaptation, and maintenance workflow."),
+        ("Repository rules", "AGENTS.md", "Source authority, age restrictions, and project boundaries."),
+        ("AI integration and FAQ", "docs/ai-integration.md", "Browsing, local CLI, skill use, read-only MCP stdio, and version pinning."),
+    )),
+    ("Machine data", (
+        ("Library manifest", MANIFEST_PATH, "Version, counts, capabilities, entry points, license scopes, and canonical UTF-8 LF hashes."),
+        ("Character catalog", CATALOG_PATH, "Stable card IDs, source-linked paths, main/release URLs, and interpretation summaries."),
+        ("Reviewed JSONL summaries", "data/characters.jsonl", "One machine retrieval record per card; subordinate to cards and sources."),
+        ("Field contract and taxonomy", "data/archetypes.json", "Archetype IDs, enums, required fields, and constraints; this is a project contract, not a JSON Schema document."),
+        ("Master index", "indexes/master-index.md", "A compact human-readable candidate list; resolve relative card links against this URL."),
+    )),
+    ("Evidence and original design", (
+        ("Source rules", "references/source-rules.md", "Fact / Interpretation / Adaptation, editions, unknowns, and age evidence."),
+        ("Hybridization rules", "references/hybridization-rules.md", "Combine mechanism slots while changing distinctive relations, events, and resolutions."),
+        ("Quality gates", "references/quality-gate.md", "Internal review criteria; do not present a pass as external validation."),
+        ("Retrieval example", "examples/retrieval.md", "Compare candidate mechanisms and read back source-linked evidence."),
+        ("Open-source assessment", "docs/open-source-assessment.md", "Specific unresolved evidence and adaptation defects."),
+    )),
+    ("Optional", (
+        ("Contribution guide", "CONTRIBUTING.md", "Content revisions, generated views, and validation."),
+        ("Copyright and attribution", "COPYRIGHT.md", "Original-content and code licensing scopes."),
+        ("Third-party notices", "THIRD_PARTY_NOTICES.md", "Source works, translations, and quotations excluded from project licensing."),
+    )),
+)
+
+
+def text_bytes(path):
+    raw = path.read_bytes()
+    if raw.startswith(b"\xef\xbb\xbf"):
+        raise ValueError(f"UTF-8 BOM is not allowed: {path}")
+    return raw.decode("utf-8").replace("\r\n", "\n").replace("\r", "\n").encode("utf-8")
+
+
+def urls(path):
+    encoded = quote(path, safe="/-._~")
+    return {
+        "main": {
+            "github_url": f"{REPOSITORY}/blob/{DEFAULT_REF}/{encoded}",
+            "raw_url": f"{RAW_BASE}/{DEFAULT_REF}/{encoded}",
+        },
+        "release": {
+            "ref": LIBRARY_VERSION,
+            "github_url": f"{REPOSITORY}/blob/{LIBRARY_VERSION}/{encoded}",
+            "raw_url": f"{RAW_BASE}/{LIBRARY_VERSION}/{encoded}",
+        },
+    }
+
+
+def resource(root, relative_path, content=None):
+    path = root / relative_path
+    if not path.resolve().is_relative_to(root.resolve()):
+        raise ValueError(f"Path escapes repository: {relative_path}")
+    canonical = text_bytes(path) if content is None else content.encode("utf-8")
+    return {
+        "path": relative_path,
+        "sha256": hashlib.sha256(canonical).hexdigest(),
+        "hash_basis": HASH_BASIS,
+        "byte_size": len(canonical),
+        "urls": urls(relative_path),
+    }
+
+
+def serialized(value):
+    return json.dumps(value, ensure_ascii=False, indent=2) + "\n"
+
+
+def reading_map():
+    lines = [
+        "# Urban Desire Female Archetypes / 都市欲望女性原型库", "",
+        f"> A source-linked Chinese fiction research library: retrieve causal character mechanisms, compare candidates, and design original urban characters. Version {LIBRARY_VERSION} is a research preview; content is mainly Chinese.", "",
+        "<!-- Generated by scripts/build-discovery.py; do not edit by hand. -->", "",
+        "Facts, interpretations, and modern adaptations have separate layers. JSONL and the generated catalog aid retrieval; read the character card and its source record before treating any claim as a fact. Gold, Silver, PASS, scores, and confidence values are internal assessments, not independent certification. Some source locators and adaptations still need review; see the assessment below.", "",
+        "Original character age and an explicitly adult modern design are separate. Do not sexualize minors or age-unknown original characters, or copy a source work's distinctive plot. Original project expressions use CC BY 4.0; code uses MIT; third-party works, translations, and quotations keep their own rights.", "",
+        f"The links below follow the maintained {DEFAULT_REF} branch. For repeatable use, replace {DEFAULT_REF} with {LIBRARY_VERSION} or a verified commit, and use the corresponding manifest. This file is an on-demand reading map following the llms.txt proposal; publishing it does not guarantee automatic discovery or search indexing.",
+    ]
+    for title, entries in READING_MAP_SECTIONS:
+        lines.extend(["", f"## {title}", ""])
+        lines.extend(f"- [{label}]({RAW_BASE}/{DEFAULT_REF}/{quote(path, safe='/-._~')}): {note}" for label, path, note in entries)
+    return "\n".join(lines) + "\n"
+
+
+def counts(records, source_count, archetypes):
+    return {
+        "character_cards": len(records),
+        "source_records": source_count,
+        "source_ids": len({source_id for record in records for source_id in record["source_ids"]}),
+        "archetypes": len(archetypes),
+        "internal_tiers": dict(sorted(Counter(record["tier"] for record in records).items())),
+        "source_categories": dict(sorted(Counter(record["source_category"] for record in records).items())),
+        "original_character_adult_status": dict(sorted(Counter(record["adult_status"] for record in records).items())),
+    }
+
+
+def quality_notes():
+    return {
+        "status": QUALITY_STATUS,
+        "tier_scope": "internal-assessment",
+        "independent_certification": False,
+        "known_limitations": [
+            "Some fact locators remain placeholders; follow card and source records and verify before factual use.",
+            "Gold, Silver, PASS, scores, and confidence values are internal judgments, not external verification.",
+            "Interpretations and modern adaptations must not be promoted to source facts or copied as original plots.",
+            "Original character adult_status and designated modern adaptation age are separate fields.",
+        ],
+        "assessment_path": "docs/open-source-assessment.md",
+    }
+
+
+def licensing():
+    return {
+        "original_content": {"identifier": "CC-BY-4.0", "license_path": "LICENSE", "scope": "Original documentation, analysis, templates, and data expressions the contributor is entitled to license"},
+        "code": {"identifier": "MIT", "license_path": "LICENSES/MIT.txt", "scope": "Scripts, tests, and workflow code"},
+        "third_party_material": {"included_in_project_license": False, "notice_path": "THIRD_PARTY_NOTICES.md", "scope": "Source works, translations, quotes, linked pages, and other third-party expressions retain their own rights"},
+        "attribution_and_scope_path": "COPYRIGHT.md",
+    }
+
+
+def build(root):
+    # Reuse the stable-ID and card-path resolver already used by the indexes.
+    index_builder = runpy.run_path(str(root / "scripts/build-indexes.py"))
+    reading_map_text = reading_map()
+    schema, summaries = index_builder["load_library"](root)
+    paths = index_builder["card_files"](root, summaries)
+    archetypes = {item["id"]: item for item in schema["archetypes"]}
+    source_paths = {path.relative_to(root).as_posix() for path in (root / "sources").glob("*_sources.md")}
+    expected_sources = {f"sources/{record['card_id']}_sources.md" for record in summaries}
+    if source_paths != expected_sources:
+        raise ValueError(f"Source/summary paths differ: missing={sorted(expected_sources - source_paths)}, extra={sorted(source_paths - expected_sources)}")
+
+    common = {
+        "format_version": "1.0.0",
+        "library_version": LIBRARY_VERSION,
+        "schema_version": schema["schema_version"],
+        "quality_status": QUALITY_STATUS,
+        "generated_by": GENERATOR,
+        "hash_basis": HASH_BASIS,
+    }
+    inputs = {
+        "contract": resource(root, "data/archetypes.json"),
+        "reviewed_summaries": resource(root, "data/characters.jsonl"),
+        "generator": resource(root, GENERATOR),
+        "stable_path_resolver": resource(root, "scripts/build-indexes.py"),
+    }
+    catalog_records = []
+    for summary in sorted(summaries, key=lambda value: value["card_id"]):
+        card_id = summary["card_id"]
+        primary_id = summary["primary_archetype_id"]
+        if primary_id not in archetypes or any(item not in archetypes for item in summary["secondary_archetype_ids"]):
+            raise ValueError(f"Unknown archetype ID on {card_id}")
+        card_path = paths[card_id].relative_to(root).as_posix()
+        search_terms = [summary["name_zh"], *summary["aliases"], summary["source_work"],
+                        primary_id, archetypes[primary_id]["name_zh"], *archetypes[primary_id]["search_tags"],
+                        *summary["secondary_archetype_ids"]]
+        catalog_records.append({
+            "card_id": card_id,
+            "name_zh": summary["name_zh"],
+            "aliases": summary["aliases"],
+            "source_category": summary["source_category"],
+            "source_work": summary["source_work"],
+            "primary_archetype": {"id": primary_id, "name_zh": archetypes[primary_id]["name_zh"]},
+            "secondary_archetype_ids": summary["secondary_archetype_ids"],
+            "original_character_adult_status": summary["adult_status"],
+            "modern_adaptation_age": summary.get("adult_adaptation_age"),
+            "layer_completion": summary["layer_completion"],
+            "internal_assessment": {
+                "tier": summary["tier"],
+                "anti_clone_result": summary["anti_clone_result"],
+                "scope": "internal-assessment",
+                "independently_certified": False,
+            },
+            "search_terms": list(dict.fromkeys(search_terms)),
+            "mechanism_summary": {
+                "statement_type": "INTERPRETATION",
+                "long_term_lack": summary["long_term_lack"],
+                "power_method": summary["power_method"],
+                "secret_leverage": summary["secret_leverage"],
+                "escalation_logic": summary["escalation_logic"],
+                "fatal_miscalculation": summary["fatal_miscalculation"],
+            },
+            "modern_adaptation": {
+                "statement_type": "ADAPTATION",
+                "role": summary.get("adult_adaptation_role"),
+            },
+            "card": resource(root, card_path),
+            "source_record": resource(root, f"sources/{card_id}_sources.md"),
+            "source_ids": summary["source_ids"],
+            "summary_lookup": {"path": "data/characters.jsonl", "key": "card_id", "value": card_id},
+        })
+    totals = counts(summaries, len(source_paths), archetypes)
+    catalog = {
+        **common,
+        "library": schema["library"],
+        "inputs": inputs,
+        "counts": totals,
+        "quality": quality_notes(),
+        "licensing": licensing(),
+        "records": catalog_records,
+    }
+    catalog_text = serialized(catalog)
+    entry_paths = {
+        "browser_reading": READING_MAP_PATH,
+        "skill": "SKILL.md",
+        "agent_ui_metadata": "agents/openai.yaml",
+        "integration_guide": "docs/ai-integration.md",
+        "field_contract": "data/archetypes.json",
+        "reviewed_summaries": "data/characters.jsonl",
+        "cli": "scripts/archetypes.py",
+        "retrieval_runtime": "scripts/library.py",
+        "mcp_stdio_server": "scripts/mcp-server.py",
+        "repository_rules": "AGENTS.md",
+        "copyright_scope": "COPYRIGHT.md",
+        "third_party_notice": "THIRD_PARTY_NOTICES.md",
+        "content_license": "LICENSE",
+        "code_license": "LICENSES/MIT.txt",
+    }
+    entry_points = {name: resource(root, path, reading_map_text if path == READING_MAP_PATH else None)
+                    for name, path in entry_paths.items()}
+    entry_points["catalog"] = resource(root, CATALOG_PATH, catalog_text)
+    manifest = {
+        **common,
+        "library": {
+            **schema["library"],
+            "name_en": "Urban Desire Female Archetypes",
+            "content_language": "zh-CN",
+            "description": "Source-linked character mechanisms for Chinese urban fiction, with facts, interpretations, and adaptations kept separate.",
+        },
+        "repository": {
+            "url": REPOSITORY,
+            "default_ref": DEFAULT_REF,
+            "release_ref": LIBRARY_VERSION,
+            "ref_policy": "main follows maintenance; pin the release tag or a verified commit for reproducible use",
+        },
+        "counts": totals,
+        "inputs": inputs,
+        "entry_points": entry_points,
+        "quality": quality_notes(),
+        "authority": {
+            "rules": "AGENTS.md",
+            "contract": "data/archetypes.json",
+            "content": ["characters/", "sources/"],
+            "retrieval_summaries": "data/characters.jsonl",
+            "generated_catalog": CATALOG_PATH,
+            "instruction": "Use summaries to find candidates, then read cards and source records. Generated data does not override content or verify claims.",
+        },
+        "capabilities": {
+            "browser_reading": True,
+            "cli": {"runtime": "Python 3.11+", "dependencies": "standard-library", "commands": ["search", "get", "list", "rules"]},
+            "mcp": {
+                "transport": "stdio",
+                "read_only": True,
+                "protocol_versions": ["2025-11-25", "2025-06-18"],
+                "tools": ["search_archetypes", "get_archetype", "list_archetypes", "read_rules"],
+            },
+            "hosted_http_api": False,
+            "embeddings_or_vector_search": False,
+            "automatic_search_engine_indexing_guarantee": False,
+        },
+        "licensing": licensing(),
+    }
+    return {READING_MAP_PATH: reading_map_text, CATALOG_PATH: catalog_text, MANIFEST_PATH: serialized(manifest)}
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--check", action="store_true", help="Fail if generated files are absent or stale; never write")
+    args = parser.parse_args()
+    root = Path(__file__).resolve().parent.parent
+    try:
+        generated = build(root)
+        stale = []
+        for relative_path, expected in generated.items():
+            destination = root / relative_path
+            current = text_bytes(destination).decode("utf-8") if destination.exists() else None
+            if current == expected:
+                continue
+            stale.append(relative_path)
+            if not args.check:
+                destination.write_bytes(expected.encode("utf-8"))
+        if args.check and stale:
+            print("Stale discovery files: " + ", ".join(stale), file=sys.stderr)
+            return 1
+        print("Discovery files are current." if args.check else "Discovery files built: " + ", ".join(stale or generated))
+        return 0
+    except (OSError, ValueError, KeyError) as error:
+        print(f"Discovery build failed: {error}", file=sys.stderr)
+        return 1
+
+
+if __name__ == "__main__":
+    sys.stdout.reconfigure(encoding="utf-8")
+    sys.stderr.reconfigure(encoding="utf-8")
+    sys.exit(main())
