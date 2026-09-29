@@ -26,7 +26,9 @@
 
 ```shell
 python scripts/build-indexes.py
+python scripts/build-discovery.py
 python scripts/build-indexes.py --check
+python scripts/build-discovery.py --check
 python scripts/validate-library.py
 ```
 
@@ -36,7 +38,7 @@ python scripts/validate-library.py
 
 - 文本统一为 UTF-8 无 BOM、LF 换行，文件末尾保留换行；由 `.editorconfig` 和 `.gitattributes` 约定。
 - 文件名使用稳定 ID 加中文人物名；来源使用 `<card_id>_sources.md`。
-- 不手改十个 Markdown 检索视图与 `character_records` 缓存；调整输入或构建器后重新生成。
+- 不手改十个 Markdown 检索视图、`character_records` 缓存、目录、发布清单或 `llms.txt`；调整输入或构建器后重新生成。
 - 不创建没有内容的媒介目录或 `.gitkeep`；有合格卡片后自然形成目录。
 - 历史审阅保留当时的范围与结论；新证据通过新记录说明变更。
 
@@ -46,4 +48,6 @@ python scripts/validate-library.py
 
 纯整理不得悄悄变更正文、年龄、等级、评分或来源断言。发现问题时先在有范围的审阅记录中列明，再对相关卡片做单独修订。
 
-项目目前尚未选定开放许可证。公开接受贡献前，维护者需明确贡献者的权利声明、署名要求和内容授权范围，见[发布评估](docs/open-source-assessment.md)。
+提交贡献时，请确认你有权按[现有授权范围](COPYRIGHT.md)提供自己的贡献：原创内容采用 CC BY 4.0，代码采用 MIT。标注第三方引用、版本、来源与排除范围，不把第三方表达重新授权；AI 辅助产生的断言同样需要依据。当前发布为研究预览版，已知内容缺口见[发布评估](docs/open-source-assessment.md)。
+
+运行接口修改后，执行 `python -m unittest discover -s tests -v`，核对真实检索、完整卡片与来源读取、MCP 握手和非法参数拒绝行为。

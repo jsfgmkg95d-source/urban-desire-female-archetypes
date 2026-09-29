@@ -1,0 +1,441 @@
+{
+  "format_version": "1.0.0",
+  "library_version": "v0.1.0",
+  "schema_version": "1.2.0",
+  "quality_status": "research-preview",
+  "generated_by": "scripts/build-discovery.py",
+  "hash_basis": "utf8-lf-text",
+  "library": {
+    "slug": "urban-desire-female-archetypes",
+    "name_zh": "都市欲望女性原型库",
+    "record_type": "female_archetype_character_card",
+    "fact_interpretation_adaptation_separated": true,
+    "name_en": "Urban Desire Female Archetypes",
+    "content_language": "zh-CN",
+    "description": "Source-linked character mechanisms for Chinese urban fiction, with facts, interpretations, and adaptations kept separate."
+  },
+  "repository": {
+    "url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes",
+    "default_ref": "main",
+    "release_ref": "v0.1.0",
+    "ref_policy": "main follows maintenance; pin the release tag or a verified commit for reproducible use"
+  },
+  "counts": {
+    "character_cards": 30,
+    "source_records": 30,
+    "source_ids": 98,
+    "archetypes": 24,
+    "internal_tiers": {
+      "Gold": 27,
+      "Silver": 3
+    },
+    "source_categories": {
+      "chinese-classics": 20,
+      "mythology-and-epics": 3,
+      "world-classics": 7
+    },
+    "original_character_adult_status": {
+      "CONFIRMED_ADULT": 9,
+      "CONFIRMED_MINOR": 4,
+      "UNKNOWN": 17
+    }
+  },
+  "inputs": {
+    "contract": {
+      "path": "data/archetypes.json",
+      "sha256": "d5735e64e1f37fed2c4fc921d925fd94635233a8c199c6ce59642374f05d0896",
+      "hash_basis": "utf8-lf-text",
+      "byte_size": 16814,
+      "urls": {
+        "main": {
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/data/archetypes.json",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/data/archetypes.json"
+        },
+        "release": {
+          "ref": "v0.1.0",
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/data/archetypes.json",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/data/archetypes.json"
+        }
+      }
+    },
+    "reviewed_summaries": {
+      "path": "data/characters.jsonl",
+      "sha256": "27e5fac88de2e34849c0342c7e13bf6aebb1aab08e3319794e3dad0c34b77ffd",
+      "hash_basis": "utf8-lf-text",
+      "byte_size": 155067,
+      "urls": {
+        "main": {
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/data/characters.jsonl",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/data/characters.jsonl"
+        },
+        "release": {
+          "ref": "v0.1.0",
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/data/characters.jsonl",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/data/characters.jsonl"
+        }
+      }
+    },
+    "generator": {
+      "path": "scripts/build-discovery.py",
+      "sha256": "20a60d70825c90233140b18986fdac5558229f1c82ab8baa13c4053612a23ddb",
+      "hash_basis": "utf8-lf-text",
+      "byte_size": 16720,
+      "urls": {
+        "main": {
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/scripts/build-discovery.py",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/scripts/build-discovery.py"
+        },
+        "release": {
+          "ref": "v0.1.0",
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/scripts/build-discovery.py",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/scripts/build-discovery.py"
+        }
+      }
+    },
+    "stable_path_resolver": {
+      "path": "scripts/build-indexes.py",
+      "sha256": "72c52506611a7f00307c2cb4c45615a0910d00cf4e8a8a5ddbe256ff72039b48",
+      "hash_basis": "utf8-lf-text",
+      "byte_size": 14806,
+      "urls": {
+        "main": {
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/scripts/build-indexes.py",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/scripts/build-indexes.py"
+        },
+        "release": {
+          "ref": "v0.1.0",
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/scripts/build-indexes.py",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/scripts/build-indexes.py"
+        }
+      }
+    }
+  },
+  "entry_points": {
+    "browser_reading": {
+      "path": "llms.txt",
+      "sha256": "64da6f1cd8eeac1c4dcfb0b856b2c5b2c78efdaec3690db73d1776e24e66c9e0",
+      "hash_basis": "utf8-lf-text",
+      "byte_size": 4927,
+      "urls": {
+        "main": {
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/llms.txt",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/llms.txt"
+        },
+        "release": {
+          "ref": "v0.1.0",
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/llms.txt",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/llms.txt"
+        }
+      }
+    },
+    "skill": {
+      "path": "SKILL.md",
+      "sha256": "4acc28f1d31bb81e50bc656c4bedb269e01acaf2a05846b1a618085ebd2b6674",
+      "hash_basis": "utf8-lf-text",
+      "byte_size": 5339,
+      "urls": {
+        "main": {
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/SKILL.md",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/SKILL.md"
+        },
+        "release": {
+          "ref": "v0.1.0",
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/SKILL.md",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/SKILL.md"
+        }
+      }
+    },
+    "agent_ui_metadata": {
+      "path": "agents/openai.yaml",
+      "sha256": "d1dba9fc48248a41ef2a2e6695f85f9dc71b44baa6cca6878a011b4953f7b082",
+      "hash_basis": "utf8-lf-text",
+      "byte_size": 287,
+      "urls": {
+        "main": {
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/agents/openai.yaml",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/agents/openai.yaml"
+        },
+        "release": {
+          "ref": "v0.1.0",
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/agents/openai.yaml",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/agents/openai.yaml"
+        }
+      }
+    },
+    "integration_guide": {
+      "path": "docs/ai-integration.md",
+      "sha256": "35e858d3f599aefb83868755f1d788a43858cab071b87c747664b0637b24e15e",
+      "hash_basis": "utf8-lf-text",
+      "byte_size": 9955,
+      "urls": {
+        "main": {
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/docs/ai-integration.md",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/docs/ai-integration.md"
+        },
+        "release": {
+          "ref": "v0.1.0",
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/docs/ai-integration.md",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/docs/ai-integration.md"
+        }
+      }
+    },
+    "field_contract": {
+      "path": "data/archetypes.json",
+      "sha256": "d5735e64e1f37fed2c4fc921d925fd94635233a8c199c6ce59642374f05d0896",
+      "hash_basis": "utf8-lf-text",
+      "byte_size": 16814,
+      "urls": {
+        "main": {
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/data/archetypes.json",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/data/archetypes.json"
+        },
+        "release": {
+          "ref": "v0.1.0",
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/data/archetypes.json",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/data/archetypes.json"
+        }
+      }
+    },
+    "reviewed_summaries": {
+      "path": "data/characters.jsonl",
+      "sha256": "27e5fac88de2e34849c0342c7e13bf6aebb1aab08e3319794e3dad0c34b77ffd",
+      "hash_basis": "utf8-lf-text",
+      "byte_size": 155067,
+      "urls": {
+        "main": {
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/data/characters.jsonl",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/data/characters.jsonl"
+        },
+        "release": {
+          "ref": "v0.1.0",
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/data/characters.jsonl",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/data/characters.jsonl"
+        }
+      }
+    },
+    "cli": {
+      "path": "scripts/archetypes.py",
+      "sha256": "4d34617b99ee0485afdaebc14f8b3a8211a0ef8c540284864ecdefdad9927e31",
+      "hash_basis": "utf8-lf-text",
+      "byte_size": 1742,
+      "urls": {
+        "main": {
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/scripts/archetypes.py",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/scripts/archetypes.py"
+        },
+        "release": {
+          "ref": "v0.1.0",
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/scripts/archetypes.py",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/scripts/archetypes.py"
+        }
+      }
+    },
+    "retrieval_runtime": {
+      "path": "scripts/library.py",
+      "sha256": "ee958f229c4e3e3c30839f9415d5f0a33734f354fbd9450c20c60b7fb3b0b938",
+      "hash_basis": "utf8-lf-text",
+      "byte_size": 17725,
+      "urls": {
+        "main": {
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/scripts/library.py",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/scripts/library.py"
+        },
+        "release": {
+          "ref": "v0.1.0",
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/scripts/library.py",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/scripts/library.py"
+        }
+      }
+    },
+    "mcp_stdio_server": {
+      "path": "scripts/mcp-server.py",
+      "sha256": "c89c7874bc05189e73f697cbcf56aae861728da79f8b4648d2eb6f3d2e326c7c",
+      "hash_basis": "utf8-lf-text",
+      "byte_size": 8924,
+      "urls": {
+        "main": {
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/scripts/mcp-server.py",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/scripts/mcp-server.py"
+        },
+        "release": {
+          "ref": "v0.1.0",
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/scripts/mcp-server.py",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/scripts/mcp-server.py"
+        }
+      }
+    },
+    "repository_rules": {
+      "path": "AGENTS.md",
+      "sha256": "d8ca31c01d7520756b6c5525eca8d9077d420518ece6d01fbe6763874a8e090b",
+      "hash_basis": "utf8-lf-text",
+      "byte_size": 2804,
+      "urls": {
+        "main": {
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/AGENTS.md",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/AGENTS.md"
+        },
+        "release": {
+          "ref": "v0.1.0",
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/AGENTS.md",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/AGENTS.md"
+        }
+      }
+    },
+    "copyright_scope": {
+      "path": "COPYRIGHT.md",
+      "sha256": "d5207e5154c2729b27f948ab14233e6365243786a56920faa87205f9eaac9667",
+      "hash_basis": "utf8-lf-text",
+      "byte_size": 1487,
+      "urls": {
+        "main": {
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/COPYRIGHT.md",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/COPYRIGHT.md"
+        },
+        "release": {
+          "ref": "v0.1.0",
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/COPYRIGHT.md",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/COPYRIGHT.md"
+        }
+      }
+    },
+    "third_party_notice": {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "d98ed86d060d660d293cff0da6781a4249ac140ec7caf5a9854d2e97e7ba2daf",
+      "hash_basis": "utf8-lf-text",
+      "byte_size": 1361,
+      "urls": {
+        "main": {
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/THIRD_PARTY_NOTICES.md",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/THIRD_PARTY_NOTICES.md"
+        },
+        "release": {
+          "ref": "v0.1.0",
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/THIRD_PARTY_NOTICES.md",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/THIRD_PARTY_NOTICES.md"
+        }
+      }
+    },
+    "content_license": {
+      "path": "LICENSE",
+      "sha256": "d557539df68e771cc1eedcc91d13f70fca930e508d11eedcafa4b15db49e3744",
+      "hash_basis": "utf8-lf-text",
+      "byte_size": 17023,
+      "urls": {
+        "main": {
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/LICENSE",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/LICENSE"
+        },
+        "release": {
+          "ref": "v0.1.0",
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/LICENSE",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/LICENSE"
+        }
+      }
+    },
+    "code_license": {
+      "path": "LICENSES/MIT.txt",
+      "sha256": "e8b0db3453167c863b0c0006cdc439b0ba765ab6d0651e8e339981725dc06799",
+      "hash_basis": "utf8-lf-text",
+      "byte_size": 1074,
+      "urls": {
+        "main": {
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/LICENSES/MIT.txt",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/LICENSES/MIT.txt"
+        },
+        "release": {
+          "ref": "v0.1.0",
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/LICENSES/MIT.txt",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/LICENSES/MIT.txt"
+        }
+      }
+    },
+    "catalog": {
+      "path": "data/catalog.json",
+      "sha256": "8e49f52928c74ac3ee466a625258232180dc2f62360878d85200e3245fd42f32",
+      "hash_basis": "utf8-lf-text",
+      "byte_size": 136708,
+      "urls": {
+        "main": {
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/main/data/catalog.json",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/main/data/catalog.json"
+        },
+        "release": {
+          "ref": "v0.1.0",
+          "github_url": "https://github.com/jsfgmkg95d-source/urban-desire-female-archetypes/blob/v0.1.0/data/catalog.json",
+          "raw_url": "https://raw.githubusercontent.com/jsfgmkg95d-source/urban-desire-female-archetypes/v0.1.0/data/catalog.json"
+        }
+      }
+    }
+  },
+  "quality": {
+    "status": "research-preview",
+    "tier_scope": "internal-assessment",
+    "independent_certification": false,
+    "known_limitations": [
+      "Some fact locators remain placeholders; follow card and source records and verify before factual use.",
+      "Gold, Silver, PASS, scores, and confidence values are internal judgments, not external verification.",
+      "Interpretations and modern adaptations must not be promoted to source facts or copied as original plots.",
+      "Original character adult_status and designated modern adaptation age are separate fields."
+    ],
+    "assessment_path": "docs/open-source-assessment.md"
+  },
+  "authority": {
+    "rules": "AGENTS.md",
+    "contract": "data/archetypes.json",
+    "content": [
+      "characters/",
+      "sources/"
+    ],
+    "retrieval_summaries": "data/characters.jsonl",
+    "generated_catalog": "data/catalog.json",
+    "instruction": "Use summaries to find candidates, then read cards and source records. Generated data does not override content or verify claims."
+  },
+  "capabilities": {
+    "browser_reading": true,
+    "cli": {
+      "runtime": "Python 3.11+",
+      "dependencies": "standard-library",
+      "commands": [
+        "search",
+        "get",
+        "list",
+        "rules"
+      ]
+    },
+    "mcp": {
+      "transport": "stdio",
+      "read_only": true,
+      "protocol_versions": [
+        "2025-11-25",
+        "2025-06-18"
+      ],
+      "tools": [
+        "search_archetypes",
+        "get_archetype",
+        "list_archetypes",
+        "read_rules"
+      ]
+    },
+    "hosted_http_api": false,
+    "embeddings_or_vector_search": false,
+    "automatic_search_engine_indexing_guarantee": false
+  },
+  "licensing": {
+    "original_content": {
+      "identifier": "CC-BY-4.0",
+      "license_path": "LICENSE",
+      "scope": "Original documentation, analysis, templates, and data expressions the contributor is entitled to license"
+    },
+    "code": {
+      "identifier": "MIT",
+      "license_path": "LICENSES/MIT.txt",
+      "scope": "Scripts, tests, and workflow code"
+    },
+    "third_party_material": {
+      "included_in_project_license": false,
+      "notice_path": "THIRD_PARTY_NOTICES.md",
+      "scope": "Source works, translations, quotes, linked pages, and other third-party expressions retain their own rights"
+    },
+    "attribution_and_scope_path": "COPYRIGHT.md"
+  }
+}

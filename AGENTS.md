@@ -6,13 +6,14 @@
 - AI 工作流以 `SKILL.md` 为入口；原型 ID、枚举和字段以 `data/archetypes.json` 为准。
 - 人物卡与来源记录是内容依据，`data/characters.jsonl` 是人工复核的机器摘要。
 - `indexes/` 下十个检索视图与 `data/archetypes.json` 中的 `character_records` 登记缓存由 `scripts/build-indexes.py` 生成；禁止单独手改生成物。
-- 更新后运行 `python scripts/build-indexes.py` 和 `python scripts/validate-library.py`。
+- `data/catalog.json`、`data/library-manifest.json` 与 `llms.txt` 由 `scripts/build-discovery.py` 生成；修改输入、入口或工具后同步重建。
+- 更新后运行两个构建器及其 `--check`、`python scripts/validate-library.py`；修改运行接口时再运行 `python -m unittest discover -s tests -v`。
 - 结构校验通过只证明约定与关联一致，不能把来源链接存在、字段齐全或内部 `Gold / PASS` 当作事实核验、原创性保证或独立认证。
 - 纯整理任务保留人物、来源与历史审阅内容；内容缺陷先记录具体证据，修订时同步权威卡与派生摘要，不得只美化索引。
 
 ## 仓库定位
 
-本仓库是“都市欲望女性原型资产库”，用于长期沉淀可被都市男频小说检索和调用的人物原型机制。本仓库是独立项目，不得修改、写入或污染 `jsfgmkg95d-source/classmate-wedding-novel`，也不得修改其他现有小说仓库。
+本仓库是“都市欲望女性原型资产库”，用于长期沉淀可被都市男频小说检索和调用的人物原型机制。本仓库是独立项目，不得修改其他小说仓库中的正文、设定或工作流。公开接口只读；不得通过查询参数执行命令、写文件或读取仓库之外的文件。
 
 ## 事实与证据边界
 

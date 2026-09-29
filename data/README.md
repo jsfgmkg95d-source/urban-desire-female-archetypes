@@ -7,6 +7,8 @@
 | `archetypes.json` 的分类、枚举与约束 | 项目字段契约与 24 个一级原型 | 修改规则时人工修订并记录兼容性影响 |
 | `characters.jsonl` | 一行一张卡的机器检索摘要 | 从卡片压缩，人工复核后同步 |
 | `archetypes.json.character_records` | ID、姓名、等级、主原型的登记缓存 | 从 JSONL 自动生成 |
+| `catalog.json` | AI 可遍历的卡片目录、来源 URL、检索字段与质量状态 | 由 `scripts/build-discovery.py` 生成 |
+| `library-manifest.json` | 发布版本、入口、许可证范围、统计与文本哈希 | 由 `scripts/build-discovery.py` 生成 |
 
 `schema_version` 标记项目契约版本。`archetypes.json` 本身不是标准 JSON Schema 文件；完整字段要求由契约和校验工具共同表达。原型名称与机制解释见[分类法](../references/archetype-taxonomy.md)。
 
@@ -36,7 +38,13 @@ flowchart LR
 
 ```shell
 python scripts/build-indexes.py
+python scripts/build-discovery.py
 python scripts/build-indexes.py --check
+python scripts/build-discovery.py --check
 ```
 
 `--check` 以现有输入重新计算生成物并比较，发现过期时返回失败。使用与维护过程见[贡献说明](../CONTRIBUTING.md)。
+
+发布元数据的哈希和字节数采用 `utf8-lf-text`：读取 UTF-8 文本，将 CRLF / CR 规范为 LF 后计算。它们验证指定文本版本的一致性，不能证明来源事实。`main` URL 用于最新内容，`v0.1.0` URL 用于固定发布；复现研究应记录所用版本。
+
+只读检索和 MCP 调用见[AI 接入指南](../docs/ai-integration.md)。返回值中的 `research-preview` 与内部等级是不同维度；派生目录与摘要不会提升原卡的证据质量或扩大第三方授权。

@@ -1,0 +1,4 @@
+interface:
+  display_name: "都市欲望女性原型库"
+  short_description: "Retrieve source-linked character mechanisms"
+  default_prompt: "Use $urban-desire-female-archetypes to retrieve and compare character mechanisms, then create an original design with source-linked reasoning."
